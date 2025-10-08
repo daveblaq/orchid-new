@@ -583,7 +583,7 @@ export default function Home() {
                     onError={(e) => {
                       // Fallback to a simple colored box with company initial if image fails to load
                       const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
+                      target.style.display = "none";
                       const parent = target.parentElement;
                       if (parent) {
                         parent.innerHTML = `
