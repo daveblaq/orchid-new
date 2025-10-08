@@ -146,8 +146,334 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Investment Service Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
+              <DollarSign className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+              Investment Plans
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+              Secure your financial future with our structured investment plans
+              offering guaranteed returns.
+            </p>
+          </motion.div>
+
+          {/* Investment Calculator */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-white border border-gray-200 p-6 sm:p-8 md:p-12 mb-12 sm:mb-16"
+          >
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary text-center mb-8 sm:mb-12">
+              Investment Calculator
+            </h3>
+
+            <div className="max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                {/* Investment Amount Input */}
+                <div>
+                  <label className="block text-sm sm:text-base font-semibold text-text-primary mb-3">
+                    Investment Amount (₦)
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="Enter amount"
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors duration-300 text-sm sm:text-base"
+                    onChange={(e) => {
+                      const amount = parseFloat(e.target.value);
+                      if (!isNaN(amount) && amount > 0) {
+                        // Update calculation display
+                        const monthlyROI = amount * 0.05;
+                        const totalROI = monthlyROI * 12;
+                        const totalPayout = totalROI + amount;
+
+                        // Update display elements
+                        const monthlyDisplay =
+                          document.getElementById("monthly-roi");
+                        const totalROIDisplay =
+                          document.getElementById("total-roi");
+                        const capitalDisplay =
+                          document.getElementById("capital-returned");
+                        const payoutDisplay =
+                          document.getElementById("total-payout");
+
+                        if (monthlyDisplay)
+                          monthlyDisplay.textContent = `₦${monthlyROI.toLocaleString()}`;
+                        if (totalROIDisplay)
+                          totalROIDisplay.textContent = `₦${totalROI.toLocaleString()}`;
+                        if (capitalDisplay)
+                          capitalDisplay.textContent = `₦${amount.toLocaleString()}`;
+                        if (payoutDisplay)
+                          payoutDisplay.textContent = `₦${totalPayout.toLocaleString()}`;
+                      }
+                    }}
+                  />
+                </div>
+
+                {/* Investment Summary */}
+                <div className="bg-primary-50 p-4 sm:p-6 border border-primary-200">
+                  <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-4">
+                    Your Returns (12 Months)
+                  </h4>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span className="text-text-secondary text-sm sm:text-base">
+                        Monthly ROI (5%):
+                      </span>
+                      <span
+                        id="monthly-roi"
+                        className="font-semibold text-primary-600"
+                      >
+                        ₦0
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-text-secondary text-sm sm:text-base">
+                        Total ROI:
+                      </span>
+                      <span
+                        id="total-roi"
+                        className="font-semibold text-primary-600"
+                      >
+                        ₦0
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-text-secondary text-sm sm:text-base">
+                        Capital Returned:
+                      </span>
+                      <span
+                        id="capital-returned"
+                        className="font-semibold text-primary-600"
+                      >
+                        ₦0
+                      </span>
+                    </div>
+                    <div className="border-t border-primary-200 pt-3">
+                      <div className="flex justify-between">
+                        <span className="text-text-primary font-bold text-sm sm:text-base">
+                          Total Payout:
+                        </span>
+                        <span
+                          id="total-payout"
+                          className="font-bold text-primary-600 text-lg"
+                        >
+                          ₦0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Investment Terms */}
+              <div className="mt-16 sm:mt-20 md:mt-24 p-6 sm:p-8 md:p-10 bg-gray-50 border border-gray-200 max-w-4xl mx-auto">
+                <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-6 sm:mb-8">
+                  Investment Terms
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-sm sm:text-base">
+                  <div className="text-center sm:text-left">
+                    <div className="font-semibold text-text-primary mb-1">
+                      Tenure:
+                    </div>
+                    <div className="text-text-secondary">12 Months</div>
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <div className="font-semibold text-text-primary mb-1">
+                      Monthly ROI:
+                    </div>
+                    <div className="text-text-secondary">5% of Capital</div>
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <div className="font-semibold text-text-primary mb-1">
+                      Payment Structure:
+                    </div>
+                    <div className="text-text-secondary">Monthly + Capital</div>
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <div className="font-semibold text-text-primary mb-1">
+                      Total Return:
+                    </div>
+                    <div className="text-text-secondary">160% Payout</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Investment Plans Table */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-white border border-gray-200 overflow-hidden"
+          >
+            <div className="bg-primary-600 text-white px-4 sm:px-6 py-4 sm:py-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
+                Orchid Digital Investment Plans
+              </h3>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
+                      S/N
+                    </th>
+                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
+                      Investment Amount (₦)
+                    </th>
+                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
+                      Monthly ROI (5%) (₦)
+                    </th>
+                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
+                      Total ROI (12 Months) (₦)
+                    </th>
+                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
+                      Capital Returned (₦)
+                    </th>
+                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
+                      Total Payout After 12 Months (₦)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {[
+                    {
+                      amount: 5000000,
+                      monthly: 250000,
+                      total: 3000000,
+                      payout: 8000000,
+                    },
+                    {
+                      amount: 10000000,
+                      monthly: 500000,
+                      total: 6000000,
+                      payout: 16000000,
+                    },
+                    {
+                      amount: 15000000,
+                      monthly: 750000,
+                      total: 9000000,
+                      payout: 24000000,
+                    },
+                    {
+                      amount: 20000000,
+                      monthly: 1000000,
+                      total: 12000000,
+                      payout: 32000000,
+                    },
+                    {
+                      amount: 25000000,
+                      monthly: 1250000,
+                      total: 15000000,
+                      payout: 40000000,
+                    },
+                    {
+                      amount: 30000000,
+                      monthly: 1500000,
+                      total: 18000000,
+                      payout: 48000000,
+                    },
+                    {
+                      amount: 40000000,
+                      monthly: 2000000,
+                      total: 24000000,
+                      payout: 64000000,
+                    },
+                    {
+                      amount: 50000000,
+                      monthly: 2500000,
+                      total: 30000000,
+                      payout: 80000000,
+                    },
+                    {
+                      amount: 75000000,
+                      monthly: 3750000,
+                      total: 45000000,
+                      payout: 120000000,
+                    },
+                    {
+                      amount: 100000000,
+                      monthly: 5000000,
+                      total: 60000000,
+                      payout: 160000000,
+                    },
+                  ].map((plan, index) => (
+                    <tr
+                      key={index}
+                      className="hover:bg-gray-50 transition-colors duration-200"
+                    >
+                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
+                        {index + 1}
+                      </td>
+                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary font-medium">
+                        {plan.amount.toLocaleString()}
+                      </td>
+                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
+                        {plan.monthly.toLocaleString()}
+                      </td>
+                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
+                        {plan.total.toLocaleString()}
+                      </td>
+                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
+                        {plan.amount.toLocaleString()}
+                      </td>
+                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary font-bold text-primary-600">
+                        {plan.payout.toLocaleString()}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+
+          {/* Investment CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-12 sm:mt-16 text-center"
+          >
+            <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white p-6 sm:p-8 md:p-12">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+                Ready to Start Investing?
+              </h3>
+              <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90">
+                Secure your financial future with our proven investment plans.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-white text-primary-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 inline-block text-center"
+                >
+                  Start Investing Now
+                </a>
+             
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
