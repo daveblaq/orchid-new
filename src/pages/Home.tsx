@@ -1,0 +1,641 @@
+import HeroSlider from "../components/HeroSlider";
+import CTASection from "../components/CTASection";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import {
+  Users,
+  Globe,
+  Shield,
+  Headphones,
+  Building,
+  GraduationCap,
+  FileText,
+  Code,
+  DollarSign,
+  TrendingUp,
+} from "lucide-react";
+
+export default function Home() {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const services = [
+    {
+      title: "Access to Market",
+      description:
+        "Connect bulk purchasers, sell across borders, and help enter foreign markets with strategic guidance.",
+      icon: Globe,
+    },
+    {
+      title: "Entrepreneurship Training",
+      description:
+        "Develop individuals for self-employment and business leadership through comprehensive training programs.",
+      icon: GraduationCap,
+    },
+    {
+      title: "Facility Management",
+      description:
+        "Coordinate everything that keeps business systems and assets running smoothly and efficiently.",
+      icon: Building,
+    },
+    {
+      title: "Insurance / Audit and Tax Clearance",
+      description:
+        "Provide financial protection and audit/tax services for businesses of all sizes.",
+      icon: FileText,
+    },
+    {
+      title: "Enterprise Management Software Development",
+      description:
+        "Develop, maintain, and re-engineer business software solutions tailored to your needs.",
+      icon: Code,
+    },
+    {
+      title: "Support Services",
+      description:
+        "End-to-end support from strategy development to implementation and beyond.",
+      icon: Headphones,
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      position: "CEO",
+      company: "TechCorp Solutions",
+      testimonial:
+        "Orchid Digital Consulting transformed our business operations. Their expertise in digital transformation helped us increase efficiency by 40% and expand into new markets.",
+    },
+    {
+      name: "Michael Chen",
+      position: "Founder",
+      company: "StartupXYZ",
+      testimonial:
+        "The entrepreneurship training program was exceptional. It gave me the skills and confidence to scale my business successfully.",
+    },
+    {
+      name: "Emily Rodriguez",
+      position: "Operations Director",
+      company: "Global Enterprises",
+      testimonial:
+        "Their facility management services streamlined our operations and reduced costs significantly. Highly recommended!",
+    },
+  ];
+
+  const goToNextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const goToPreviousTestimonial = () => {
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <HeroSlider />
+
+      {/* Services Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
+              <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+              Our Services
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+              Comprehensive solutions designed to accelerate your business
+              growth and digital transformation journey.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group bg-white border border-gray-200 p-6 sm:p-8 hover:border-primary-300 hover:shadow-xl transition-all duration-500"
+                >
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
+                    <Icon className="text-primary-600 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 group-hover:text-white transition-colors duration-500" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                    {service.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
+              <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+              Why Choose Us
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+              We combine industry expertise with innovative solutions to deliver
+              exceptional results for our clients.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-center group"
+            >
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
+                <Users className="text-primary-600 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:text-white transition-colors duration-500" />
+              </div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                Expert Team
+              </h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                Our experienced professionals bring deep industry knowledge and
+                proven expertise to every project.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center group"
+            >
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
+                <TrendingUp className="text-primary-600 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:text-white transition-colors duration-500" />
+              </div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                Proven Results
+              </h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                We deliver measurable outcomes that drive business growth and
+                operational efficiency.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-center group"
+            >
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
+                <Globe className="text-primary-600 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:text-white transition-colors duration-500" />
+              </div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                Global Reach
+              </h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                We help businesses expand internationally with our global
+                network and market expertise.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-center group"
+            >
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
+                <DollarSign className="text-primary-600 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:text-white transition-colors duration-500" />
+              </div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                Cost Effective
+              </h3>
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                Our solutions maximize ROI while minimizing costs through
+                efficient processes and smart technology.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
+              <svg
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+              </svg>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+              Client Success Stories
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+              Trusted by industry leaders who've transformed their businesses
+              with our expertise.
+            </p>
+          </motion.div>
+
+          {/* Testimonial Carousel */}
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${currentTestimonial * 100}%)`,
+                }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <div className="bg-white border border-gray-200 overflow-hidden">
+                      <div className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 p-6 sm:p-8 md:p-12 lg:p-16 relative">
+                        {/* Quote Icon */}
+                        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 opacity-20">
+                          <svg
+                            className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+                          </svg>
+                        </div>
+
+                        {/* Rating Stars */}
+                        <div className="flex items-center mb-4 sm:mb-6 md:mb-8">
+                          {[...Array(5)].map((_, i) => (
+                            <svg
+                              key={i}
+                              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-400 fill-current mr-1"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                            </svg>
+                          ))}
+                        </div>
+
+                        {/* Testimonial Text */}
+                        <blockquote className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed mb-6 sm:mb-8 md:mb-12 font-light">
+                          "{testimonial.testimonial}"
+                        </blockquote>
+
+                        {/* Author Info */}
+                        <div>
+                          <div className="font-bold text-white text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
+                            {testimonial.name}
+                          </div>
+                          <div className="text-white/90 text-sm sm:text-base md:text-lg">
+                            {testimonial.position} • {testimonial.company}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Controls */}
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+              {/* Progress Bar */}
+              <div className="flex-1 max-w-xs w-full sm:w-auto">
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-full bg-gray-200 h-1">
+                    <div
+                      className="bg-gradient-to-r from-primary-500 to-primary-600 h-full transition-all duration-500"
+                      style={{
+                        width: `${
+                          ((currentTestimonial + 1) / testimonials.length) * 100
+                        }%`,
+                      }}
+                    ></div>
+                  </div>
+                  <span className="text-text-secondary font-semibold text-sm sm:text-base">
+                    {currentTestimonial + 1}/{testimonials.length}
+                  </span>
+                </div>
+              </div>
+
+              {/* Pagination Dots */}
+              <div className="flex items-center space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`w-2 h-2 sm:w-3 sm:h-3 transition-all duration-300 ${
+                      index === currentTestimonial
+                        ? "bg-primary-500 scale-125"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* Navigation Arrows */}
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={goToPreviousTestimonial}
+                  className="w-8 h-8 sm:w-10 sm:h-10 border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors duration-200"
+                >
+                  <svg
+                    className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onClick={goToNextTestimonial}
+                  className="w-8 h-8 sm:w-10 sm:h-10 border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors duration-200"
+                >
+                  <svg
+                    className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Indicators */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-12 sm:mt-16 md:mt-20 text-center"
+          >
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">
+                  500+
+                </div>
+                <div className="text-text-secondary text-sm sm:text-base">
+                  Happy Clients
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">
+                  98%
+                </div>
+                <div className="text-text-secondary text-sm sm:text-base">
+                  Success Rate
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">
+                  24/7
+                </div>
+                <div className="text-text-secondary text-sm sm:text-base">
+                  Support
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">
+                  5★
+                </div>
+                <div className="text-text-secondary text-sm sm:text-base">
+                  Average Rating
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+              Trusted Partners
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+              Collaborating with industry leaders to deliver exceptional results
+              across diverse sectors.
+            </p>
+          </motion.div>
+
+          {/* Partner Categories */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 mb-12 sm:mb-16">
+            {/* Enterprise Partners */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-white border border-gray-200 p-4 sm:p-6 md:p-8 group hover:border-primary-300 hover:shadow-xl transition-all duration-500"
+            >
+              <div className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
+                  <Building className="text-primary-600 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                </div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                  Enterprise Partners
+                </h3>
+                <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                  Fortune 500 companies and large-scale organizations trust us
+                  with their digital transformation needs.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Startup Partners */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white border border-gray-200 p-4 sm:p-6 md:p-8 group hover:border-primary-300 hover:shadow-xl transition-all duration-500"
+            >
+              <div className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
+                  <TrendingUp className="text-primary-600 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                </div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                  Startup Partners
+                </h3>
+                <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                  Innovative startups and emerging businesses rely on our
+                  expertise to scale and grow rapidly.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Government Partners */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="bg-white border border-gray-200 p-4 sm:p-6 md:p-8 group hover:border-primary-300 hover:shadow-xl transition-all duration-500"
+            >
+              <div className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
+                  <Shield className="text-primary-600 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                </div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                  Government Partners
+                </h3>
+                <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
+                  Public sector organizations partner with us for digital
+                  transformation and citizen services.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Client Logo Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-white border border-gray-200 p-6 sm:p-8 md:p-12"
+          >
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary text-center mb-8 sm:mb-12">
+              Our Clients
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-12">
+              {[
+                { name: "TechCorp", logo: "/api/placeholder/120/80" },
+                { name: "StartupXYZ", logo: "/api/placeholder/120/80" },
+                { name: "Global Enterprises", logo: "/api/placeholder/120/80" },
+                { name: "Innovation Labs", logo: "/api/placeholder/120/80" },
+                { name: "Digital Solutions", logo: "/api/placeholder/120/80" },
+                { name: "Future Systems", logo: "/api/placeholder/120/80" },
+                { name: "Smart Tech", logo: "/api/placeholder/120/80" },
+                { name: "NextGen Corp", logo: "/api/placeholder/120/80" },
+                { name: "Alpha Ventures", logo: "/api/placeholder/120/80" },
+                { name: "Beta Industries", logo: "/api/placeholder/120/80" },
+                { name: "Gamma Tech", logo: "/api/placeholder/120/80" },
+                { name: "Delta Solutions", logo: "/api/placeholder/120/80" },
+              ].map((client, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center h-16 sm:h-20 md:h-24 bg-gray-50 border border-gray-200 group hover:border-primary-300 hover:bg-white transition-all duration-300"
+                >
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
+                    onError={(e) => {
+                      // Fallback to a simple colored box with company initial if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.innerHTML = `
+                          <div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white text-sm sm:text-base md:text-lg font-bold group-hover:scale-110 transition-transform duration-300">
+                            ${client.name.charAt(0)}
+                          </div>
+                        `;
+                      }
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Partnership CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-12 sm:mt-16 md:mt-20 text-center"
+          >
+            <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white p-6 sm:p-8 md:p-12">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+                Ready to Partner With Us?
+              </h3>
+              <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90">
+                Join our network of successful partners and grow your business
+                with our expertise.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <button className="bg-white text-primary-600 px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+                  Become a Partner
+                </button>
+                <button className="border-2 border-white text-white px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300 hover:shadow-lg">
+                  View Case Studies
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <CTASection
+        title="Ready to Grow Your Business?"
+        subtitle="Let Orchid Digital Consulting help you reach your next milestone."
+        buttonText="Contact Us Today"
+        buttonLink="/contact"
+        gradient={true}
+      />
+    </div>
+  );
+}
