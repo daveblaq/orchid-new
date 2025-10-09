@@ -163,7 +163,7 @@ export default function HeroSlider() {
                 </Link>
                 <Link
                   to="/contact"
-                  className="bg-primary-600 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-primary-700 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
+                  className="bg-primary-500 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-primary-700 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Get Started
                 </Link>

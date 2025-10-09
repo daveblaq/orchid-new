@@ -44,12 +44,7 @@ export default function Footer() {
       color: "hover:text-pink-400",
     },
     { icon: Youtube, href: "#", label: "YouTube", color: "hover:text-red-400" },
-    {
-      icon: MessageCircle,
-      href: "#",
-      label: "WhatsApp",
-      color: "hover:text-green-400",
-    },
+   
     {
       icon: Facebook,
       href: "#",
@@ -67,7 +62,7 @@ export default function Footer() {
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-50 bg-primary-600 hover:bg-primary-700 text-white p-2 sm:p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-50 bg-primary-500 hover:bg-primary-700 text-white p-2 sm:p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Scroll to top"

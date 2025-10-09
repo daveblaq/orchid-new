@@ -274,7 +274,7 @@ export default function Services() {
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Panel - Content */}
-                    <div className="p-6 sm:p-8 md:p-12 lg:p-16 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-white relative">
+                    <div className="p-6 sm:p-8 md:p-12 lg:p-16 bg-primary-500 text-white relative">
                       {/* Background Pattern */}
                       <div className="absolute inset-0 opacity-10">
                         <div className="absolute top-4 right-4 sm:top-8 sm:right-8 w-12 h-12 sm:w-16 sm:h-16 border-2 border-white"></div>
@@ -342,7 +342,7 @@ export default function Services() {
                               Schedule a consultation
                             </div>
                           </div>
-                          <button className="bg-primary-600 hover:bg-primary-700 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center w-full sm:w-auto justify-center sm:justify-start">
+                          <button className="bg-primary-500 hover:bg-primary-700 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center w-full sm:w-auto justify-center sm:justify-start">
                             Learn More{" "}
                             <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                           </button>
@@ -392,7 +392,7 @@ export default function Services() {
                   <div className="text-center">
                     <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500 relative">
                       <Icon className="text-primary-600 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
-                      <div className="absolute -top-2 -right-2 w-7 h-7 sm:w-8 sm:h-8 bg-primary-600 text-white text-xs sm:text-sm font-bold flex items-center justify-center">
+                      <div className="absolute -top-2 -right-2 w-7 h-7 sm:w-8 sm:h-8 bg-primary-500 text-white text-xs sm:text-sm font-bold flex items-center justify-center">
                         {step.step}
                       </div>
                     </div>

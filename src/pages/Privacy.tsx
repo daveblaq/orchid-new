@@ -217,7 +217,7 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 p-6 sm:p-8 md:p-12 text-white text-center"
+            className="bg-primary-500 p-6 sm:p-8 md:p-12 text-white text-center"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
               CONTACT US

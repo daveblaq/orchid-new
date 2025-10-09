@@ -83,7 +83,7 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="space-y-6 sm:space-y-8 lg:pt-8"
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight px-4 sm:px-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black leading-[190%] px-4 sm:px-0">
                 Orchid Digital Consulting connects businesses with innovative
                 solutions for seamless transformation.
               </h1>
@@ -170,7 +170,7 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 p-6 sm:p-8 md:p-12 text-white">
+              <div className="bg-primary-500 p-6 sm:p-8 md:p-12 text-white">
                 <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">

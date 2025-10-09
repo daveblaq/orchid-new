@@ -106,9 +106,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
-              <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600" />
-            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
               Our Services
             </h2>
@@ -146,28 +143,302 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Investment Service Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      {/* Major Services Section */}
+      <section className="py-12 sm:py-16 md:py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          {/* Investment Service */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="mb-20 sm:mb-24 md:mb-32"
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
-              <DollarSign className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+              {/* Content Section */}
+              <div className="order-2 lg:order-1">
+                <div className="text-primary-600 font-bold text-sm sm:text-base mb-4">
+                  Investment Service
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 sm:mb-8">
+                  Investment - Your Savings, Secured with Great Returns
+                </h2>
+                <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
+                  Orchid Investment is an exciting savings feature that helps
+                  grow your savings with attractive interest rates. Lock your
+                  savings for a specified period and receive interest upfront,
+                  instantly!
+                </p>
+                <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
+                  Choose from our flexible investment plans with competitive
+                  interest rates designed to maximize your returns.
+                </p>
+
+                {/* Interest Rate */}
+                <div className="mb-8 sm:mb-10">
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text-primary text-lg sm:text-xl md:text-2xl font-bold">
+                      365 days: Earn up to 25% interest
+                    </span>
+                  </div>
+                </div>
+
+                <a
+                  href="/contact"
+                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 inline-block"
+                >
+                  Get Started Now
+                </a>
+              </div>
+
+              {/* Image Section */}
+              <div className="order-1 lg:order-2">
+                <div className="bg-primary-500 p-6 sm:p-8 md:p-12 text-white relative overflow-hidden">
+                  {/* Background Icons */}
+                  <div className="absolute top-4 right-4 opacity-10">
+                    <DollarSign size={32} />
+                  </div>
+                  <div className="absolute bottom-4 left-4 opacity-10">
+                    <TrendingUp size={28} />
+                  </div>
+
+                  <div className="relative z-10">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
+                      Unlock your financial dreams with Orchid Investment!
+                    </h3>
+
+                    {/* Interest Rate Highlight */}
+                    <div className="flex justify-center mb-6 sm:mb-8">
+                      <div className="bg-green-600 p-6 sm:p-8 text-center rounded-lg">
+                        <div className="text-2xl sm:text-3xl md:text-4xl font-bold">
+                          25%
+                        </div>
+                        <div className="text-sm sm:text-base md:text-lg">
+                          for 365 days
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Main Message */}
+                    <div className="text-center">
+                      <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                        Orchid{" "}
+                        <span className="text-green-400">Investment</span>
+                      </h4>
+                      <p className="text-lg sm:text-xl md:text-2xl mb-6">
+                        Lock your deposit and receive your interest upfront,{" "}
+                        <span className="text-green-400">INSTANTLY!</span>
+                      </p>
+                    </div>
+
+                    {/* Call to Action */}
+                    <div className="text-center">
+                      <p className="text-sm sm:text-base mb-4">
+                        Start your investment journey with us today!
+                      </p>
+                      <a
+                        href="/contact"
+                        className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-sm sm:text-base font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+                      >
+                        Contact Us Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
-              Investment Plans
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              Secure your financial future with our structured investment plans
-              offering guaranteed returns.
-            </p>
           </motion.div>
 
+          {/* Loan Service */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-20 sm:mb-24 md:mb-32"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+              {/* Image Section */}
+              <div className="order-1">
+                <div className="bg-primary-500 p-6 sm:p-8 md:p-12 text-white relative overflow-hidden">
+                  {/* Background Icons */}
+                  <div className="absolute top-4 right-4 opacity-10">
+                    <FileText size={32} />
+                  </div>
+                  <div className="absolute bottom-4 left-4 opacity-10">
+                    <TrendingUp size={28} />
+                  </div>
+
+                  <div className="relative z-10">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
+                      Get the funding you need with Orchid Loans!
+                    </h3>
+
+                    {/* Loan Features */}
+                    <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+                      <div className="bg-white bg-opacity-20 p-3 sm:p-4 rounded">
+                        <div className="text-lg sm:text-xl font-bold">
+                          Quick Approval
+                        </div>
+                        <div className="text-sm sm:text-base opacity-90">
+                          Get approved in minutes
+                        </div>
+                      </div>
+                      <div className="bg-white bg-opacity-20 p-3 sm:p-4 rounded">
+                        <div className="text-lg sm:text-xl font-bold">
+                          Flexible Terms
+                        </div>
+                        <div className="text-sm sm:text-base opacity-90">
+                          Repay over 3-24 months
+                        </div>
+                      </div>
+                      <div className="bg-white bg-opacity-20 p-3 sm:p-4 rounded">
+                        <div className="text-lg sm:text-xl font-bold">
+                          Competitive Rates
+                        </div>
+                        <div className="text-sm sm:text-base opacity-90">
+                          Starting from 5% monthly
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Main Message */}
+                    <div className="text-center">
+                      <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                        Orchid <span className="text-green-400">Loans</span>
+                      </h4>
+                      <p className="text-lg sm:text-xl md:text-2xl mb-6">
+                        Access funds when you need them most,{" "}
+                        <span className="text-green-400">FAST & EASY!</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="order-2">
+                <div className="text-primary-600 font-bold text-sm sm:text-base mb-4">
+                  Loan Service
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 sm:mb-8">
+                  Loans - Quick, Flexible, and Affordable Financing
+                </h2>
+                <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
+                  Orchid Loans provides quick and flexible financing solutions
+                  for your business and personal needs. Get the funds you need
+                  with competitive rates and flexible repayment terms.
+                </p>
+                <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
+                  Whether you need capital for business expansion, equipment
+                  purchase, or personal expenses, we've got you covered with
+                  fast approval and transparent terms.
+                </p>
+
+                {/* Loan Features */}
+                <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                      Quick approval in 24 hours
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                      Flexible repayment terms (3-24 months)
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                      Competitive interest rates starting from 5%
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                      No hidden fees or charges
+                    </span>
+                  </div>
+                </div>
+
+                <a
+                  href="/contact"
+                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 inline-block"
+                >
+                  Apply for Loan Now
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Investment Service Section */}
+      <section className="py-12 sm:py-16 md:py-10 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Investment Calculator */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
@@ -314,14 +585,14 @@ export default function Home() {
           </motion.div>
 
           {/* Investment Plans Table */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="bg-white border border-gray-200 overflow-hidden"
           >
-            <div className="bg-primary-600 text-white px-4 sm:px-6 py-4 sm:py-6">
+            <div className="bg-primary-500 text-white px-4 sm:px-6 py-4 sm:py-6">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
                 Orchid Digital Investment Plans
               </h3>
@@ -441,7 +712,7 @@ export default function Home() {
                 </tbody>
               </table>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Investment CTA */}
           <motion.div
@@ -451,7 +722,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12 sm:mt-16 text-center"
           >
-            <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white p-6 sm:p-8 md:p-12">
+            <div className="bg-primary-500 text-white p-6 sm:p-8 md:p-12">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                 Ready to Start Investing?
               </h3>
@@ -465,7 +736,6 @@ export default function Home() {
                 >
                   Start Investing Now
                 </a>
-             
               </div>
             </div>
           </motion.div>
@@ -482,9 +752,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
-              <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600" />
-            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
               Why Choose Us
             </h2>
@@ -584,15 +851,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
-              <svg
-                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
-              </svg>
-            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
               Client Success Stories
             </h2>
@@ -614,7 +872,7 @@ export default function Home() {
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="w-full flex-shrink-0">
                     <div className="bg-white border border-gray-200 overflow-hidden">
-                      <div className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 p-6 sm:p-8 md:p-12 lg:p-16 relative">
+                      <div className="bg-primary-500 p-6 sm:p-8 md:p-12 lg:p-16 relative">
                         {/* Quote Icon */}
                         <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 opacity-20">
                           <svg
@@ -667,7 +925,7 @@ export default function Home() {
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-full bg-gray-200 h-1">
                     <div
-                      className="bg-gradient-to-r from-primary-500 to-primary-600 h-full transition-all duration-500"
+                      className="bg-primary-500 h-full transition-all duration-500"
                       style={{
                         width: `${
                           ((currentTestimonial + 1) / testimonials.length) * 100
@@ -933,7 +1191,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12 sm:mt-16 md:mt-20 text-center"
           >
-            <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white p-6 sm:p-8 md:p-12">
+            <div className="bg-primary-500 text-white p-6 sm:p-8 md:p-12">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                 Ready to Partner With Us?
               </h3>

@@ -77,7 +77,7 @@ export default function Navbar() {
             <div className="ml-4 pl-4 border-l border-gray-200">
               <Link
                 to="/contact"
-                className="bg-primary-600 hover:bg-primary-700 text-white px-6 xl:px-8 py-3 text-sm xl:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="bg-primary-500 hover:bg-primary-700 text-white px-6 xl:px-8 py-3 text-sm xl:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Get Started
               </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full bg-primary-600 hover:bg-primary-700 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl touch-manipulation"
+                className="block w-full bg-primary-500 hover:bg-primary-700 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl touch-manipulation"
               >
                 Get Started
               </Link>

@@ -24,9 +24,7 @@ export default function CTASection({
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className={`py-20 relative overflow-hidden ${
-        gradient
-          ? "bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700"
-          : "bg-white"
+        gradient ? "bg-primary-500" : "bg-white"
       }`}
     >
       {/* Background Dots Pattern */}
@@ -70,19 +68,6 @@ export default function CTASection({
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-16 h-16 mb-8">
-            {gradient ? (
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                <Star className="w-8 h-8 text-white" />
-              </div>
-            ) : (
-              <div className="w-16 h-16 bg-primary-100 flex items-center justify-center">
-                <Star className="w-8 h-8 text-primary-600" />
-              </div>
-            )}
-          </div>
-
           <h2
             className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight ${
               gradient ? "text-white" : "text-text-primary"
@@ -139,7 +124,7 @@ export default function CTASection({
               className={`group inline-flex items-center space-x-3 px-10 py-4 font-bold transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 ${
                 gradient
                   ? "bg-white text-primary-600 hover:bg-gray-100"
-                  : "bg-primary-600 text-white hover:bg-primary-700"
+                  : "bg-primary-500 text-white hover:bg-primary-700"
               }`}
             >
               <span>{buttonText}</span>

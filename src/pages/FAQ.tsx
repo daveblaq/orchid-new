@@ -209,7 +209,7 @@ export default function FAQ() {
                 }}
                 className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base font-semibold transition-all duration-300 touch-manipulation ${
                   activeCategory === category.id
-                    ? "bg-primary-600 text-white shadow-lg"
+                    ? "bg-primary-500 text-white shadow-lg"
                     : "bg-white text-text-secondary hover:bg-primary-50 hover:text-primary-600 border border-gray-200 hover:border-primary-200"
                 }`}
               >
@@ -331,7 +331,7 @@ export default function FAQ() {
                     </p>
                     <a
                       href={method.href}
-                      className="inline-block bg-primary-600 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 touch-manipulation"
+                      className="inline-block bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 touch-manipulation"
                     >
                       {method.action}
                     </a>

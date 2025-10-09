@@ -88,9 +88,6 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
-                <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600" />
-              </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
                 Contact Us
               </h1>
@@ -346,7 +343,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 sm:py-5 md:py-6 px-6 sm:px-8 text-base sm:text-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 sm:gap-3 touch-manipulation"
+                    className="w-full bg-primary-500 hover:bg-primary-700 text-white font-semibold py-4 sm:py-5 md:py-6 px-6 sm:px-8 text-base sm:text-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 sm:gap-3 touch-manipulation"
                   >
                     <Send size={20} className="sm:w-6 sm:h-6" />
                     Send Message
@@ -447,7 +444,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 p-6 sm:p-8 md:p-10 text-white relative overflow-hidden"
+                className="bg-primary-500 p-6 sm:p-8 md:p-10 text-white relative overflow-hidden"
               >
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
@@ -548,7 +545,7 @@ export default function Contact() {
               href="https://maps.google.com/?q=123+Innovation+Street+Tech+City+TC+12345"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 touch-manipulation"
+              className="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 touch-manipulation"
             >
               <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
               Get Directions
