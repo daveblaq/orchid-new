@@ -23,8 +23,10 @@ export default function CTASection({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className={`py-20 relative overflow-hidden ${
-        gradient ? "bg-primary-500" : "bg-white"
+      className={`py-20 sm:py-24 md:py-28 lg:py-32 relative overflow-hidden ${
+        gradient
+          ? "bg-gradient-to-br from-primary-500 to-green-500"
+          : "bg-gradient-to-br from-gray-50 via-white to-gray-50"
       }`}
     >
       {/* Background Dots Pattern */}
@@ -61,7 +63,7 @@ export default function CTASection({
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-white rounded-full"></div>
         </div>
       )}
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -69,14 +71,14 @@ export default function CTASection({
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight ${
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight ${
               gradient ? "text-white" : "text-text-primary"
             }`}
           >
             {title}
           </h2>
           <p
-            className={`text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed ${
+            className={`text-xl sm:text-2xl md:text-3xl mb-12 sm:mb-16 max-w-5xl mx-auto leading-relaxed font-light ${
               gradient ? "text-white/90" : "text-text-secondary"
             }`}
           >
@@ -84,7 +86,7 @@ export default function CTASection({
           </p>
 
           {/* Benefits List */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 mb-12 sm:mb-16 max-w-5xl mx-auto">
             {["Expert Consultation", "Proven Results", "24/7 Support"].map(
               (benefit, index) => (
                 <motion.div
@@ -93,15 +95,15 @@ export default function CTASection({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  className="flex items-center justify-center space-x-3"
+                  className="flex items-center justify-center space-x-3 sm:space-x-4"
                 >
                   <CheckCircle
-                    className={`w-5 h-5 ${
-                      gradient ? "text-white" : "text-primary-600"
+                    className={`w-6 h-6 sm:w-7 sm:h-7 ${
+                      gradient ? "text-white" : "text-green-500"
                     }`}
                   />
                   <span
-                    className={`font-semibold ${
+                    className={`font-semibold text-lg sm:text-xl ${
                       gradient ? "text-white" : "text-text-primary"
                     }`}
                   >
@@ -121,14 +123,14 @@ export default function CTASection({
           >
             <Link
               to={buttonLink}
-              className={`group inline-flex items-center space-x-3 px-10 py-4 font-bold transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 ${
+              className={`group inline-flex items-center space-x-3 sm:space-x-4 px-10 sm:px-12 md:px-14 py-4 sm:py-5 md:py-6 text-lg sm:text-xl md:text-2xl font-bold transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 shadow-lg ${
                 gradient
-                  ? "bg-white text-primary-600 hover:bg-gray-100"
-                  : "bg-primary-500 text-white hover:bg-primary-700"
+                  ? "bg-white/95 backdrop-blur-sm text-primary-500 hover:bg-white border border-white/50"
+                  : "bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white"
               }`}
             >
               <span>{buttonText}</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </motion.div>
 

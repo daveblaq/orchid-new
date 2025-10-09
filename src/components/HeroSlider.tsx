@@ -118,21 +118,21 @@ export default function HeroSlider() {
       <button
         onClick={goToPrevious}
         disabled={isTransitioning}
-        className="absolute left-3 sm:left-6 top-1/2 transform -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 backdrop-blur-md text-white p-2 sm:p-3 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group"
+        className="absolute left-3 sm:left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 text-gray-600 hover:text-green-500 p-3 sm:p-4 transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed group"
       >
         <ChevronLeft
           size={20}
-          className="group-hover:scale-110 transition-transform duration-200 sm:w-7 sm:h-7"
+          className="group-hover:scale-110 transition-transform duration-200 sm:w-6 sm:h-6"
         />
       </button>
       <button
         onClick={goToNext}
         disabled={isTransitioning}
-        className="absolute right-3 sm:right-6 top-1/2 transform -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 backdrop-blur-md text-white p-2 sm:p-3 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group"
+        className="absolute right-3 sm:right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 text-gray-600 hover:text-green-500 p-3 sm:p-4 transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed group"
       >
         <ChevronRight
           size={20}
-          className="group-hover:scale-110 transition-transform duration-200 sm:w-7 sm:h-7"
+          className="group-hover:scale-110 transition-transform duration-200 sm:w-6 sm:h-6"
         />
       </button>
 
@@ -148,7 +148,7 @@ export default function HeroSlider() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-5xl mx-auto"
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight px-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight px-4">
                 {slides[currentSlide].headline}
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-100 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-4xl mx-auto px-4">
@@ -157,13 +157,13 @@ export default function HeroSlider() {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-md sm:max-w-none mx-auto px-4">
                 <Link
                   to="/services"
-                  className="bg-white text-text-primary px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
+                  className="bg-white/90 backdrop-blur-sm text-text-primary px-8 sm:px-10 md:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-white transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 border border-white/50"
                 >
                   Learn More
                 </Link>
                 <Link
                   to="/contact"
-                  className="bg-primary-500 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-primary-700 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
+                  className="bg-gradient-to-r from-primary-500 to-green-500 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:from-primary-600 hover:to-green-600 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Get Started
                 </Link>
@@ -182,8 +182,8 @@ export default function HeroSlider() {
             disabled={isTransitioning}
             className={`h-1 transition-all duration-500 disabled:cursor-not-allowed ${
               index === currentSlide
-                ? "w-8 sm:w-10 md:w-12 bg-primary-500"
-                : "w-4 sm:w-6 bg-white/40 hover:bg-white/60 hover:w-6 sm:hover:w-8"
+                ? "w-8 sm:w-10 md:w-12 bg-gradient-to-r from-primary-500 to-green-500"
+                : "w-4 sm:w-6 bg-white/40 hover:bg-green-300/60 hover:w-6 sm:hover:w-8"
             }`}
           />
         ))}
@@ -196,7 +196,7 @@ export default function HeroSlider() {
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
           transition={{ duration: 7, ease: "linear" }}
-          className="h-full bg-primary-500"
+          className="h-full bg-gradient-to-r from-primary-500 to-green-500"
         />
       </div>
     </section>

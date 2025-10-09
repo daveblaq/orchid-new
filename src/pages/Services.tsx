@@ -206,9 +206,9 @@ export default function Services() {
                 >
                   <div className="mb-4 sm:mb-6">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                      <Icon className="text-primary-600 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                      <Icon className="text-primary-500 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-500 transition-colors duration-300">
                       {service.title}
                     </h3>
                     <p className="text-text-secondary leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
@@ -229,7 +229,7 @@ export default function Services() {
                   </div>
 
                   <div className="pt-3 sm:pt-4 border-t border-gray-100 group-hover:border-primary-200 transition-colors duration-300">
-                    <span className="text-primary-600 font-semibold text-base sm:text-lg group-hover:text-primary-700 transition-colors duration-300 flex items-center">
+                    <span className="text-primary-500 font-semibold text-base sm:text-lg group-hover:text-primary-500 transition-colors duration-300 flex items-center">
                       Learn More{" "}
                       <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                     </span>
@@ -335,7 +335,7 @@ export default function Services() {
                       <div className="border-t border-gray-200 pt-6 sm:pt-8">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
                           <div className="mb-4 sm:mb-0">
-                            <div className="text-xl sm:text-2xl font-bold text-primary-600">
+                            <div className="text-xl sm:text-2xl font-bold text-primary-500">
                               Get Started
                             </div>
                             <div className="text-text-secondary text-sm sm:text-base">
@@ -391,12 +391,12 @@ export default function Services() {
                 >
                   <div className="text-center">
                     <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500 relative">
-                      <Icon className="text-primary-600 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                      <Icon className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
                       <div className="absolute -top-2 -right-2 w-7 h-7 sm:w-8 sm:h-8 bg-primary-500 text-white text-xs sm:text-sm font-bold flex items-center justify-center">
                         {step.step}
                       </div>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-600 transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
                       {step.title}
                     </h3>
                     <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg">

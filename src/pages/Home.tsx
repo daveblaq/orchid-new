@@ -2,6 +2,7 @@ import HeroSlider from "../components/HeroSlider";
 import CTASection from "../components/CTASection";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Users,
   Globe,
@@ -17,6 +18,7 @@ import {
 
 export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentClientIndex, setCurrentClientIndex] = useState(0);
 
   const services = [
     {
@@ -64,6 +66,7 @@ export default function Home() {
       company: "TechCorp Solutions",
       testimonial:
         "Orchid Digital Consulting transformed our business operations. Their expertise in digital transformation helped us increase efficiency by 40% and expand into new markets.",
+      image: "/api/placeholder/200/200",
     },
     {
       name: "Michael Chen",
@@ -71,6 +74,7 @@ export default function Home() {
       company: "StartupXYZ",
       testimonial:
         "The entrepreneurship training program was exceptional. It gave me the skills and confidence to scale my business successfully.",
+      image: "/api/placeholder/200/200",
     },
     {
       name: "Emily Rodriguez",
@@ -78,7 +82,23 @@ export default function Home() {
       company: "Global Enterprises",
       testimonial:
         "Their facility management services streamlined our operations and reduced costs significantly. Highly recommended!",
+      image: "/api/placeholder/200/200",
     },
+  ];
+
+  const clients = [
+    { name: "TechCorp", logo: "/api/placeholder/120/80" },
+    { name: "StartupXYZ", logo: "/api/placeholder/120/80" },
+    { name: "Global Enterprises", logo: "/api/placeholder/120/80" },
+    { name: "Innovation Labs", logo: "/api/placeholder/120/80" },
+    { name: "Digital Solutions", logo: "/api/placeholder/120/80" },
+    { name: "Future Systems", logo: "/api/placeholder/120/80" },
+    { name: "Smart Tech", logo: "/api/placeholder/120/80" },
+    { name: "NextGen Corp", logo: "/api/placeholder/120/80" },
+    { name: "Alpha Ventures", logo: "/api/placeholder/120/80" },
+    { name: "Beta Industries", logo: "/api/placeholder/120/80" },
+    { name: "Gamma Tech", logo: "/api/placeholder/120/80" },
+    { name: "Delta Solutions", logo: "/api/placeholder/120/80" },
   ];
 
   const goToNextTestimonial = () => {
@@ -91,61 +111,139 @@ export default function Home() {
     );
   };
 
+  const goToNextClient = () => {
+    setCurrentClientIndex((prev) => (prev + 1) % clients.length);
+  };
+
+  const goToPreviousClient = () => {
+    setCurrentClientIndex(
+      (prev) => (prev - 1 + clients.length) % clients.length
+    );
+  };
+
+  // Create extended client array for seamless looping
+  const extendedClients = [...clients, ...clients, ...clients];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroSlider />
 
       {/* Services Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-16 sm:mb-20 md:mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+            <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
               Our Services
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+              Comprehensive
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Digital Solutions
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              Comprehensive solutions designed to accelerate your business
-              growth and digital transformation journey.
+            <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+              Accelerate your business growth with our cutting-edge technology
+              solutions and strategic consulting services.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="group bg-white border border-gray-200 p-6 sm:p-8 hover:border-primary-300 hover:shadow-xl transition-all duration-500"
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group relative h-full"
                 >
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                    <Icon className="text-primary-600 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 group-hover:text-white transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-green-500/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-6  transition-all duration-500 group-hover:border-primary-300/50 h-full flex flex-col">
+                    {/* Icon Container */}
+                    <div className="relative mb-8">
+                      <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110">
+                        <Icon className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">
+                          {index + 1}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 space-y-4">
+                      <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed text-base sm:text-lg font-light flex-1">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                    {service.description}
-                  </p>
                 </motion.div>
               );
             })}
           </div>
+
+          {/* View All Services Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center mt-16 sm:mt-20 md:mt-24"
+          >
+            <Link
+              to="/services"
+              className="group inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-10 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold transition-all duration-300  transform hover:-translate-y-2 hover:scale-105"
+            >
+              <span>Explore All Services</span>
+              <svg
+                className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
       {/* Major Services Section */}
-      <section className="py-12 sm:py-16 md:py-10 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           {/* Investment Service */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -157,25 +255,29 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
               {/* Content Section */}
               <div className="order-2 lg:order-1">
-                <div className="text-primary-600 font-bold text-sm sm:text-base mb-4">
+                <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
+                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                   Investment Service
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 sm:mb-8">
-                  Investment - Your Savings, Secured with Great Returns
+                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+                  Orchiddigital Investment
+                  <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                    Your Savings, Secured
+                  </span>
                 </h2>
-                <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
-                  Orchid Investment is an exciting savings feature that helps
-                  grow your savings with attractive interest rates. Lock your
-                  savings for a specified period and receive interest upfront,
-                  instantly!
+                <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light mb-6 sm:mb-8">
+                  Orchiddigital Investment is an exciting savings feature that
+                  helps grow your savings with attractive interest rates. Lock
+                  your savings for a specified period and receive interest
+                  upfront, instantly!
                 </p>
                 <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
                   Choose from our flexible investment plans with competitive
                   interest rates designed to maximize your returns.
                 </p>
 
-                {/* Interest Rate */}
-                <div className="mb-8 sm:mb-10">
+                {/* Interest Rates */}
+                <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
                   <div className="flex items-center space-x-3 sm:space-x-4">
                     <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
                       <svg
@@ -190,15 +292,51 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <span className="text-text-primary text-lg sm:text-xl md:text-2xl font-bold">
-                      365 days: Earn up to 25% interest
+                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                      Below ₦50M: 5% monthly interest
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                      ₦50M and above: 3.3% monthly interest
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                      365 days investment period
                     </span>
                   </div>
                 </div>
 
                 <a
                   href="/contact"
-                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 inline-block"
+                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300  transform hover:-translate-y-1 inline-block"
                 >
                   Get Started Now
                 </a>
@@ -220,14 +358,22 @@ export default function Home() {
                       Unlock your financial dreams with Orchid Investment!
                     </h3>
 
-                    {/* Interest Rate Highlight */}
-                    <div className="flex justify-center mb-6 sm:mb-8">
-                      <div className="bg-green-600 p-6 sm:p-8 text-center rounded-lg">
-                        <div className="text-2xl sm:text-3xl md:text-4xl font-bold">
-                          25%
+                    {/* Interest Rate Highlights */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                      <div className="bg-white p-3 sm:p-4 text-center rounded">
+                        <div className="text-lg sm:text-xl font-bold text-green-500">
+                          5%
                         </div>
-                        <div className="text-sm sm:text-base md:text-lg">
-                          for 365 days
+                        <div className="text-xs sm:text-sm text-gray-400">
+                          Below ₦50M
+                        </div>
+                      </div>
+                      <div className="bg-white p-3 sm:p-4 text-center rounded">
+                        <div className="text-lg sm:text-xl font-bold text-green-500">
+                          3.3%
+                        </div>
+                        <div className="text-xs sm:text-sm text-gray-400">
+                          ₦50M & above
                         </div>
                       </div>
                     </div>
@@ -235,12 +381,11 @@ export default function Home() {
                     {/* Main Message */}
                     <div className="text-center">
                       <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                        Orchid{" "}
-                        <span className="text-green-400">Investment</span>
+                        Orchiddigital Investment
                       </h4>
                       <p className="text-lg sm:text-xl md:text-2xl mb-6">
                         Lock your deposit and receive your interest upfront,{" "}
-                        <span className="text-green-400">INSTANTLY!</span>
+                        INSTANTLY!
                       </p>
                     </div>
 
@@ -251,7 +396,7 @@ export default function Home() {
                       </p>
                       <a
                         href="/contact"
-                        className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-sm sm:text-base font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+                        className="inline-block bg-green-500 hover:bg-green-700 text-white px-6 py-3 text-sm sm:text-base font-semibold transition-all duration-300  transform hover:-translate-y-1"
                       >
                         Contact Us Now
                       </a>
@@ -289,28 +434,20 @@ export default function Home() {
 
                     {/* Loan Features */}
                     <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
-                      <div className="bg-white bg-opacity-20 p-3 sm:p-4 rounded">
-                        <div className="text-lg sm:text-xl font-bold">
+                      <div className="bg-white p-3 sm:p-4 rounded text-center">
+                        <div className="text-lg sm:text-xl font-bold text-green-500">
                           Quick Approval
                         </div>
-                        <div className="text-sm sm:text-base opacity-90">
-                          Get approved in minutes
+                        <div className="text-sm sm:text-base text-gray-400">
+                          24 hours processing
                         </div>
                       </div>
-                      <div className="bg-white bg-opacity-20 p-3 sm:p-4 rounded">
-                        <div className="text-lg sm:text-xl font-bold">
-                          Flexible Terms
+                      <div className="bg-white p-3 sm:p-4 rounded text-center">
+                        <div className="text-lg sm:text-xl font-bold text-green-500">
+                          6 Months
                         </div>
-                        <div className="text-sm sm:text-base opacity-90">
-                          Repay over 3-24 months
-                        </div>
-                      </div>
-                      <div className="bg-white bg-opacity-20 p-3 sm:p-4 rounded">
-                        <div className="text-lg sm:text-xl font-bold">
-                          Competitive Rates
-                        </div>
-                        <div className="text-sm sm:text-base opacity-90">
-                          Starting from 5% monthly
+                        <div className="text-sm sm:text-base text-gray-400">
+                          Repayment Duration
                         </div>
                       </div>
                     </div>
@@ -318,11 +455,10 @@ export default function Home() {
                     {/* Main Message */}
                     <div className="text-center">
                       <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                        Orchid <span className="text-green-400">Loans</span>
+                        Orchiddigital Loan Plan
                       </h4>
                       <p className="text-lg sm:text-xl md:text-2xl mb-6">
-                        Access funds when you need them most,{" "}
-                        <span className="text-green-400">FAST & EASY!</span>
+                        Access funds when you need them most, FAST & EASY!
                       </p>
                     </div>
                   </div>
@@ -331,16 +467,16 @@ export default function Home() {
 
               {/* Content Section */}
               <div className="order-2">
-                <div className="text-primary-600 font-bold text-sm sm:text-base mb-4">
+                <div className="text-primary-500 font-bold text-sm sm:text-base mb-4">
                   Loan Service
                 </div>
                 <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 sm:mb-8">
-                  Loans - Quick, Flexible, and Affordable Financing
+                  Orchiddigital Loan Plan - Quick and Reliable Financing
                 </h2>
                 <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
-                  Orchid Loans provides quick and flexible financing solutions
-                  for your business and personal needs. Get the funds you need
-                  with competitive rates and flexible repayment terms.
+                  Orchiddigital Loan Plan provides quick and reliable financing
+                  solutions for your business and personal needs. Get the funds
+                  you need with competitive rates and flexible terms.
                 </p>
                 <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
                   Whether you need capital for business expansion, equipment
@@ -383,7 +519,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
-                      Flexible repayment terms (3-24 months)
+                      6 months repayment duration
                     </span>
                   </div>
                   <div className="flex items-center space-x-3 sm:space-x-4">
@@ -401,32 +537,14 @@ export default function Home() {
                       </svg>
                     </div>
                     <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
-                      Competitive interest rates starting from 5%
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
-                      No hidden fees or charges
+                      Competitive interest rates
                     </span>
                   </div>
                 </div>
 
                 <a
                   href="/contact"
-                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 inline-block"
+                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300  transform hover:-translate-y-1 inline-block"
                 >
                   Apply for Loan Now
                 </a>
@@ -437,15 +555,21 @@ export default function Home() {
       </section>
 
       {/* Investment Service Section */}
-      <section className="py-12 sm:py-16 md:py-10 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           {/* Investment Calculator */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white border border-gray-200 p-6 sm:p-8 md:p-12 mb-12 sm:mb-16"
+            className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-8 sm:p-10 md:p-12 mb-12 sm:mb-16"
           >
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary text-center mb-8 sm:mb-12">
               Investment Calculator
@@ -505,7 +629,7 @@ export default function Home() {
                       </span>
                       <span
                         id="monthly-roi"
-                        className="font-semibold text-primary-600"
+                        className="font-semibold text-primary-500"
                       >
                         ₦0
                       </span>
@@ -516,7 +640,7 @@ export default function Home() {
                       </span>
                       <span
                         id="total-roi"
-                        className="font-semibold text-primary-600"
+                        className="font-semibold text-primary-500"
                       >
                         ₦0
                       </span>
@@ -527,7 +651,7 @@ export default function Home() {
                       </span>
                       <span
                         id="capital-returned"
-                        className="font-semibold text-primary-600"
+                        className="font-semibold text-primary-500"
                       >
                         ₦0
                       </span>
@@ -539,7 +663,7 @@ export default function Home() {
                         </span>
                         <span
                           id="total-payout"
-                          className="font-bold text-primary-600 text-lg"
+                          className="font-bold text-primary-500 text-lg"
                         >
                           ₦0
                         </span>
@@ -550,9 +674,12 @@ export default function Home() {
               </div>
 
               {/* Investment Terms */}
-              <div className="mt-16 sm:mt-20 md:mt-24 p-6 sm:p-8 md:p-10 bg-gray-50 border border-gray-200 max-w-4xl mx-auto">
-                <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-6 sm:mb-8">
-                  Investment Terms
+              <div className="mt-16 sm:mt-20 md:mt-24 p-8 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm border border-gray-300/50  max-w-4xl mx-auto">
+                <h4 className="text-2xl sm:text-3xl font-bold text-text-primary mb-8 sm:mb-10 text-center">
+                  Investment{" "}
+                  <span className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                    Terms
+                  </span>
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-sm sm:text-base">
                   <div className="text-center sm:text-left">
@@ -704,7 +831,7 @@ export default function Home() {
                       <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
                         {plan.amount.toLocaleString()}
                       </td>
-                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary font-bold text-primary-600">
+                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary font-bold text-primary-500">
                         {plan.payout.toLocaleString()}
                       </td>
                     </tr>
@@ -722,19 +849,25 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12 sm:mt-16 text-center"
           >
-            <div className="bg-primary-500 text-white p-6 sm:p-8 md:p-12">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+            <div className="bg-gradient-to-br from-primary-500 to-green-500 text-white p-8 sm:p-10 md:p-12 lg:p-16 ">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8">
                 Ready to Start Investing?
               </h3>
-              <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90">
+              <p className="text-xl sm:text-2xl mb-8 sm:mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
                 Secure your financial future with our proven investment plans.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
                 <a
                   href="/contact"
-                  className="bg-white text-primary-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 inline-block text-center"
+                  className="bg-white text-primary-500 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-gray-100 transition-all duration-300  transform hover:-translate-y-1 inline-block text-center"
                 >
                   Start Investing Now
+                </a>
+                <a
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300  transform hover:-translate-y-1 inline-block text-center"
+                >
+                  Learn More
                 </a>
               </div>
             </div>
@@ -743,120 +876,202 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-16 sm:mb-20 md:mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Why Choose Us
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+              Proven Excellence in
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Digital Consulting
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               We combine industry expertise with innovative solutions to deliver
               exceptional results for our clients.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-center group"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative h-full"
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                <Users className="text-primary-600 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:text-white transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-green-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <Users className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">1</span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Expert Team
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed text-base sm:text-md font-light flex-1">
+                    Our experienced professionals bring deep industry knowledge
+                    and proven expertise to every project.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                Expert Team
-              </h3>
-              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                Our experienced professionals bring deep industry knowledge and
-                proven expertise to every project.
-              </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center group"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative h-full"
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                <TrendingUp className="text-primary-600 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:text-white transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-green-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <TrendingUp className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">2</span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Proven Results
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed text-base sm:text-md font-light flex-1">
+                    We deliver measurable outcomes that drive business growth
+                    and operational efficiency.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                Proven Results
-              </h3>
-              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                We deliver measurable outcomes that drive business growth and
-                operational efficiency.
-              </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-center group"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative h-full"
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                <Globe className="text-primary-600 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:text-white transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-green-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <Globe className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">3</span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Global Reach
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed text-base sm:text-md font-light flex-1">
+                    We help businesses expand internationally with our global
+                    network and market expertise.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                Global Reach
-              </h3>
-              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                We help businesses expand internationally with our global
-                network and market expertise.
-              </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-center group"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative h-full"
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                <DollarSign className="text-primary-600 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:text-white transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-green-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <DollarSign className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">4</span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Cost Effective
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed text-base sm:text-md font-light flex-1">
+                    Our solutions maximize ROI while minimizing costs through
+                    efficient processes and smart technology.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                Cost Effective
-              </h3>
-              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                Our solutions maximize ROI while minimizing costs through
-                efficient processes and smart technology.
-              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-16 sm:mb-20 md:mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Client Success Stories
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+              Trusted by
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Industry Leaders
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              Trusted by industry leaders who've transformed their businesses
-              with our expertise.
+            <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+              Discover how we've transformed businesses with our proven
+              expertise and innovative solutions.
             </p>
           </motion.div>
 
@@ -871,44 +1086,74 @@ export default function Home() {
               >
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="w-full flex-shrink-0">
-                    <div className="bg-white border border-gray-200 overflow-hidden">
-                      <div className="bg-primary-500 p-6 sm:p-8 md:p-12 lg:p-16 relative">
-                        {/* Quote Icon */}
-                        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 opacity-20">
-                          <svg
-                            className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
-                          </svg>
-                        </div>
-
-                        {/* Rating Stars */}
-                        <div className="flex items-center mb-4 sm:mb-6 md:mb-8">
-                          {[...Array(5)].map((_, i) => (
-                            <svg
-                              key={i}
-                              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-400 fill-current mr-1"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                            </svg>
-                          ))}
-                        </div>
-
-                        {/* Testimonial Text */}
-                        <blockquote className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed mb-6 sm:mb-8 md:mb-12 font-light">
-                          "{testimonial.testimonial}"
-                        </blockquote>
-
-                        {/* Author Info */}
-                        <div>
-                          <div className="font-bold text-white text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
-                            {testimonial.name}
+                    <div className="bg-white/80 backdrop-blur-sm border border-gray-300/50 overflow-hidden">
+                      <div className="flex flex-col lg:flex-row">
+                        {/* Client Image Section - Left Side */}
+                        <div className="lg:w-1/2 bg-gray-100">
+                          <div className="w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] relative overflow-hidden">
+                            <img
+                              src={testimonial.image}
+                              alt={`${testimonial.name} - ${testimonial.position}`}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                // Fallback to initials if image fails to load
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = "none";
+                                const parent = target.parentElement;
+                                if (parent) {
+                                  parent.innerHTML = `
+                                    <div class="w-full h-full bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center text-white text-4xl sm:text-5xl md:text-6xl font-bold">
+                                      ${testimonial.name
+                                        .split(" ")
+                                        .map((n) => n[0])
+                                        .join("")}
+                                    </div>
+                                  `;
+                                }
+                              }}
+                            />
                           </div>
-                          <div className="text-white/90 text-sm sm:text-base md:text-lg">
-                            {testimonial.position} • {testimonial.company}
+                        </div>
+
+                        {/* Testimonial Content Section - Right Side */}
+                        <div className="lg:w-1/2 bg-gradient-to-br from-primary-500 to-green-500 p-6 sm:p-8 md:p-12 lg:p-16 relative">
+                          {/* Quote Icon */}
+                          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 opacity-20">
+                            <svg
+                              className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+                            </svg>
+                          </div>
+
+                          {/* Rating Stars */}
+                          <div className="flex items-center mb-4 sm:mb-6 md:mb-8">
+                            {[...Array(5)].map((_, i) => (
+                              <svg
+                                key={i}
+                                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-400 fill-current mr-1"
+                                viewBox="0 0 20 20"
+                              >
+                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                              </svg>
+                            ))}
+                          </div>
+
+                          {/* Testimonial Text */}
+                          <blockquote className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed mb-6 sm:mb-8 md:mb-12 font-light">
+                            "{testimonial.testimonial}"
+                          </blockquote>
+
+                          {/* Author Info */}
+                          <div>
+                            <div className="font-bold text-white text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
+                              {testimonial.name}
+                            </div>
+                            <div className="text-white/90 text-sm sm:text-base md:text-lg">
+                              {testimonial.position} • {testimonial.company}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -919,13 +1164,13 @@ export default function Home() {
             </div>
 
             {/* Navigation Controls */}
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+            <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-between space-y-6 sm:space-y-0">
               {/* Progress Bar */}
               <div className="flex-1 max-w-xs w-full sm:w-auto">
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-full bg-gray-200 h-1">
                     <div
-                      className="bg-primary-500 h-full transition-all duration-500"
+                      className="bg-gradient-to-r from-primary-500 to-green-500 h-full transition-all duration-500"
                       style={{
                         width: `${
                           ((currentTestimonial + 1) / testimonials.length) * 100
@@ -947,8 +1192,8 @@ export default function Home() {
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-2 h-2 sm:w-3 sm:h-3 transition-all duration-300 ${
                       index === currentTestimonial
-                        ? "bg-primary-500 scale-125"
-                        : "bg-gray-300 hover:bg-gray-400"
+                        ? "bg-gradient-to-r from-primary-500 to-green-500 scale-125"
+                        : "bg-gray-300 hover:bg-green-300"
                     }`}
                   />
                 ))}
@@ -958,10 +1203,10 @@ export default function Home() {
               <div className="flex items-center space-x-2">
                 <button
                   onClick={goToPreviousTestimonial}
-                  className="w-8 h-8 sm:w-10 sm:h-10 border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors duration-200"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/80 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 flex items-center justify-center transition-all duration-300"
                 >
                   <svg
-                    className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 hover:text-green-500 transition-colors duration-200"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -976,10 +1221,10 @@ export default function Home() {
                 </button>
                 <button
                   onClick={goToNextTestimonial}
-                  className="w-8 h-8 sm:w-10 sm:h-10 border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors duration-200"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/80 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 flex items-center justify-center transition-all duration-300"
                 >
                   <svg
-                    className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 hover:text-green-500 transition-colors duration-200"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -1002,184 +1247,300 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-12 sm:mt-16 md:mt-20 text-center"
+            className="mt-16 sm:mt-20 md:mt-24"
           >
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
+              >
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
                   500+
                 </div>
-                <div className="text-text-secondary text-sm sm:text-base">
+                <div className="text-text-secondary text-sm sm:text-base font-medium">
                   Happy Clients
                 </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
+              >
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
                   98%
                 </div>
-                <div className="text-text-secondary text-sm sm:text-base">
+                <div className="text-text-secondary text-sm sm:text-base font-medium">
                   Success Rate
                 </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
+              >
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
                   24/7
                 </div>
-                <div className="text-text-secondary text-sm sm:text-base">
+                <div className="text-text-secondary text-sm sm:text-base font-medium">
                   Support
                 </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
+              >
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
                   5★
                 </div>
-                <div className="text-text-secondary text-sm sm:text-base">
+                <div className="text-text-secondary text-sm sm:text-base font-medium">
                   Average Rating
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Partners Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-16 sm:mb-20 md:mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 sm:mb-6 md:mb-8 px-4">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Trusted Partners
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+              Strategic
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Partnerships
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               Collaborating with industry leaders to deliver exceptional results
               across diverse sectors.
             </p>
           </motion.div>
 
           {/* Partner Categories */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-8 mb-16 sm:mb-20 md:mb-24">
             {/* Enterprise Partners */}
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-white border border-gray-200 p-4 sm:p-6 md:p-8 group hover:border-primary-300 hover:shadow-xl transition-all duration-500"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative h-full"
             >
-              <div className="text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                  <Building className="text-primary-600 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-green-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <Building className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">E</span>
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                  Enterprise Partners
-                </h3>
-                <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                  Fortune 500 companies and large-scale organizations trust us
-                  with their digital transformation needs.
-                </p>
+
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Enterprise Partners
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed text-base sm:text-lg font-light flex-1">
+                    Fortune 500 companies and large-scale organizations trust us
+                    with their digital transformation needs.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
             {/* Startup Partners */}
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-white border border-gray-200 p-4 sm:p-6 md:p-8 group hover:border-primary-300 hover:shadow-xl transition-all duration-500"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative h-full"
             >
-              <div className="text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                  <TrendingUp className="text-primary-600 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-green-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <TrendingUp className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">S</span>
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                  Startup Partners
-                </h3>
-                <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                  Innovative startups and emerging businesses rely on our
-                  expertise to scale and grow rapidly.
-                </p>
+
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Startup Partners
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed text-base sm:text-lg font-light flex-1">
+                    Innovative startups and emerging businesses rely on our
+                    expertise to scale and grow rapidly.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
             {/* Government Partners */}
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="bg-white border border-gray-200 p-4 sm:p-6 md:p-8 group hover:border-primary-300 hover:shadow-xl transition-all duration-500"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative h-full"
             >
-              <div className="text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                  <Shield className="text-primary-600 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-green-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <Shield className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">G</span>
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                  Government Partners
-                </h3>
-                <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                  Public sector organizations partner with us for digital
-                  transformation and citizen services.
-                </p>
+
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Government Partners
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed text-base sm:text-lg font-light flex-1">
+                    Public sector organizations partner with us for digital
+                    transformation and citizen services.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Client Logo Grid */}
+          {/* Client Logo Carousel */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white border border-gray-200 p-6 sm:p-8 md:p-12"
+            className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-8 sm:p-10 md:p-12 lg:p-16"
           >
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary text-center mb-8 sm:mb-12">
-              Our Clients
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary text-center mb-10 sm:mb-12 md:mb-16">
+              Our{" "}
+              <span className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Clients
+              </span>
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-12">
-              {[
-                { name: "TechCorp", logo: "/api/placeholder/120/80" },
-                { name: "StartupXYZ", logo: "/api/placeholder/120/80" },
-                { name: "Global Enterprises", logo: "/api/placeholder/120/80" },
-                { name: "Innovation Labs", logo: "/api/placeholder/120/80" },
-                { name: "Digital Solutions", logo: "/api/placeholder/120/80" },
-                { name: "Future Systems", logo: "/api/placeholder/120/80" },
-                { name: "Smart Tech", logo: "/api/placeholder/120/80" },
-                { name: "NextGen Corp", logo: "/api/placeholder/120/80" },
-                { name: "Alpha Ventures", logo: "/api/placeholder/120/80" },
-                { name: "Beta Industries", logo: "/api/placeholder/120/80" },
-                { name: "Gamma Tech", logo: "/api/placeholder/120/80" },
-                { name: "Delta Solutions", logo: "/api/placeholder/120/80" },
-              ].map((client, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center h-16 sm:h-20 md:h-24 bg-gray-50 border border-gray-200 group hover:border-primary-300 hover:bg-white transition-all duration-300"
+
+            {/* Carousel Container */}
+            <div className="relative overflow-hidden">
+              {/* Navigation Buttons */}
+              <button
+                onClick={goToPreviousClient}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 flex items-center justify-center transition-all duration-300 "
+              >
+                <svg
+                  className="w-5 h-5 text-gray-600 hover:text-green-500 transition-colors duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <img
-                    src={client.logo}
-                    alt={`${client.name} logo`}
-                    className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-                    onError={(e) => {
-                      // Fallback to a simple colored box with company initial if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = "none";
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.innerHTML = `
-                          <div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white text-sm sm:text-base md:text-lg font-bold group-hover:scale-110 transition-transform duration-300">
-                            ${client.name.charAt(0)}
-                          </div>
-                        `;
-                      }
-                    }}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
                   />
-                </div>
-              ))}
+                </svg>
+              </button>
+
+              <button
+                onClick={goToNextClient}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 flex items-center justify-center transition-all duration-300 "
+              >
+                <svg
+                  className="w-5 h-5 text-gray-600 hover:text-green-500 transition-colors duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+
+              {/* Client Logos Row */}
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${
+                    (currentClientIndex + clients.length) * 25
+                  }%)`,
+                }}
+              >
+                {extendedClients.map((client, index) => (
+                  <div
+                    key={index}
+                    className="w-1/4 flex-shrink-0 px-2 sm:px-3 md:px-4"
+                  >
+                    <div className="w-full h-20 sm:h-24 md:h-28 bg-gray-50 border border-gray-200 group hover:border-primary-300 hover:bg-white transition-all duration-300 flex items-center justify-center">
+                      <img
+                        src={client.logo}
+                        alt={`${client.name} logo`}
+                        className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
+                        onError={(e) => {
+                          // Fallback to a simple colored box with company initial if image fails to load
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = "none";
+                          const parent = target.parentElement;
+                          if (parent) {
+                            parent.innerHTML = `
+                              <div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white text-lg sm:text-xl md:text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
+                                ${client.name.charAt(0)}
+                              </div>
+                            `;
+                          }
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
 
@@ -1200,10 +1561,10 @@ export default function Home() {
                 with our expertise.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <button className="bg-white text-primary-600 px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+                <button className="bg-white text-primary-500 px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all duration-300  transform hover:-translate-y-1">
                   Become a Partner
                 </button>
-                <button className="border-2 border-white text-white px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300 hover:shadow-lg">
+                <button className="border-2 border-white text-white px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300 ">
                   View Case Studies
                 </button>
               </div>

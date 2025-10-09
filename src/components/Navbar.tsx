@@ -46,17 +46,34 @@ export default function Navbar() {
             to="/"
             className="flex items-center space-x-2 sm:space-x-3 group"
           >
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <span className="text-white font-bold text-sm sm:text-lg">O</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary leading-tight">
-                Orchid Digital
-              </span>
-              <span className="text-xs sm:text-sm text-text-secondary font-medium tracking-wide">
-                Consulting
-              </span>
-            </div>
+            <img
+              src="https://ik.imagekit.io/shiga/orchid/logo.30351a81.png?updatedAt=1760026675568"
+              alt="Orchid Digital Consulting"
+              className="h-10 sm:h-12 md:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              onError={(e) => {
+                // Fallback to text logo if image fails to load
+                const target = e.target as HTMLImageElement;
+                target.style.display = "none";
+                const parent = target.parentElement;
+                if (parent && !parent.querySelector(".fallback-logo")) {
+                  parent.innerHTML = `
+                    <div class="fallback-logo flex items-center space-x-2 sm:space-x-3">
+                      <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <span class="text-white font-bold text-sm sm:text-lg">O</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="text-lg sm:text-xl md:text-2xl font-bold text-text-primary leading-tight">
+                          Orchid Digital
+                        </span>
+                        <span class="text-xs sm:text-sm text-text-secondary font-medium tracking-wide">
+                          Consulting
+                        </span>
+                      </div>
+                    </div>
+                  `;
+                }
+              }}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -67,8 +84,8 @@ export default function Navbar() {
                 to={item.path}
                 className={`px-4 xl:px-6 py-3 text-sm xl:text-base font-semibold transition-colors duration-300 ${
                   isActive(item.path)
-                    ? "text-primary-600"
-                    : "text-text-secondary hover:text-primary-600"
+                    ? "text-primary-500 hover:text-green-500"
+                    : "text-text-secondary hover:text-green-500"
                 }`}
               >
                 {item.label}
@@ -77,7 +94,7 @@ export default function Navbar() {
             <div className="ml-4 pl-4 border-l border-gray-200">
               <Link
                 to="/contact"
-                className="bg-primary-500 hover:bg-primary-700 text-white px-6 xl:px-8 py-3 text-sm xl:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 xl:px-8 py-3 text-sm xl:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Get Started
               </Link>
@@ -88,7 +105,7 @@ export default function Navbar() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-text-primary hover:text-primary-600 focus:outline-none p-2 sm:p-3 transition-colors duration-200 touch-manipulation"
+              className="text-text-primary hover:text-green-500 focus:outline-none p-2 sm:p-3 transition-colors duration-200 touch-manipulation"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? (
@@ -118,8 +135,8 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-colors duration-200 touch-manipulation ${
                   isActive(item.path)
-                    ? "text-primary-600 bg-primary-50"
-                    : "text-text-secondary hover:text-primary-600 hover:bg-gray-50"
+                    ? "text-primary-500 bg-green-50/50 hover:text-green-500"
+                    : "text-text-secondary hover:text-green-500 hover:bg-green-50/30"
                 }`}
               >
                 {item.label}
@@ -129,7 +146,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full bg-primary-500 hover:bg-primary-700 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl touch-manipulation"
+                className="block w-full bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl touch-manipulation"
               >
                 Get Started
               </Link>

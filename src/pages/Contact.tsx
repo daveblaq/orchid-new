@@ -108,9 +108,9 @@ export default function Contact() {
               className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl text-center"
             >
               <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                <Mail className="text-primary-600 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                <Mail className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-600 transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
                 Email Us
               </h3>
               <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
@@ -118,7 +118,7 @@ export default function Contact() {
               </p>
               <a
                 href="mailto:hello@orchidconsulting.com"
-                className="text-primary-600 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-700 transition-colors duration-300 flex items-center justify-center touch-manipulation break-all"
+                className="text-primary-500 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-500 transition-colors duration-300 flex items-center justify-center touch-manipulation break-all"
               >
                 hello@orchidconsulting.com{" "}
                 <ArrowRight className="ml-2 flex-shrink-0 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
@@ -134,9 +134,9 @@ export default function Contact() {
               className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl text-center"
             >
               <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                <Phone className="text-primary-600 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                <Phone className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-600 transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
                 Call Us
               </h3>
               <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
@@ -144,7 +144,7 @@ export default function Contact() {
               </p>
               <a
                 href="tel:+15551234567"
-                className="text-primary-600 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-700 transition-colors duration-300 flex items-center justify-center touch-manipulation"
+                className="text-primary-500 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-500 transition-colors duration-300 flex items-center justify-center touch-manipulation"
               >
                 +1 (555) 123-4567{" "}
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
@@ -160,15 +160,15 @@ export default function Contact() {
               className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl text-center"
             >
               <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                <Calendar className="text-primary-600 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                <Calendar className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-600 transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
                 Schedule Meeting
               </h3>
               <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
                 Book a free consultation to discuss your specific needs
               </p>
-              <button className="text-primary-600 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-700 transition-colors duration-300 flex items-center justify-center mx-auto touch-manipulation">
+              <button className="text-primary-500 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-500 transition-colors duration-300 flex items-center justify-center mx-auto touch-manipulation">
                 Book Now{" "}
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
               </button>
@@ -366,7 +366,7 @@ export default function Contact() {
                 <div className="space-y-6 sm:space-y-8">
                   <div className="flex items-start">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <Mail className="text-primary-600 w-5 h-5 sm:w-6 sm:h-6" />
+                      <Mail className="text-primary-500 w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
@@ -385,7 +385,7 @@ export default function Contact() {
 
                   <div className="flex items-start">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <Phone className="text-primary-600 w-5 h-5 sm:w-6 sm:h-6" />
+                      <Phone className="text-primary-500 w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
@@ -404,7 +404,7 @@ export default function Contact() {
 
                   <div className="flex items-start">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <MapPin className="text-primary-600 w-5 h-5 sm:w-6 sm:h-6" />
+                      <MapPin className="text-primary-500 w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
@@ -422,7 +422,7 @@ export default function Contact() {
 
                   <div className="flex items-start">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <Clock className="text-primary-600 w-5 h-5 sm:w-6 sm:h-6" />
+                      <Clock className="text-primary-500 w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">

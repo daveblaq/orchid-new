@@ -35,8 +35,8 @@ export default function Navigation() {
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
-                    ? "text-primary-600 bg-primary-50"
-                    : "text-secondary-600 hover:text-primary-600 hover:bg-secondary-50"
+                    ? "text-primary-500 bg-primary-50"
+                    : "text-secondary-600 hover:text-primary-500 hover:bg-secondary-50"
                 }`}
               >
                 {item.label}
@@ -48,7 +48,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-secondary-600 hover:text-primary-600 focus:outline-none focus:text-primary-600"
+              className="text-secondary-600 hover:text-primary-500 focus:outline-none focus:text-primary-500"
             >
               <svg
                 className="h-6 w-6"
@@ -87,8 +87,8 @@ export default function Navigation() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                     isActive(item.path)
-                      ? "text-primary-600 bg-primary-50"
-                      : "text-secondary-600 hover:text-primary-600 hover:bg-secondary-50"
+                      ? "text-primary-500 bg-primary-50"
+                      : "text-secondary-600 hover:text-primary-500 hover:bg-secondary-50"
                   }`}
                 >
                   {item.label}

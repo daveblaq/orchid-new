@@ -127,7 +127,7 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
-                <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-600" />
+                <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-500" />
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
                 Privacy Policy
@@ -161,7 +161,7 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
                 >
                   <div className="flex items-start mb-6 sm:mb-8">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <Icon className="text-primary-600 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                      <Icon className="text-primary-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
                     </div>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary">
                       {section.title}
