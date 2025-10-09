@@ -8,7 +8,6 @@ import {
   Phone,
   MapPin,
   Youtube,
-  MessageCircle,
   Facebook,
   ArrowUp,
 } from "lucide-react";
