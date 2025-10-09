@@ -154,16 +154,16 @@ export default function HeroSlider() {
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-100 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-4xl mx-auto px-4">
                 {slides[currentSlide].subtext}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-md sm:max-w-none mx-auto px-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center max-w-md sm:max-w-none mx-auto px-4">
                 <Link
                   to="/services"
-                  className="bg-white/90 backdrop-blur-sm text-text-primary px-8 sm:px-10 md:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-white transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 border border-white/50"
+                  className="bg-white/90 backdrop-blur-sm text-text-primary px-6 sm:px-10 md:px-12 py-3 sm:py-5 text-base sm:text-xl font-semibold hover:bg-white transition-all duration-300 transform hover:-translate-y-1 border border-white/50"
                 >
                   Learn More
                 </Link>
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-primary-500 to-green-500 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:from-primary-600 hover:to-green-600 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
+                  className="bg-gradient-to-r from-primary-500 to-green-500 text-white px-6 sm:px-10 md:px-12 py-3 sm:py-5 text-base sm:text-xl font-semibold hover:from-primary-600 hover:to-green-600 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Get Started
                 </Link>
