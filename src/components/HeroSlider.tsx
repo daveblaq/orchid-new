@@ -114,25 +114,25 @@ export default function HeroSlider() {
         ))}
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Hidden on mobile */}
       <button
         onClick={goToPrevious}
         disabled={isTransitioning}
-        className="absolute left-3 sm:left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 text-gray-600 hover:text-green-500 p-3 sm:p-4 transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed group"
+        className="hidden md:flex absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 text-gray-600 hover:text-green-500 p-4 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group items-center justify-center"
       >
         <ChevronLeft
-          size={20}
-          className="group-hover:scale-110 transition-transform duration-200 sm:w-6 sm:h-6"
+          size={24}
+          className="group-hover:scale-110 transition-transform duration-200"
         />
       </button>
       <button
         onClick={goToNext}
         disabled={isTransitioning}
-        className="absolute right-3 sm:right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 text-gray-600 hover:text-green-500 p-3 sm:p-4 transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed group"
+        className="hidden md:flex absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 text-gray-600 hover:text-green-500 p-4 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group items-center justify-center"
       >
         <ChevronRight
-          size={20}
-          className="group-hover:scale-110 transition-transform duration-200 sm:w-6 sm:h-6"
+          size={24}
+          className="group-hover:scale-110 transition-transform duration-200"
         />
       </button>
 

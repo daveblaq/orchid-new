@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force light mode - prevent dark mode from affecting the website */
+html,
+body,
+#root {
+  color-scheme: light !important;
+  background-color: white !important;
+}
+
+/* Ensure all backgrounds stay light in dark mode */
+* {
+  color-scheme: light;
+}
+
 /* Custom animations for modern design */
 @keyframes blob {
   0% {
