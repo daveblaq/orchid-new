@@ -863,26 +863,40 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12 sm:mt-16 text-center"
           >
-            <div className="bg-gradient-to-br from-primary-500 to-green-500 text-white p-8 sm:p-10 md:p-12 lg:p-16 ">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8">
-                Ready to Start Investing?
-              </h3>
-              <p className="text-xl sm:text-2xl mb-8 sm:mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-                Secure your financial future with our proven investment plans.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-white text-primary-500 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-gray-100 transition-all duration-300  transform hover:-translate-y-1 inline-block text-center"
-                >
-                  Start Investing Now
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300  transform hover:-translate-y-1 inline-block text-center"
-                >
-                  Learn More
-                </a>
+            <div className="relative overflow-hidden">
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
+                }}
+              />
+              {/* Black Overlay */}
+              <div className="absolute inset-0 bg-black/70" />
+
+              {/* Content */}
+              <div className="relative z-10 text-white p-8 sm:p-10 md:p-12 lg:p-16">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8">
+                  Ready to Start Investing?
+                </h3>
+                <p className="text-xl sm:text-2xl mb-8 sm:mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
+                  Secure your financial future with our proven investment plans.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                  <a
+                    href="/contact"
+                    className="bg-white text-primary-500 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
+                  >
+                    Start Investing Now
+                  </a>
+                  <a
+                    href="/contact"
+                    className="border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
+                  >
+                    Learn More
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -1130,11 +1144,11 @@ export default function Home() {
                         </div>
 
                         {/* Testimonial Content Section - Right Side */}
-                        <div className="lg:w-1/2 bg-gradient-to-br from-primary-500 to-green-500 p-6 sm:p-8 md:p-12 lg:p-16 relative">
+                        <div className="lg:w-1/2 bg-white p-6 sm:p-8 md:p-12 lg:p-16 relative">
                           {/* Quote Icon */}
-                          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 opacity-20">
+                          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 opacity-10">
                             <svg
-                              className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-white"
+                              className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-primary-500"
                               fill="currentColor"
                               viewBox="0 0 24 24"
                             >
@@ -1156,16 +1170,16 @@ export default function Home() {
                           </div>
 
                           {/* Testimonial Text */}
-                          <blockquote className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed mb-6 sm:mb-8 md:mb-12 font-light">
+                          <blockquote className="text-text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed mb-6 sm:mb-8 md:mb-12 font-light">
                             "{testimonial.testimonial}"
                           </blockquote>
 
                           {/* Author Info */}
                           <div>
-                            <div className="font-bold text-white text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
+                            <div className="font-bold text-text-primary text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
                               {testimonial.name}
                             </div>
-                            <div className="text-white/90 text-sm sm:text-base md:text-lg">
+                            <div className="text-text-secondary text-sm sm:text-base md:text-lg">
                               {testimonial.position} • {testimonial.company}
                             </div>
                           </div>

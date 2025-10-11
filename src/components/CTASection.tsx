@@ -23,45 +23,22 @@ export default function CTASection({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className={`py-16 sm:py-20 md:py-24 relative overflow-hidden ${
-        gradient
-          ? "bg-gradient-to-br from-primary-500 to-green-500"
-          : "bg-gradient-to-br from-gray-50 via-white to-gray-50"
-      }`}
+      className="py-16 sm:py-20 md:py-24 relative overflow-hidden"
     >
-      {/* Background Dots Pattern */}
-      {gradient && (
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-32 right-32 w-1 h-1 bg-white rounded-full"></div>
-          <div className="absolute top-48 left-48 w-3 h-3 bg-white rounded-full"></div>
-          <div className="absolute top-16 right-48 w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-64 left-16 w-1 h-1 bg-white rounded-full"></div>
-          <div className="absolute top-40 right-16 w-2 h-2 bg-white rounded-full"></div>
-
-          <div className="absolute top-80 left-32 w-1 h-1 bg-white rounded-full"></div>
-          <div className="absolute top-96 right-64 w-3 h-3 bg-white rounded-full"></div>
-          <div className="absolute top-72 left-64 w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-88 right-20 w-1 h-1 bg-white rounded-full"></div>
-
-          <div className="absolute bottom-20 left-20 w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute bottom-32 right-32 w-1 h-1 bg-white rounded-full"></div>
-          <div className="absolute bottom-48 left-48 w-3 h-3 bg-white rounded-full"></div>
-          <div className="absolute bottom-16 right-48 w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute bottom-64 left-16 w-1 h-1 bg-white rounded-full"></div>
-          <div className="absolute bottom-40 right-16 w-2 h-2 bg-white rounded-full"></div>
-
-          <div className="absolute bottom-80 left-32 w-1 h-1 bg-white rounded-full"></div>
-          <div className="absolute bottom-96 right-64 w-3 h-3 bg-white rounded-full"></div>
-          <div className="absolute bottom-72 left-64 w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute bottom-88 right-20 w-1 h-1 bg-white rounded-full"></div>
-
-          {/* Center dots */}
-          <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-white rounded-full"></div>
-          <div className="absolute top-1/3 left-1/3 w-1 h-1 bg-white rounded-full"></div>
-          <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-white rounded-full"></div>
-        </div>
+      {/* Background Image with Overlay */}
+      {gradient ? (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
+            }}
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </>
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50" />
       )}
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div

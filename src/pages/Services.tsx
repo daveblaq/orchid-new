@@ -21,6 +21,8 @@ export default function Services() {
     {
       title: "Access to Market",
       icon: Globe,
+      backgroundImage:
+        "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description:
         "Expand your business reach and connect with global opportunities through our comprehensive market access solutions.",
       details: [
@@ -41,6 +43,8 @@ export default function Services() {
     {
       title: "Entrepreneurship Training",
       icon: GraduationCap,
+      backgroundImage:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description:
         "Develop the next generation of business leaders with our comprehensive entrepreneurship and leadership training programs.",
       details: [
@@ -61,6 +65,8 @@ export default function Services() {
     {
       title: "Facility Management",
       icon: Building,
+      backgroundImage:
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description:
         "Optimize your business operations with our comprehensive facility management and system coordination services.",
       details: [
@@ -81,6 +87,8 @@ export default function Services() {
     {
       title: "Insurance / Audit and Tax Clearance",
       icon: FileText,
+      backgroundImage:
+        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description:
         "Ensure financial compliance and protection with our comprehensive insurance, audit, and tax clearance services.",
       details: [
@@ -101,6 +109,8 @@ export default function Services() {
     {
       title: "Enterprise Management Software Development",
       icon: Code,
+      backgroundImage:
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description:
         "Transform your business operations with custom software solutions designed to meet your specific needs and objectives.",
       details: [
@@ -121,6 +131,8 @@ export default function Services() {
     {
       title: "Access to Finance",
       icon: DollarSign,
+      backgroundImage:
+        "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description:
         "Secure the funding you need to grow and expand your business through our extensive network of financial partners.",
       details: [
@@ -141,6 +153,8 @@ export default function Services() {
     {
       title: "Orchiddigital Investment Service",
       icon: TrendingUp,
+      backgroundImage:
+        "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description:
         "Grow your savings with attractive interest rates. Lock your savings for 365 days and receive competitive returns on your investment.",
       details: [
@@ -161,6 +175,8 @@ export default function Services() {
     {
       title: "Orchiddigital Loan Service",
       icon: CreditCard,
+      backgroundImage:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description:
         "Access funds when you need them most with our fast and easy loan service. Get the financial support your business needs to thrive.",
       details: [
@@ -316,13 +332,16 @@ export default function Services() {
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Panel - Content */}
-                    <div className="p-6 sm:p-8 md:p-12 lg:p-16 bg-gradient-to-br from-primary-500 to-green-500 text-white relative">
-                      {/* Background Pattern */}
-                      <div className="absolute inset-0 opacity-10">
-                        <div className="absolute top-4 right-4 sm:top-8 sm:right-8 w-12 h-12 sm:w-16 sm:h-16 border-2 border-white"></div>
-                        <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 w-8 h-8 sm:w-12 sm:h-12 border border-white"></div>
-                        <div className="absolute top-1/2 left-1/4 w-6 h-6 sm:w-8 sm:h-8 bg-white"></div>
-                      </div>
+                    <div className="p-6 sm:p-8 md:p-12 lg:p-16 text-white relative overflow-hidden">
+                      {/* Background Image */}
+                      <div
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        style={{
+                          backgroundImage: `url('${service.backgroundImage}')`,
+                        }}
+                      />
+                      {/* Black Overlay */}
+                      <div className="absolute inset-0 bg-black/70" />
 
                       <div className="relative z-10">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6 sm:mb-8">
@@ -418,7 +437,7 @@ export default function Services() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
             {processSteps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -429,7 +448,7 @@ export default function Services() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50 "
+                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-6 transition-all duration-500 hover:border-green-300/50 "
                 >
                   <div className="text-center">
                     <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500 relative">
