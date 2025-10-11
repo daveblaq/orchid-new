@@ -83,7 +83,7 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="space-y-6 sm:space-y-8 lg:pt-8"
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black leading-[190%] px-4 sm:px-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black leading-tight px-4 sm:px-0">
                 Orchiddigital Consulting connects businesses with innovative
                 solutions for seamless transformation.
               </h1>
@@ -107,7 +107,7 @@ export default function AboutUs() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-4 sm:space-y-6"
+              className="space-y-3 sm:space-y-6"
             >
               {/* Top Image */}
               <div className="relative">
@@ -132,7 +132,12 @@ export default function AboutUs() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
             <motion.div
@@ -141,17 +146,17 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 sm:px-0">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-6 px-4 sm:px-0">
                 Our Story
               </h2>
-              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
+              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-6 px-4 sm:px-0">
                 Founded in 2018, Orchiddigital Consulting emerged from a vision
                 to bridge the gap between traditional business practices and the
                 digital future. We recognized that many organizations were
                 struggling to adapt to the rapidly evolving technological
                 landscape.
               </p>
-              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
+              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-6 px-4 sm:px-0">
                 Today, we stand as a trusted partner for businesses across
                 various industries, helping them navigate digital
                 transformation, optimize operations, and achieve sustainable
@@ -212,7 +217,12 @@ export default function AboutUs() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
             <motion.div
@@ -222,10 +232,10 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-6 sm:mb-8 transition-colors duration-500">
+              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-6 sm:mb-6 transition-colors duration-500">
                 <Target className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 Our Mission
               </h3>
               <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
@@ -242,10 +252,10 @@ export default function AboutUs() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-6 sm:mb-8 transition-colors duration-500">
+              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-6 sm:mb-6 transition-colors duration-500">
                 <Eye className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 Our Vision
               </h3>
               <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
@@ -259,47 +269,73 @@ export default function AboutUs() {
       </section>
 
       {/* Values */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Our Values
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+              Principles That
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Guide Us
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              The principles that guide everything we do and define who we are
-              as an organization.
+            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+              The core values that define who we are and how we serve our
+              clients.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  whileHover={{ y: -8 }}
-                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-6 transition-all duration-500 hover:border-green-300/50 "
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group relative h-full"
                 >
-                  <div className="text-center">
-                    <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
-                      <Icon className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-green-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
+                    {/* Icon Container */}
+                    <div className="relative mb-6">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center transition-all duration-500 group-hover:scale-110 mx-auto">
+                        <Icon className="text-white w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">
+                          {index + 1}
+                        </span>
+                      </div>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
-                      {value.title}
-                    </h3>
-                    <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg">
-                      {value.description}
-                    </p>
+
+                    {/* Content */}
+                    <div className="flex-1 space-y-3">
+                      <h3 className="text-xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                        {value.title}
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
+                        {value.description}
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               );
@@ -309,21 +345,34 @@ export default function AboutUs() {
       </section>
 
       {/* Team Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
-              Meet Our Leadership Team
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              Our Team
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-6 sm:mb-6 px-4 leading-tight">
+              Meet Our
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Leadership Team
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               The experienced professionals who drive our success and guide our
-              clients to achieve their goals.
+              clients.
             </p>
           </motion.div>
 
@@ -424,10 +473,10 @@ export default function AboutUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 text-center px-4">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-6 text-center px-4">
               OUR ENGAGEMENT APPROACH
             </h3>
-            <p className="text-gray-300 text-base sm:text-lg text-center mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto px-4">
+            <p className="text-gray-300 text-base sm:text-lg text-center mb-6 sm:mb-10 md:mb-12 max-w-4xl mx-auto px-4">
               Specifically, Orchiddigital Consulting facilitates the achievement
               of the following outcomes:
             </p>
@@ -472,22 +521,34 @@ export default function AboutUs() {
       </section>
 
       {/* What Makes Us Different */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               What Makes Us Different
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-6 sm:mb-6 px-4 leading-tight">
+              Our Unique
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Approach
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              Our unique approach and comprehensive expertise set us apart in
-              the consulting industry with proven methodologies and innovative
-              solutions.
+            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+              Comprehensive expertise and proven methodologies that set us apart
+              in the consulting industry.
             </p>
           </motion.div>
 
@@ -500,10 +561,10 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50 "
             >
-              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-6 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Our Approach
               </h3>
-              <ul className="space-y-4 sm:space-y-6">
+              <ul className="space-y-3 sm:space-y-6">
                 <li className="flex items-start">
                   <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
                     <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
@@ -550,7 +611,7 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50 "
             >
-              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-6 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Our Expertise
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">

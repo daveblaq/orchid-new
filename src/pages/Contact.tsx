@@ -79,26 +79,39 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-16">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
-                Contact Us
+              <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Get In Touch
+              </div>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+                Ready to Transform
+                <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                  Your Business?
+                </span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-                Ready to transform your business? Get in touch with our expert
-                team and let's discuss how we can help you achieve your goals.
+              <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+                Get in touch with our expert team and let's discuss how we can
+                help you achieve your goals.
               </p>
             </motion.div>
           </div>
 
           {/* Contact Methods */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 sm:mb-12">
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +120,7 @@ export default function Contact() {
               whileHover={{ y: -8 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50  text-center"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
                 <Mail className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
@@ -133,7 +146,7 @@ export default function Contact() {
               whileHover={{ y: -8 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50  text-center"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
                 <Phone className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
@@ -159,7 +172,7 @@ export default function Contact() {
               whileHover={{ y: -8 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50  text-center"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
                 <Calendar className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
@@ -178,25 +191,38 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
-              Send us a Message
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              Send A Message
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+              Let's Start A
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Conversation
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              Fill out the form below and we'll get back to you with a
-              personalized response within 24 hours.
+            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+              Fill out the form and we'll respond with a personalized solution
+              within 24 hours.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <motion.div
@@ -204,13 +230,13 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 "
+                className="bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 "
               >
                 <form
                   onSubmit={handleSubmit(onSubmit)}
                   className="space-y-6 sm:space-y-8"
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
                         Full Name *
@@ -252,7 +278,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
                         Company Name
@@ -443,14 +469,18 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-gradient-to-br from-primary-500 to-green-500 p-6 sm:p-8 md:p-10 text-white relative overflow-hidden"
+                className="p-6 sm:p-8 text-white relative overflow-hidden"
               >
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-4 right-4 sm:top-8 sm:right-8 w-12 h-12 sm:w-16 sm:h-16 border-2 border-white"></div>
-                  <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 w-8 h-8 sm:w-12 sm:h-12 border border-white"></div>
-                  <div className="absolute top-1/2 left-1/4 w-6 h-6 sm:w-8 sm:h-8 bg-white"></div>
-                </div>
+                {/* Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage:
+                      "url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
+                  }}
+                />
+                {/* Black Overlay */}
+                <div className="absolute inset-0 bg-black/70" />
 
                 <div className="relative z-10">
                   <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
@@ -494,22 +524,34 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
-              Visit Our Office
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              Our Location
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+              Visit Our
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Office
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              Located in the heart of the business district, our office is
-              easily accessible by public transportation and offers convenient
-              parking.
+            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+              Located in the heart of the business district with convenient
+              access and parking.
             </p>
           </motion.div>
 

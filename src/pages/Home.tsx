@@ -1,7 +1,7 @@
 import HeroSlider from "../components/HeroSlider";
 import CTASection from "../components/CTASection";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Users,
@@ -19,6 +19,26 @@ import {
 export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [currentClientIndex, setCurrentClientIndex] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(4);
+
+  // Calculate items per view based on screen size
+  useEffect(() => {
+    const updateItemsPerView = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerView(1); // Mobile: 1 logo
+      } else if (window.innerWidth < 768) {
+        setItemsPerView(2); // SM: 2 logos
+      } else if (window.innerWidth < 1024) {
+        setItemsPerView(3); // MD: 3 logos
+      } else {
+        setItemsPerView(4); // LG: 4 logos
+      }
+    };
+
+    updateItemsPerView();
+    window.addEventListener("resize", updateItemsPerView);
+    return () => window.removeEventListener("resize", updateItemsPerView);
+  }, []);
 
   const services = [
     {
@@ -130,7 +150,7 @@ export default function Home() {
       <HeroSlider />
 
       {/* Services Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -144,7 +164,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
+            className="text-center mb-12 sm:mb-16"
           >
             <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
@@ -156,13 +176,13 @@ export default function Home() {
                 Digital Solutions
               </span>
             </h2>
-            <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               Accelerate your business growth with our cutting-edge technology
               solutions and strategic consulting services.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -176,7 +196,7 @@ export default function Home() {
                   className="group relative h-full"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-green-500/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-6  transition-all duration-500 group-hover:border-primary-300/50 h-full flex flex-col">
+                  <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6  transition-all duration-500 group-hover:border-primary-300/50 h-full flex flex-col">
                     {/* Icon Container */}
                     <div className="relative mb-8">
                       <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110">
@@ -190,11 +210,11 @@ export default function Home() {
                     </div>
 
                     {/* Content */}
-                    <div className="flex-1 space-y-4">
+                    <div className="flex-1 space-y-3">
                       <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                         {service.title}
                       </h3>
-                      <p className="text-text-secondary leading-relaxed text-base sm:text-lg font-light flex-1">
+                      <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
                         {service.description}
                       </p>
                     </div>
@@ -265,7 +285,7 @@ export default function Home() {
                     Your Savings, Secured
                   </span>
                 </h2>
-                <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light mb-6 sm:mb-8">
+                <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light mb-6 sm:mb-8">
                   Orchiddigital Investment is an exciting savings feature that
                   helps grow your savings with attractive interest rates. Lock
                   your savings for a specified period and receive interest
@@ -277,7 +297,7 @@ export default function Home() {
                 </p>
 
                 {/* Interest Rates */}
-                <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
+                <div className="space-y-3 sm:space-y-6 mb-8 sm:mb-10">
                   <div className="flex items-center space-x-3 sm:space-x-4">
                     <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
                       <svg
@@ -354,7 +374,7 @@ export default function Home() {
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
+                    <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8">
                       Unlock your financial dreams with Orchiddigital
                       Investment!
                     </h3>
@@ -413,7 +433,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-20 sm:mb-24 md:mb-32"
+            className="mt-12 sm:mt-16"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
               {/* Image Section */}
@@ -428,12 +448,12 @@ export default function Home() {
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
+                    <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8">
                       Get the funding you need with Orchid Loans!
                     </h3>
 
                     {/* Loan Features */}
-                    <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+                    <div className="space-y-3 sm:space-y-6 mb-6 sm:mb-8">
                       <div className="bg-white p-3 sm:p-4 rounded text-center">
                         <div className="text-lg sm:text-xl font-bold text-green-500">
                           Quick Approval
@@ -485,7 +505,7 @@ export default function Home() {
                 </p>
 
                 {/* Loan Features */}
-                <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
+                <div className="space-y-3 sm:space-y-6 mb-8 sm:mb-10">
                   <div className="flex items-center space-x-3 sm:space-x-4">
                     <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
                       <svg
@@ -569,7 +589,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-8 sm:p-10 md:p-12 mb-12 sm:mb-16"
+            className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-6 md:p-12 mb-12 sm:mb-16"
           >
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary text-center mb-8 sm:mb-12">
               Investment Calculator
@@ -687,7 +707,7 @@ export default function Home() {
 
               {/* Investment Terms */}
               <div className="mt-16 sm:mt-20 md:mt-24 max-w-2xl mx-auto">
-                <div className="bg-gradient-to-br from-primary-500 to-green-500 p-8 sm:p-10 md:p-12 text-white text-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-primary-500 to-green-500 p-6 md:p-12 text-white text-center relative overflow-hidden">
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-4 right-4 w-12 h-12 border-2 border-white"></div>
@@ -699,7 +719,7 @@ export default function Home() {
                       <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                       Investment Terms
                     </div>
-                    <h4 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                    <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
                       Fixed Tenure
                     </h4>
                     <div className="flex items-center justify-center gap-3 sm:gap-4">
@@ -707,7 +727,7 @@ export default function Home() {
                         12
                       </div>
                       <div className="text-left">
-                        <div className="text-2xl sm:text-3xl font-bold">
+                        <div className="text-xl sm:text-2xl font-bold">
                           Months
                         </div>
                         <div className="text-white/80 text-sm sm:text-base">
@@ -734,7 +754,7 @@ export default function Home() {
             className="bg-white border border-gray-200 overflow-hidden"
           >
             <div className="bg-primary-500 text-white px-4 sm:px-6 py-4 sm:py-6">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
+              <h3 className="text-lg sm:text-xl font-bold text-center">
                 Orchiddigital Investment Plans
               </h3>
             </div>
@@ -876,23 +896,23 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/70" />
 
               {/* Content */}
-              <div className="relative z-10 text-white p-8 sm:p-10 md:p-12 lg:p-16">
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8">
+              <div className="relative z-10 text-white p-6 md:p-12 lg:p-16">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
                   Ready to Start Investing?
                 </h3>
                 <p className="text-xl sm:text-2xl mb-8 sm:mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
                   Secure your financial future with our proven investment plans.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center">
                   <a
                     href="/contact"
-                    className="bg-white text-primary-500 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
+                    className="bg-white text-primary-500 px-6 sm:px-10 py-3 sm:py-5 text-base sm:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
                   >
                     Start Investing Now
                   </a>
                   <a
                     href="/contact"
-                    className="border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
+                    className="border-2 border-white text-white px-6 sm:px-10 py-3 sm:py-5 text-base sm:text-xl font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
                   >
                     Learn More
                   </a>
@@ -917,7 +937,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
+            className="text-center mb-12 sm:mb-16"
           >
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -929,13 +949,13 @@ export default function Home() {
                 Digital Consulting
               </span>
             </h2>
-            <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               We combine industry expertise with innovative solutions to deliver
               exceptional results for our clients.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 60, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -957,7 +977,7 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3">
                   <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Expert Team
                   </h3>
@@ -990,7 +1010,7 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3">
                   <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Proven Results
                   </h3>
@@ -1023,7 +1043,7 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3">
                   <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Global Reach
                   </h3>
@@ -1048,7 +1068,7 @@ export default function Home() {
                 {/* Icon Container */}
                 <div className="relative mb-8">
                   <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
-                    <DollarSign className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
+                    <DollarSign className="text-white w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
                   {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">4</span>
@@ -1056,7 +1076,7 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3">
                   <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Cost Effective
                   </h3>
@@ -1085,7 +1105,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
+            className="text-center mb-12 sm:mb-16"
           >
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -1097,7 +1117,7 @@ export default function Home() {
                 Industry Leaders
               </span>
             </h2>
-            <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               Discover how we've transformed businesses with our proven
               expertise and innovative solutions.
             </p>
@@ -1285,7 +1305,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
                   500+
                 </div>
                 <div className="text-text-secondary text-sm sm:text-base font-medium">
@@ -1299,7 +1319,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
                   98%
                 </div>
                 <div className="text-text-secondary text-sm sm:text-base font-medium">
@@ -1313,7 +1333,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
                   24/7
                 </div>
                 <div className="text-text-secondary text-sm sm:text-base font-medium">
@@ -1327,7 +1347,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
                   5★
                 </div>
                 <div className="text-text-secondary text-sm sm:text-base font-medium">
@@ -1353,7 +1373,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
+            className="text-center mb-12 sm:mb-16"
           >
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -1365,14 +1385,14 @@ export default function Home() {
                 Partnerships
               </span>
             </h2>
-            <p className="text-xl sm:text-2xl md:text-3xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               Collaborating with industry leaders to deliver exceptional results
               across diverse sectors.
             </p>
           </motion.div>
 
           {/* Partner Categories */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-8 mb-16 sm:mb-20 md:mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 sm:mb-16">
             {/* Enterprise Partners */}
             <motion.div
               initial={{ opacity: 0, y: 60, scale: 0.95 }}
@@ -1386,8 +1406,8 @@ export default function Home() {
               <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
                 {/* Icon Container */}
                 <div className="relative mb-8">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
-                    <Building className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <Building className="text-white w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
                   {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">E</span>
@@ -1395,11 +1415,11 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3">
                   <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Enterprise Partners
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-base sm:text-lg font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
                     Fortune 500 companies and large-scale organizations trust us
                     with their digital transformation needs.
                   </p>
@@ -1420,8 +1440,8 @@ export default function Home() {
               <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
                 {/* Icon Container */}
                 <div className="relative mb-8">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
-                    <TrendingUp className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <TrendingUp className="text-white w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
                   {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">S</span>
@@ -1429,11 +1449,11 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3">
                   <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Startup Partners
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-base sm:text-lg font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
                     Innovative startups and emerging businesses rely on our
                     expertise to scale and grow rapidly.
                   </p>
@@ -1454,8 +1474,8 @@ export default function Home() {
               <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-8 sm:p-8  transition-all duration-500 group-hover:border-green-300/50 h-full flex flex-col text-center">
                 {/* Icon Container */}
                 <div className="relative mb-8">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
-                    <Shield className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
+                    <Shield className="text-white w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
                   {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">G</span>
@@ -1463,11 +1483,11 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3">
                   <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Government Partners
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-base sm:text-lg font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
                     Public sector organizations partner with us for digital
                     transformation and citizen services.
                   </p>
@@ -1482,7 +1502,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-8 sm:p-10 md:p-12 lg:p-16"
+            className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-6 md:p-12 lg:p-16"
           >
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary text-center mb-10 sm:mb-12 md:mb-16">
               Our{" "}
@@ -1532,19 +1552,19 @@ export default function Home() {
                 </svg>
               </button>
 
-              {/* Client Logos Row */}
+              {/* Client Logos Row - Mobile: 1 logo, SM: 2 logos, MD: 3 logos, LG: 4 logos */}
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
                   transform: `translateX(-${
-                    (currentClientIndex + clients.length) * 25
+                    ((currentClientIndex + clients.length) * 100) / itemsPerView
                   }%)`,
                 }}
               >
                 {extendedClients.map((client, index) => (
                   <div
                     key={index}
-                    className="w-1/4 flex-shrink-0 px-2 sm:px-3 md:px-4"
+                    className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 px-2 sm:px-3 md:px-4"
                   >
                     <div className="w-full h-20 sm:h-24 md:h-28 bg-gray-50 border border-gray-200 group hover:border-primary-300 hover:bg-white transition-all duration-300 flex items-center justify-center">
                       <img

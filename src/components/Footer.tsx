@@ -90,7 +90,7 @@ export default function Footer() {
               <img
                 src="https://ik.imagekit.io/shiga/orchid/logo.30351a81.png?updatedAt=1760026675568"
                 alt="Orchiddigital Consulting"
-                className="h-12 sm:h-14 md:h-16 w-auto object-contain"
+                className="h-12 sm:h-14 md:h-16 w-auto object-contain brightness-0 invert"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;

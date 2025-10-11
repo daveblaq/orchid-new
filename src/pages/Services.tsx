@@ -230,26 +230,39 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-16">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
+              <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 Our Services
+              </div>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+                Comprehensive
+                <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                  Business Solutions
+                </span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-                Comprehensive business solutions designed to drive growth,
-                efficiency, and success across all aspects of your organization.
+              <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+                Designed to drive growth, efficiency, and success across all
+                aspects of your organization.
               </p>
             </motion.div>
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -300,25 +313,38 @@ export default function Services() {
       </section>
 
       {/* Detailed Services Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Service Details
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+              Explore Our
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Service Offerings
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              Explore our comprehensive service offerings in detail and discover
-              how we can help your business thrive.
+            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+              Discover how we can help your business thrive with our
+              comprehensive solutions.
             </p>
           </motion.div>
 
-          <div className="space-y-12 sm:space-y-16 md:space-y-20">
+          <div className="space-y-10 sm:space-y-12">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -332,7 +358,7 @@ export default function Services() {
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Panel - Content */}
-                    <div className="p-6 sm:p-8 md:p-12 lg:p-16 text-white relative overflow-hidden">
+                    <div className="p-6 sm:p-8 text-white relative overflow-hidden">
                       {/* Background Image */}
                       <div
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -348,12 +374,12 @@ export default function Services() {
                           <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 sm:mb-0 sm:mr-4 md:mr-6">
                             <Icon className="text-white w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                           </div>
-                          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+                          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">
                             {service.title}
                           </h3>
                         </div>
 
-                        <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 md:mb-12 opacity-90">
+                        <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-10 md:mb-12 opacity-90">
                           {service.description}
                         </p>
 
@@ -371,7 +397,7 @@ export default function Services() {
                     </div>
 
                     {/* Right Panel - Benefits & Stats */}
-                    <div className="p-6 sm:p-8 md:p-12 lg:p-16 bg-gray-50 flex flex-col justify-center">
+                    <div className="p-6 sm:p-8 bg-gray-50 flex flex-col justify-center">
                       <div className="mb-8 sm:mb-10 md:mb-12">
                         <h4 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8">
                           Why Choose This Service?
@@ -419,21 +445,34 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Our Process
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+              Proven
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Methodology
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
-              We follow a proven methodology to ensure successful project
-              delivery and client satisfaction.
+            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+              Ensuring successful project delivery and client satisfaction every
+              time.
             </p>
           </motion.div>
 
@@ -448,7 +487,7 @@ export default function Services() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-6 transition-all duration-500 hover:border-green-300/50 "
+                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-500 hover:border-green-300/50 "
                 >
                   <div className="text-center">
                     <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500 relative">

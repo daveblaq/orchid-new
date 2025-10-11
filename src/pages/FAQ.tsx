@@ -190,15 +190,21 @@ export default function FAQ() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           {/* Category Filter */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-12 sm:mb-14 md:mb-16"
+            className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-10 sm:mb-12"
           >
             {categories.map((category) => (
               <button
@@ -219,7 +225,7 @@ export default function FAQ() {
           </motion.div>
 
           {/* FAQ Items */}
-          <div className="max-w-5xl mx-auto space-y-4 sm:space-y-6">
+          <div className="max-w-5xl mx-auto space-y-3 sm:space-y-4">
             {filteredFAQs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -274,7 +280,7 @@ export default function FAQ() {
               <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gray-100 flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Search className="text-gray-400 w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4 px-4">
+              <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4 px-4">
                 No results found
               </h3>
               <p className="text-text-secondary text-base sm:text-lg max-w-md mx-auto px-4">
@@ -288,25 +294,38 @@ export default function FAQ() {
       </section>
 
       {/* Contact Support Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-14 md:mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
-              Still Have Questions?
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              Need Help?
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+              Still Have
+              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                Questions?
+              </span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
               Our expert team is here to provide personalized support and
-              detailed answers to your specific questions.
+              detailed answers.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactMethods.map((method, index) => {
               const Icon = method.icon;
               return (
@@ -317,13 +336,13 @@ export default function FAQ() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50"
+                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-500 hover:border-green-300/50"
                 >
                   <div className="text-center">
-                    <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8 transition-colors duration-500">
-                      <Icon className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8 transition-colors duration-500">
+                      <Icon className="text-white transition-colors duration-500 w-7 h-7 sm:w-8 sm:h-8" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                       {method.title}
                     </h3>
                     <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg mb-6 sm:mb-8">
