@@ -89,7 +89,7 @@ export default function Footer() {
             <div className="mb-4 sm:mb-6">
               <img
                 src="https://ik.imagekit.io/shiga/orchid/logo.30351a81.png?updatedAt=1760026675568"
-                alt="Orchid Digital Consulting"
+                alt="Orchiddigital Consulting"
                 className="h-12 sm:h-14 md:h-16 w-auto object-contain"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
@@ -104,7 +104,7 @@ export default function Footer() {
                         </div>
                         <div class="flex flex-col">
                           <span class="text-xl sm:text-2xl font-bold text-white">
-                            Orchid Digital
+                            Orchiddigital
                           </span>
                           <span class="text-base sm:text-lg bg-gradient-to-r from-primary-400 to-green-400 bg-clip-text text-transparent">
                             Consulting
@@ -222,22 +222,14 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm sm:text-base md:text-lg text-center md:text-left">
-              © {currentYear} Orchid Digital Consulting. All rights reserved.
+              © {currentYear} Orchiddigital Consulting. All rights reserved.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6">
-              <Link
-                to="/privacy"
-                className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm sm:text-base md:text-lg touch-manipulation text-center"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                to="/terms"
-                className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm sm:text-base md:text-lg touch-manipulation text-center"
-              >
-                Terms of Service
-              </Link>
-            </div>
+            <Link
+              to="/privacy"
+              className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm sm:text-base md:text-lg touch-manipulation text-center"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </motion.div>
       </div>

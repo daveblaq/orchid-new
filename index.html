@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orchid Digital Consulting - Business & Digital Consulting</title>
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Orchiddigital Consulting - Business & Digital Consulting</title>
     <meta
       name="description"
-      content="Orchid Digital Consulting - Empowering businesses for global growth through technology, training, and enterprise transformation."
+      content="Orchiddigital Consulting - Empowering businesses for global growth through technology, training, and enterprise transformation."
     />
+
+    <!-- Force light mode - execute before page renders -->
+    <script>
+      (function () {
+        // Force light mode immediately
+        document.documentElement.style.colorScheme = "light";
+        document.documentElement.style.backgroundColor = "#ffffff";
+        document.documentElement.classList.remove("dark");
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

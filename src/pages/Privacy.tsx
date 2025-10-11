@@ -6,7 +6,7 @@ export default function Privacy() {
     {
       title: "INTRODUCTION",
       icon: Shield,
-      content: `ORCHID DIGITAL CONSULTING LIMITED respects the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.orchiddigitalconsulting.com, including any other media form, social media handles and application related or connected thereto (collectively, "the Site"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+      content: `Orchiddigital CONSULTING LIMITED respects the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.orchiddigitalconsulting.com, including any other media form, social media handles and application related or connected thereto (collectively, "the Site"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
 
 We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the "Last Updated" date of this Privacy Policy. Any changes or modifications will be effective immediately upon posting the updated Privacy Policy on the Site, and you waive the right to receive specific notice of each such change or modification.
 
@@ -83,7 +83,7 @@ Sale or Bankruptcy: If we reorganize or sell all or a portion of our assets, und
   const additionalSections = [
     {
       title: "TRACKING TECHNOLOGIES",
-      content: `Cookies and Web Beacons: Orchid Digital Consulting Limited may use cookies, web beacons, tracking pixels, and other tracking technologies on the Site to help customize the Site and improve your experience. When you access the Site, your personal information is not collected through the use of tracking technology. Most browsers are set to accept cookies by default. You can remove or reject cookies, but be aware that such action could affect the availability and functionality of the Site.
+      content: `Cookies and Web Beacons: Orchiddigital Consulting Limited may use cookies, web beacons, tracking pixels, and other tracking technologies on the Site to help customize the Site and improve your experience. When you access the Site, your personal information is not collected through the use of tracking technology. Most browsers are set to accept cookies by default. You can remove or reject cookies, but be aware that such action could affect the availability and functionality of the Site.
 
 Internet-Based Advertising: Additionally, we may use third-party software to serve ads on the Site, implement email marketing campaigns, and manage other interactive marketing initiatives.
 
@@ -126,8 +126,8 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 mb-6 sm:mb-8">
-                <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary-500" />
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 mb-6 sm:mb-8">
+                <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
                 Privacy Policy
@@ -157,11 +157,11 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white border border-gray-200 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:shadow-2xl"
+                  className="bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 "
                 >
                   <div className="flex items-start mb-6 sm:mb-8">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <Icon className="text-primary-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
+                      <Icon className="text-white w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
                     </div>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary">
                       {section.title}
@@ -188,7 +188,7 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white border border-gray-200 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:shadow-2xl"
+                className="bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 "
               >
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-8">
                   {section.title}
@@ -217,7 +217,7 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-primary-500 p-6 sm:p-8 md:p-12 text-white text-center"
+            className="bg-gradient-to-br from-primary-500 to-green-500 p-6 sm:p-8 md:p-12 text-white text-center"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
               CONTACT US
@@ -229,14 +229,14 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
               <a
                 href="mailto:hello@orchidconsulting.com"
-                className="flex items-center gap-2 sm:gap-3 text-white hover:text-primary-100 transition-colors duration-300 text-sm sm:text-base md:text-lg"
+                className="flex items-center gap-2 sm:gap-3 text-white hover:text-green-200 transition-colors duration-300 text-sm sm:text-base md:text-lg"
               >
                 <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 hello@orchidconsulting.com
               </a>
               <a
                 href="tel:+15551234567"
-                className="flex items-center gap-2 sm:gap-3 text-white hover:text-primary-100 transition-colors duration-300 text-sm sm:text-base md:text-lg"
+                className="flex items-center gap-2 sm:gap-3 text-white hover:text-green-200 transition-colors duration-300 text-sm sm:text-base md:text-lg"
               >
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                 +1 (555) 123-4567

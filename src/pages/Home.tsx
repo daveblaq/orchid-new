@@ -65,7 +65,7 @@ export default function Home() {
       position: "CEO",
       company: "TechCorp Solutions",
       testimonial:
-        "Orchid Digital Consulting transformed our business operations. Their expertise in digital transformation helped us increase efficiency by 40% and expand into new markets.",
+        "Orchiddigital Consulting transformed our business operations. Their expertise in digital transformation helped us increase efficiency by 40% and expand into new markets.",
       image: "/api/placeholder/200/200",
     },
     {
@@ -182,11 +182,11 @@ export default function Home() {
                       <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110">
                         <Icon className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                      {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                         <span className="text-white text-xs font-bold">
                           {index + 1}
                         </span>
-                      </div>
+                      </div> */}
                     </div>
 
                     {/* Content */}
@@ -355,7 +355,8 @@ export default function Home() {
 
                   <div className="relative z-10">
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
-                      Unlock your financial dreams with Orchid Investment!
+                      Unlock your financial dreams with Orchiddigital
+                      Investment!
                     </h3>
 
                     {/* Interest Rate Highlights */}
@@ -384,8 +385,7 @@ export default function Home() {
                         Orchiddigital Investment
                       </h4>
                       <p className="text-lg sm:text-xl md:text-2xl mb-6">
-                        Lock your deposit and receive your interest upfront,{" "}
-                        INSTANTLY!
+                        Lock your deposit and receive your interest upfront.
                       </p>
                     </div>
 
@@ -589,14 +589,21 @@ export default function Home() {
                     onChange={(e) => {
                       const amount = parseFloat(e.target.value);
                       if (!isNaN(amount) && amount > 0) {
+                        // Determine interest rate based on amount
+                        // Below 50M = 5% monthly, 50M and above = 3.3% monthly
+                        const interestRate = amount >= 50000000 ? 0.033 : 0.05;
+                        const rateLabel = amount >= 50000000 ? "3.3%" : "5%";
+
                         // Update calculation display
-                        const monthlyROI = amount * 0.05;
+                        const monthlyROI = amount * interestRate;
                         const totalROI = monthlyROI * 12;
                         const totalPayout = totalROI + amount;
 
                         // Update display elements
                         const monthlyDisplay =
                           document.getElementById("monthly-roi");
+                        const monthlyLabel =
+                          document.getElementById("monthly-roi-label");
                         const totalROIDisplay =
                           document.getElementById("total-roi");
                         const capitalDisplay =
@@ -606,6 +613,8 @@ export default function Home() {
 
                         if (monthlyDisplay)
                           monthlyDisplay.textContent = `₦${monthlyROI.toLocaleString()}`;
+                        if (monthlyLabel)
+                          monthlyLabel.textContent = `Monthly ROI (${rateLabel}):`;
                         if (totalROIDisplay)
                           totalROIDisplay.textContent = `₦${totalROI.toLocaleString()}`;
                         if (capitalDisplay)
@@ -624,7 +633,10 @@ export default function Home() {
                   </h4>
                   <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-text-secondary text-sm sm:text-base">
+                      <span
+                        id="monthly-roi-label"
+                        className="text-text-secondary text-sm sm:text-base"
+                      >
                         Monthly ROI (5%):
                       </span>
                       <span
@@ -674,37 +686,39 @@ export default function Home() {
               </div>
 
               {/* Investment Terms */}
-              <div className="mt-16 sm:mt-20 md:mt-24 p-8 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm border border-gray-300/50  max-w-4xl mx-auto">
-                <h4 className="text-2xl sm:text-3xl font-bold text-text-primary mb-8 sm:mb-10 text-center">
-                  Investment{" "}
-                  <span className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
-                    Terms
-                  </span>
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-sm sm:text-base">
-                  <div className="text-center sm:text-left">
-                    <div className="font-semibold text-text-primary mb-1">
-                      Tenure:
-                    </div>
-                    <div className="text-text-secondary">12 Months</div>
+              <div className="mt-16 sm:mt-20 md:mt-24 max-w-2xl mx-auto">
+                <div className="bg-gradient-to-br from-primary-500 to-green-500 p-8 sm:p-10 md:p-12 text-white text-center relative overflow-hidden">
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-4 right-4 w-12 h-12 border-2 border-white"></div>
+                    <div className="absolute bottom-4 left-4 w-8 h-8 border border-white"></div>
                   </div>
-                  <div className="text-center sm:text-left">
-                    <div className="font-semibold text-text-primary mb-1">
-                      Monthly ROI:
+
+                  <div className="relative z-10">
+                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 text-sm font-semibold mb-4">
+                      <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                      Investment Terms
                     </div>
-                    <div className="text-text-secondary">5% of Capital</div>
-                  </div>
-                  <div className="text-center sm:text-left">
-                    <div className="font-semibold text-text-primary mb-1">
-                      Payment Structure:
+                    <h4 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                      Fixed Tenure
+                    </h4>
+                    <div className="flex items-center justify-center gap-3 sm:gap-4">
+                      <div className="text-6xl sm:text-7xl md:text-8xl font-bold">
+                        12
+                      </div>
+                      <div className="text-left">
+                        <div className="text-2xl sm:text-3xl font-bold">
+                          Months
+                        </div>
+                        <div className="text-white/80 text-sm sm:text-base">
+                          Investment Period
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-text-secondary">Monthly + Capital</div>
-                  </div>
-                  <div className="text-center sm:text-left">
-                    <div className="font-semibold text-text-primary mb-1">
-                      Total Return:
-                    </div>
-                    <div className="text-text-secondary">160% Payout</div>
+                    <p className="mt-6 text-white/90 text-base sm:text-lg">
+                      Lock your savings for 365 days and earn competitive
+                      returns
+                    </p>
                   </div>
                 </div>
               </div>
@@ -721,7 +735,7 @@ export default function Home() {
           >
             <div className="bg-primary-500 text-white px-4 sm:px-6 py-4 sm:py-6">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
-                Orchid Digital Investment Plans
+                Orchiddigital Investment Plans
               </h3>
             </div>
 
@@ -923,9 +937,9 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <Users className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">1</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
@@ -956,9 +970,9 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <TrendingUp className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">2</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
@@ -989,9 +1003,9 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <Globe className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">3</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
@@ -1022,9 +1036,9 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <DollarSign className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">4</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
@@ -1576,7 +1590,7 @@ export default function Home() {
       {/* CTA Section */}
       <CTASection
         title="Ready to Grow Your Business?"
-        subtitle="Let Orchid Digital Consulting help you reach your next milestone."
+        subtitle="Let Orchiddigital Consulting help you reach your next milestone."
         buttonText="Contact Us Today"
         buttonLink="/contact"
         gradient={true}

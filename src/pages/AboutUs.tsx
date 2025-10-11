@@ -84,7 +84,7 @@ export default function AboutUs() {
               className="space-y-6 sm:space-y-8 lg:pt-8"
             >
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black leading-[190%] px-4 sm:px-0">
-                Orchid Digital Consulting connects businesses with innovative
+                Orchiddigital Consulting connects businesses with innovative
                 solutions for seamless transformation.
               </h1>
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed px-4 sm:px-0">
@@ -96,7 +96,7 @@ export default function AboutUs() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="bg-primary-500 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium transition-all duration-300 hover:shadow-lg mx-4 sm:mx-0"
+                className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium transition-all duration-300 mx-4 sm:mx-0"
               >
                 Explore Our Services
               </motion.button>
@@ -145,7 +145,7 @@ export default function AboutUs() {
                 Our Story
               </h2>
               <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
-                Founded in 2018, Orchid Digital Consulting emerged from a vision
+                Founded in 2018, Orchiddigital Consulting emerged from a vision
                 to bridge the gap between traditional business practices and the
                 digital future. We recognized that many organizations were
                 struggling to adapt to the rapidly evolving technological
@@ -170,7 +170,7 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-primary-500 p-6 sm:p-8 md:p-12 text-white">
+              <div className="bg-gradient-to-br from-primary-500 to-green-500 p-6 sm:p-8 md:p-12 text-white">
                 <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">
@@ -220,12 +220,12 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="group bg-white border border-gray-200 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl"
+              className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                <Target className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-6 sm:mb-8 transition-colors duration-500">
+                <Target className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:text-primary-500 transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 Our Mission
               </h3>
               <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
@@ -240,12 +240,12 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="group bg-white border border-gray-200 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl"
+              className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                <Eye className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-6 sm:mb-8 transition-colors duration-500">
+                <Eye className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:text-primary-500 transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 Our Vision
               </h3>
               <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
@@ -288,13 +288,13 @@ export default function AboutUs() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl"
+                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50 "
                 >
                   <div className="text-center">
-                    <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                      <Icon className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                    <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
+                      <Icon className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                       {value.title}
                     </h3>
                     <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg">
@@ -336,7 +336,7 @@ export default function AboutUs() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="group bg-white border border-gray-200 overflow-hidden transition-all duration-500 hover:border-primary-300 hover:shadow-2xl"
+                className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 overflow-hidden transition-all duration-500 hover:border-green-300/50 "
               >
                 <div className="aspect-square overflow-hidden">
                   <img
@@ -346,7 +346,7 @@ export default function AboutUs() {
                   />
                 </div>
                 <div className="p-4 sm:p-6 md:p-8">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-2 sm:mb-3 group-hover:text-primary-500 transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-2 sm:mb-3 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                     {member.name}
                   </h3>
                   <p className="text-primary-500 font-semibold text-sm sm:text-base md:text-lg">
@@ -391,7 +391,7 @@ export default function AboutUs() {
                   About Us
                 </h3>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                  Orchid Digital Consulting Limited is committed to eradicating
+                  Orchiddigital Consulting Limited is committed to eradicating
                   poverty, reducing unemployment, and promoting job creation
                   through startups. We prevent business failure by supporting
                   existing businesses and hand-holding entrepreneurs through a
@@ -428,8 +428,8 @@ export default function AboutUs() {
               OUR ENGAGEMENT APPROACH
             </h3>
             <p className="text-gray-300 text-base sm:text-lg text-center mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto px-4">
-              Specifically, Orchid Digital Consulting facilitates the
-              achievement of the following outcomes:
+              Specifically, Orchiddigital Consulting facilitates the achievement
+              of the following outcomes:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
@@ -498,15 +498,15 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="group bg-white border border-gray-200 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl"
+              className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50 "
             >
-              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:text-primary-500 transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Our Approach
               </h3>
               <ul className="space-y-4 sm:space-y-6">
                 <li className="flex items-start">
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-primary-100 flex items-center justify-center mr-3 sm:mr-4 mt-1 group-hover:bg-primary-500 transition-colors duration-300">
-                    <CheckCircle className="text-primary-500 group-hover:text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
+                    <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
                     Comprehensive assessment and strategic planning tailored to
@@ -514,8 +514,8 @@ export default function AboutUs() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-primary-100 flex items-center justify-center mr-3 sm:mr-4 mt-1 group-hover:bg-primary-500 transition-colors duration-300">
-                    <CheckCircle className="text-primary-500 group-hover:text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
+                    <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
                     Custom solutions designed specifically for your industry and
@@ -523,8 +523,8 @@ export default function AboutUs() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-primary-100 flex items-center justify-center mr-3 sm:mr-4 mt-1 group-hover:bg-primary-500 transition-colors duration-300">
-                    <CheckCircle className="text-primary-500 group-hover:text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
+                    <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
                     End-to-end implementation support with dedicated project
@@ -532,8 +532,8 @@ export default function AboutUs() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-primary-100 flex items-center justify-center mr-3 sm:mr-4 mt-1 group-hover:bg-primary-500 transition-colors duration-300">
-                    <CheckCircle className="text-primary-500 group-hover:text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
+                    <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
                     Continuous monitoring and optimization for sustained growth
@@ -548,50 +548,50 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="group bg-white border border-gray-200 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl"
+              className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50 "
             >
-              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:text-primary-500 transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Our Expertise
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                <div className="group/item bg-gray-50 hover:bg-primary-50 p-4 sm:p-6 transition-all duration-300 hover:shadow-lg">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-primary-100 flex items-center justify-center mb-3 sm:mb-4 group-hover/item:bg-primary-500 transition-colors duration-300">
-                    <Globe className="text-primary-500 group-hover/item:text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
+                <div className="group/item bg-gray-50 hover:bg-primary-50 p-4 sm:p-6 transition-all duration-300 ">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-3 sm:mb-4  transition-colors duration-300">
+                    <Globe className="text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-primary-500 transition-colors duration-300">
+                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-green-500 transition-colors duration-300">
                     Global Reach
                   </div>
                   <div className="text-text-secondary text-xs sm:text-sm mt-1">
                     Serving clients worldwide
                   </div>
                 </div>
-                <div className="group/item bg-gray-50 hover:bg-primary-50 p-4 sm:p-6 transition-all duration-300 hover:shadow-lg">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-primary-100 flex items-center justify-center mb-3 sm:mb-4 group-hover/item:bg-primary-500 transition-colors duration-300">
-                    <Briefcase className="text-primary-500 group-hover/item:text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
+                <div className="group/item bg-gray-50 hover:bg-primary-50 p-4 sm:p-6 transition-all duration-300 ">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-3 sm:mb-4  transition-colors duration-300">
+                    <Briefcase className="text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-primary-500 transition-colors duration-300">
+                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-green-500 transition-colors duration-300">
                     Multi-Industry
                   </div>
                   <div className="text-text-secondary text-xs sm:text-sm mt-1">
                     Cross-sector expertise
                   </div>
                 </div>
-                <div className="group/item bg-gray-50 hover:bg-primary-50 p-4 sm:p-6 transition-all duration-300 hover:shadow-lg">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-primary-100 flex items-center justify-center mb-3 sm:mb-4 group-hover/item:bg-primary-500 transition-colors duration-300">
-                    <Wrench className="text-primary-500 group-hover/item:text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
+                <div className="group/item bg-gray-50 hover:bg-primary-50 p-4 sm:p-6 transition-all duration-300 ">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-3 sm:mb-4  transition-colors duration-300">
+                    <Wrench className="text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-primary-500 transition-colors duration-300">
+                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-green-500 transition-colors duration-300">
                     Full-Service
                   </div>
                   <div className="text-text-secondary text-xs sm:text-sm mt-1">
                     Complete solutions
                   </div>
                 </div>
-                <div className="group/item bg-gray-50 hover:bg-primary-50 p-4 sm:p-6 transition-all duration-300 hover:shadow-lg">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-primary-100 flex items-center justify-center mb-3 sm:mb-4 group-hover/item:bg-primary-500 transition-colors duration-300">
-                    <TrendingUp className="text-primary-500 group-hover/item:text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
+                <div className="group/item bg-gray-50 hover:bg-primary-50 p-4 sm:p-6 transition-all duration-300 ">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-3 sm:mb-4  transition-colors duration-300">
+                    <TrendingUp className="text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-primary-500 transition-colors duration-300">
+                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-green-500 transition-colors duration-300">
                     Proven Results
                   </div>
                   <div className="text-text-secondary text-xs sm:text-sm mt-1">

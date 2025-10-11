@@ -12,6 +12,8 @@ import {
   Users,
   Target,
   Zap,
+  TrendingUp,
+  CreditCard,
 } from "lucide-react";
 
 export default function Services() {
@@ -136,6 +138,46 @@ export default function Services() {
         "Comprehensive financial planning",
       ],
     },
+    {
+      title: "Orchiddigital Investment Service",
+      icon: TrendingUp,
+      description:
+        "Grow your savings with attractive interest rates. Lock your savings for 365 days and receive competitive returns on your investment.",
+      details: [
+        "5% monthly ROI for investments below ₦50M",
+        "3.3% monthly ROI for investments ₦50M and above",
+        "Fixed 365-day investment period",
+        "Monthly interest payments plus capital return",
+        "Secure and transparent investment platform",
+        "Instant interest calculation and tracking",
+      ],
+      benefits: [
+        "Up to 60% total annual return",
+        "Flexible investment amounts",
+        "Monthly ROI payments",
+        "Guaranteed capital return",
+      ],
+    },
+    {
+      title: "Orchiddigital Loan Service",
+      icon: CreditCard,
+      description:
+        "Access funds when you need them most with our fast and easy loan service. Get the financial support your business needs to thrive.",
+      details: [
+        "6-month loan duration",
+        "Quick approval process",
+        "Competitive interest rates",
+        "Flexible repayment terms",
+        "Business-focused loan products",
+        "Minimal documentation required",
+      ],
+      benefits: [
+        "Fast approval within 24-48 hours",
+        "Transparent fee structure",
+        "6-month flexible repayment",
+        "Dedicated loan support team",
+      ],
+    },
   ];
 
   const processSteps = [
@@ -202,13 +244,13 @@ export default function Services() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl"
+                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50 "
                 >
                   <div className="mb-4 sm:mb-6">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary-500 transition-colors duration-500">
-                      <Icon className="text-primary-500 group-hover:text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-4 sm:mb-6  transition-colors duration-500">
+                      <Icon className="text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:text-primary-500 transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                       {service.title}
                     </h3>
                     <p className="text-text-secondary leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
@@ -220,7 +262,7 @@ export default function Services() {
                   <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     {service.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center">
-                        <CheckCircle className="text-accent-500 mr-2 sm:mr-3 flex-shrink-0 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+                        <CheckCircle className="text-green-500 mr-2 sm:mr-3 flex-shrink-0 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                         <span className="text-text-secondary text-xs sm:text-sm">
                           {benefit}
                         </span>
@@ -228,8 +270,8 @@ export default function Services() {
                     ))}
                   </div>
 
-                  <div className="pt-3 sm:pt-4 border-t border-gray-100 group-hover:border-primary-200 transition-colors duration-300">
-                    <span className="text-primary-500 font-semibold text-base sm:text-lg group-hover:text-primary-500 transition-colors duration-300 flex items-center">
+                  <div className="pt-3 sm:pt-4 border-t border-gray-100 group-hover:border-green-200 transition-colors duration-300">
+                    <span className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-base sm:text-lg transition-colors duration-300 flex items-center">
                       Learn More{" "}
                       <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                     </span>
@@ -270,11 +312,11 @@ export default function Services() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white border border-gray-200 overflow-hidden"
+                  className="bg-white/80 backdrop-blur-sm border border-gray-300/50 overflow-hidden"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Panel - Content */}
-                    <div className="p-6 sm:p-8 md:p-12 lg:p-16 bg-primary-500 text-white relative">
+                    <div className="p-6 sm:p-8 md:p-12 lg:p-16 bg-gradient-to-br from-primary-500 to-green-500 text-white relative">
                       {/* Background Pattern */}
                       <div className="absolute inset-0 opacity-10">
                         <div className="absolute top-4 right-4 sm:top-8 sm:right-8 w-12 h-12 sm:w-16 sm:h-16 border-2 border-white"></div>
@@ -321,7 +363,7 @@ export default function Services() {
                               key={benefitIndex}
                               className="flex items-start"
                             >
-                              <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-accent-500 flex items-center justify-center mr-3 sm:mr-4 mt-1 flex-shrink-0">
+                              <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1 flex-shrink-0">
                                 <CheckCircle className="text-white w-3 h-3 sm:w-4 sm:h-4" />
                               </div>
                               <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
@@ -335,14 +377,14 @@ export default function Services() {
                       <div className="border-t border-gray-200 pt-6 sm:pt-8">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
                           <div className="mb-4 sm:mb-0">
-                            <div className="text-xl sm:text-2xl font-bold text-primary-500">
+                            <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                               Get Started
                             </div>
                             <div className="text-text-secondary text-sm sm:text-base">
                               Schedule a consultation
                             </div>
                           </div>
-                          <button className="bg-primary-500 hover:bg-primary-700 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center w-full sm:w-auto justify-center sm:justify-start">
+                          <button className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 flex items-center w-full sm:w-auto justify-center sm:justify-start">
                             Learn More{" "}
                             <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                           </button>
@@ -387,16 +429,16 @@ export default function Services() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl"
+                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50 "
                 >
                   <div className="text-center">
-                    <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500 relative">
-                      <Icon className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
-                      <div className="absolute -top-2 -right-2 w-7 h-7 sm:w-8 sm:h-8 bg-primary-500 text-white text-xs sm:text-sm font-bold flex items-center justify-center">
+                    <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500 relative">
+                      <Icon className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                      {/* <div className="absolute -top-2 -right-2 w-7 h-7 sm:w-8 sm:h-8 bg-green-500 text-white text-xs sm:text-sm font-bold flex items-center justify-center">
                         {step.step}
-                      </div>
+                      </div> */}
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                       {step.title}
                     </h3>
                     <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg">

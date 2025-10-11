@@ -61,8 +61,8 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-md mx-auto"
         >
-          <div className="bg-accent-100 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-            <CheckCircle className="text-accent-500 w-8 h-8 sm:w-10 sm:h-10" />
+          <div className="bg-gradient-to-br from-primary-500 to-green-500 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+            <CheckCircle className="text-white w-8 h-8 sm:w-10 sm:h-10" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-3 sm:mb-4">
             Message Sent!
@@ -105,12 +105,12 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
               whileHover={{ y: -8 }}
-              className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl text-center"
+              className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50  text-center"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                <Mail className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
+                <Mail className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Email Us
               </h3>
               <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
@@ -118,7 +118,7 @@ export default function Contact() {
               </p>
               <a
                 href="mailto:hello@orchidconsulting.com"
-                className="text-primary-500 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-500 transition-colors duration-300 flex items-center justify-center touch-manipulation break-all"
+                className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base md:text-lg group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center touch-manipulation break-all"
               >
                 hello@orchidconsulting.com{" "}
                 <ArrowRight className="ml-2 flex-shrink-0 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
@@ -131,12 +131,12 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
               whileHover={{ y: -8 }}
-              className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl text-center"
+              className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50  text-center"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                <Phone className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
+                <Phone className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Call Us
               </h3>
               <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
@@ -144,7 +144,7 @@ export default function Contact() {
               </p>
               <a
                 href="tel:+15551234567"
-                className="text-primary-500 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-500 transition-colors duration-300 flex items-center justify-center touch-manipulation"
+                className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base md:text-lg group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center touch-manipulation"
               >
                 +1 (555) 123-4567{" "}
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
@@ -157,18 +157,18 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
               whileHover={{ y: -8 }}
-              className="group bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:border-primary-300 hover:shadow-2xl text-center"
+              className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50  text-center"
             >
-              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-primary-100 flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:bg-primary-500 transition-colors duration-500">
-                <Calendar className="text-primary-500 group-hover:text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
+                <Calendar className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:text-primary-500 transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Schedule Meeting
               </h3>
               <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
                 Book a free consultation to discuss your specific needs
               </p>
-              <button className="text-primary-500 font-semibold text-sm sm:text-base md:text-lg group-hover:text-primary-500 transition-colors duration-300 flex items-center justify-center mx-auto touch-manipulation">
+              <button className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base md:text-lg group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center mx-auto touch-manipulation">
                 Book Now{" "}
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
               </button>
@@ -204,7 +204,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="bg-white border border-gray-200 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:shadow-2xl"
+                className="bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 "
               >
                 <form
                   onSubmit={handleSubmit(onSubmit)}
@@ -218,7 +218,7 @@ export default function Contact() {
                       <input
                         type="text"
                         {...register("name", { required: "Name is required" })}
-                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                         placeholder="Your full name"
                       />
                       {errors.name && (
@@ -241,7 +241,7 @@ export default function Contact() {
                             message: "Invalid email address",
                           },
                         })}
-                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                         placeholder="your.email@example.com"
                       />
                       {errors.email && (
@@ -260,7 +260,7 @@ export default function Contact() {
                       <input
                         type="text"
                         {...register("company")}
-                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                         placeholder="Your company name"
                       />
                     </div>
@@ -272,7 +272,7 @@ export default function Contact() {
                       <input
                         type="tel"
                         {...register("phone")}
-                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
@@ -286,7 +286,7 @@ export default function Contact() {
                       {...register("service", {
                         required: "Please select a service",
                       })}
-                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -311,7 +311,7 @@ export default function Contact() {
                       {...register("subject", {
                         required: "Subject is required",
                       })}
-                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                       placeholder="What's this about?"
                     />
                     {errors.subject && (
@@ -330,7 +330,7 @@ export default function Contact() {
                         required: "Message is required",
                       })}
                       rows={8}
-                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none transition-all duration-300"
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent resize-none transition-all duration-300"
                       placeholder="Tell us more about your inquiry and how we can help..."
                     />
                     {errors.message && (
@@ -342,7 +342,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-primary-500 hover:bg-primary-700 text-white font-semibold py-4 sm:py-5 md:py-6 px-6 sm:px-8 text-base sm:text-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 sm:gap-3 touch-manipulation"
+                    className="w-full bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white font-semibold py-4 sm:py-5 md:py-6 px-6 sm:px-8 text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 sm:gap-3 touch-manipulation"
                   >
                     <Send size={20} className="sm:w-6 sm:h-6" />
                     Send Message
@@ -358,15 +358,15 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="bg-white border border-gray-200 p-6 sm:p-8 transition-all duration-500 hover:shadow-2xl"
+                className="bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 "
               >
                 <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8">
                   Get in Touch
                 </h3>
                 <div className="space-y-6 sm:space-y-8">
                   <div className="flex items-start">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <Mail className="text-primary-500 w-5 h-5 sm:w-6 sm:h-6" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
+                      <Mail className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
@@ -384,8 +384,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <Phone className="text-primary-500 w-5 h-5 sm:w-6 sm:h-6" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
+                      <Phone className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
@@ -403,8 +403,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <MapPin className="text-primary-500 w-5 h-5 sm:w-6 sm:h-6" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
+                      <MapPin className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
@@ -421,8 +421,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-100 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
-                      <Clock className="text-primary-500 w-5 h-5 sm:w-6 sm:h-6" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-4 sm:mr-6 flex-shrink-0">
+                      <Clock className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
@@ -443,7 +443,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-primary-500 p-6 sm:p-8 md:p-10 text-white relative overflow-hidden"
+                className="bg-gradient-to-br from-primary-500 to-green-500 p-6 sm:p-8 md:p-10 text-white relative overflow-hidden"
               >
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
@@ -518,7 +518,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="border border-gray-200 overflow-hidden shadow-lg"
+            className="border border-gray-300/50 overflow-hidden"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.95373631531654!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sus!4v1635151234567!5m2!1sen!2sus"
@@ -544,7 +544,7 @@ export default function Contact() {
               href="https://maps.google.com/?q=123+Innovation+Street+Tech+City+TC+12345"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 touch-manipulation"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
             >
               <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
               Get Directions

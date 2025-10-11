@@ -48,7 +48,7 @@ export default function Navbar() {
           >
             <img
               src="https://ik.imagekit.io/shiga/orchid/logo.30351a81.png?updatedAt=1760026675568"
-              alt="Orchid Digital Consulting"
+              alt="Orchiddigital Consulting"
               className="h-10 sm:h-12 md:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
               onError={(e) => {
                 // Fallback to text logo if image fails to load
@@ -63,7 +63,7 @@ export default function Navbar() {
                       </div>
                       <div class="flex flex-col">
                         <span class="text-lg sm:text-xl md:text-2xl font-bold text-text-primary leading-tight">
-                          Orchid Digital
+                          Orchiddigital
                         </span>
                         <span class="text-xs sm:text-sm text-text-secondary font-medium tracking-wide">
                           Consulting
