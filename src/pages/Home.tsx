@@ -1375,9 +1375,9 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <Building className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">E</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
@@ -1409,9 +1409,9 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <TrendingUp className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">S</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
@@ -1443,9 +1443,9 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <Shield className="text-white w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
+                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">G</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content */}
