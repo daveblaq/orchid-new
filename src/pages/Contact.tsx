@@ -103,7 +103,7 @@ export default function Contact() {
                   Your Business?
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
                 Get in touch with our expert team and let's discuss how we can
                 help you achieve your goals.
               </p>
@@ -123,15 +123,15 @@ export default function Contact() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
                 <Mail className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Email Us
               </h3>
-              <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
+              <p className="text-text-secondary text-sm mb-3 sm:mb-4">
                 Send us a detailed message and we'll respond within 24 hours
               </p>
               <a
                 href="mailto:hello@orchidconsulting.com"
-                className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base md:text-lg group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center touch-manipulation break-all"
+                className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center touch-manipulation break-all"
               >
                 hello@orchidconsulting.com{" "}
                 <ArrowRight className="ml-2 flex-shrink-0 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
@@ -149,15 +149,15 @@ export default function Contact() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
                 <Phone className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Call Us
               </h3>
-              <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
+              <p className="text-text-secondary text-sm mb-3 sm:mb-4">
                 Speak directly with our experts for immediate assistance
               </p>
               <a
                 href="tel:+15551234567"
-                className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base md:text-lg group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center touch-manipulation"
+                className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center touch-manipulation"
               >
                 +1 (555) 123-4567{" "}
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
@@ -175,13 +175,13 @@ export default function Contact() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8  transition-colors duration-500">
                 <Calendar className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Schedule Meeting
               </h3>
-              <p className="text-text-secondary text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
+              <p className="text-text-secondary text-sm mb-3 sm:mb-4">
                 Book a free consultation to discuss your specific needs
               </p>
-              <button className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base md:text-lg group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center mx-auto touch-manipulation">
+              <button className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center mx-auto touch-manipulation">
                 Book Now{" "}
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
               </button>
@@ -216,7 +216,7 @@ export default function Contact() {
                 Conversation
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
               Fill out the form and we'll respond with a personalized solution
               within 24 hours.
             </p>
@@ -238,24 +238,24 @@ export default function Contact() {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
+                      <label className="block text-sm sm:text-base font-semibold text-text-secondary mb-2 sm:mb-3">
                         Full Name *
                       </label>
                       <input
                         type="text"
                         {...register("name", { required: "Name is required" })}
-                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                         placeholder="Your full name"
                       />
                       {errors.name && (
-                        <p className="text-red-500 text-xs sm:text-sm mt-2">
+                        <p className="text-red-500 text-xs mt-2">
                           {errors.name.message}
                         </p>
                       )}
                     </div>
 
                     <div>
-                      <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
+                      <label className="block text-sm sm:text-base font-semibold text-text-secondary mb-2 sm:mb-3">
                         Email Address *
                       </label>
                       <input
@@ -267,11 +267,11 @@ export default function Contact() {
                             message: "Invalid email address",
                           },
                         })}
-                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                         placeholder="your.email@example.com"
                       />
                       {errors.email && (
-                        <p className="text-red-500 text-xs sm:text-sm mt-2">
+                        <p className="text-red-500 text-xs mt-2">
                           {errors.email.message}
                         </p>
                       )}
@@ -280,39 +280,39 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
+                      <label className="block text-sm sm:text-base font-semibold text-text-secondary mb-2 sm:mb-3">
                         Company Name
                       </label>
                       <input
                         type="text"
                         {...register("company")}
-                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                         placeholder="Your company name"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
+                      <label className="block text-sm sm:text-base font-semibold text-text-secondary mb-2 sm:mb-3">
                         Phone Number
                       </label>
                       <input
                         type="tel"
                         {...register("phone")}
-                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
+                    <label className="block text-sm sm:text-base font-semibold text-text-secondary mb-2 sm:mb-3">
                       Service Interest *
                     </label>
                     <select
                       {...register("service", {
                         required: "Please select a service",
                       })}
-                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -322,14 +322,14 @@ export default function Contact() {
                       ))}
                     </select>
                     {errors.service && (
-                      <p className="text-red-500 text-xs sm:text-sm mt-2">
+                      <p className="text-red-500 text-xs mt-2">
                         {errors.service.message}
                       </p>
                     )}
                   </div>
 
                   <div>
-                    <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
+                    <label className="block text-sm sm:text-base font-semibold text-text-secondary mb-2 sm:mb-3">
                       Subject *
                     </label>
                     <input
@@ -337,18 +337,18 @@ export default function Contact() {
                       {...register("subject", {
                         required: "Subject is required",
                       })}
-                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
                       placeholder="What's this about?"
                     />
                     {errors.subject && (
-                      <p className="text-red-500 text-xs sm:text-sm mt-2">
+                      <p className="text-red-500 text-xs mt-2">
                         {errors.subject.message}
                       </p>
                     )}
                   </div>
 
                   <div>
-                    <label className="block text-base sm:text-lg font-semibold text-text-secondary mb-3 sm:mb-4">
+                    <label className="block text-sm sm:text-base font-semibold text-text-secondary mb-2 sm:mb-3">
                       Message *
                     </label>
                     <textarea
@@ -356,11 +356,11 @@ export default function Contact() {
                         required: "Message is required",
                       })}
                       rows={8}
-                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent resize-none transition-all duration-300"
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent resize-none transition-all duration-300"
                       placeholder="Tell us more about your inquiry and how we can help..."
                     />
                     {errors.message && (
-                      <p className="text-red-500 text-xs sm:text-sm mt-2">
+                      <p className="text-red-500 text-xs mt-2">
                         {errors.message.message}
                       </p>
                     )}
@@ -368,7 +368,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white font-semibold py-4 sm:py-5 md:py-6 px-6 sm:px-8 text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 sm:gap-3 touch-manipulation"
+                    className="w-full bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white font-semibold py-4 sm:py-5 md:py-6 px-6 sm:px-8 text-sm sm:text-base transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 sm:gap-3 touch-manipulation"
                   >
                     <Send size={20} className="sm:w-6 sm:h-6" />
                     Send Message
@@ -386,7 +386,7 @@ export default function Contact() {
                 transition={{ duration: 0.8 }}
                 className="bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 "
               >
-                <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6">
                   Get in Touch
                 </h3>
                 <div className="space-y-6 sm:space-y-8">
@@ -395,14 +395,14 @@ export default function Contact() {
                       <Mail className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
+                      <h4 className="text-base sm:text-lg font-bold text-text-primary mb-2">
                         Email
                       </h4>
                       <div className="space-y-1">
-                        <p className="text-text-secondary text-sm sm:text-base break-all">
+                        <p className="text-text-secondary text-sm break-all">
                           hello@orchidconsulting.com
                         </p>
-                        <p className="text-text-secondary text-sm sm:text-base break-all">
+                        <p className="text-text-secondary text-sm break-all">
                           partnerships@orchidconsulting.com
                         </p>
                       </div>
@@ -414,14 +414,14 @@ export default function Contact() {
                       <Phone className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
+                      <h4 className="text-base sm:text-lg font-bold text-text-primary mb-2">
                         Phone
                       </h4>
                       <div className="space-y-1">
-                        <p className="text-text-secondary text-sm sm:text-base md:text-lg">
+                        <p className="text-text-secondary text-sm">
                           +1 (555) 123-4567
                         </p>
-                        <p className="text-text-secondary text-sm sm:text-base md:text-lg">
+                        <p className="text-text-secondary text-sm">
                           +1 (555) 987-6543
                         </p>
                       </div>
@@ -433,10 +433,10 @@ export default function Contact() {
                       <MapPin className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
+                      <h4 className="text-base sm:text-lg font-bold text-text-primary mb-2">
                         Address
                       </h4>
-                      <p className="text-text-secondary text-sm sm:text-base md:text-lg">
+                      <p className="text-text-secondary text-sm">
                         123 Innovation Street
                         <br />
                         Tech City, TC 12345
@@ -451,10 +451,10 @@ export default function Contact() {
                       <Clock className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
+                      <h4 className="text-base sm:text-lg font-bold text-text-primary mb-2">
                         Business Hours
                       </h4>
-                      <div className="text-text-secondary text-sm sm:text-base md:text-lg space-y-1">
+                      <div className="text-text-secondary text-sm space-y-1">
                         <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                         <p>Saturday: 10:00 AM - 4:00 PM</p>
                         <p>Sunday: Closed</p>
@@ -483,37 +483,29 @@ export default function Contact() {
                 <div className="absolute inset-0 bg-black/70" />
 
                 <div className="relative z-10">
-                  <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                     Quick Response
                   </h3>
-                  <p className="text-white/90 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
+                  <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                     We typically respond to all inquiries within 24 hours during
                     business days. For urgent matters, please call us directly.
                   </p>
                   <div className="space-y-2 sm:space-y-3">
                     <div className="flex items-center">
                       <CheckCircle className="text-white mr-2 sm:mr-3 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5" />
-                      <span className="text-sm sm:text-base md:text-lg">
-                        Free initial consultation
-                      </span>
+                      <span className="text-sm">Free initial consultation</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="text-white mr-2 sm:mr-3 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5" />
-                      <span className="text-sm sm:text-base md:text-lg">
-                        Customized solutions
-                      </span>
+                      <span className="text-sm">Customized solutions</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="text-white mr-2 sm:mr-3 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5" />
-                      <span className="text-sm sm:text-base md:text-lg">
-                        Global expertise
-                      </span>
+                      <span className="text-sm">Global expertise</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="text-white mr-2 sm:mr-3 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5" />
-                      <span className="text-sm sm:text-base md:text-lg">
-                        Proven track record
-                      </span>
+                      <span className="text-sm">Proven track record</span>
                     </div>
                   </div>
                 </div>
@@ -549,7 +541,7 @@ export default function Contact() {
                 Office
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
               Located in the heart of the business district with convenient
               access and parking.
             </p>

@@ -14,58 +14,31 @@ import {
 export default function AboutUs() {
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "Mr. Okoh Chiadikaobi David",
       role: "CEO & Founder",
-      bio: "15+ years in digital transformation and business consulting.",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      bio: "Technology leader with expertise in enterprise software development.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Head of Operations",
-      bio: "Operations expert specializing in facility management and process optimization.",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      name: "David Kim",
-      role: "Lead Consultant",
-      bio: "Financial services expert with deep knowledge in audit and tax clearance.",
+      bio: "Entrepreneur, writer, consultant, and business coach with 7+ years of experience. Author of 'The Entrepreneur: Money Doubler' and has helped over 5000 businesses access funding.",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
   ];
 
-  const values = [
+  const missionGoals = [
     {
-      title: "Innovation",
+      title: "Financial Stability",
       description:
-        "We embrace cutting-edge technologies and methodologies to deliver forward-thinking solutions.",
+        "To secure financial stability in Nigeria through entrepreneurship programme and workshop trainings.",
       icon: Target,
     },
     {
-      title: "Excellence",
+      title: "Access to Finance",
       description:
-        "We maintain the highest standards in everything we do, ensuring exceptional results for our clients.",
+        "Access to finance for SMEs, MSMEs and other business sectors including Power sector, Entertainment, AgiTECH, Logistics, Advisory and Consulting Services.",
       icon: Award,
     },
     {
-      title: "Integrity",
+      title: "Business Bridge",
       description:
-        "We build trust through transparency, honesty, and ethical business practices.",
-      icon: CheckCircle,
-    },
-    {
-      title: "Collaboration",
-      description:
-        "We believe in the power of teamwork and partnership to achieve extraordinary outcomes.",
+        "To be a bridge to link business to businesses, connecting people and organizations to resources.",
       icon: Users,
     },
   ];
@@ -83,20 +56,21 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="space-y-6 sm:space-y-8 lg:pt-8"
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black leading-tight px-4 sm:px-0">
-                Orchiddigital Consulting connects businesses with innovative
-                solutions for seamless transformation.
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black leading-tight px-4 sm:px-0">
+                Orchiddigital Consulting Limited - Your Partner in Business
+                Growth and Financial Success
               </h1>
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed px-4 sm:px-0">
-                We open doors to meaningful growth where your business expertise
-                shines and your potential flourishes through strategic digital
-                consulting.
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-4 sm:px-0">
+                A finance-based consulting firm established in 2019 and
+                registered with the Corporate Affairs Commission (CAC) on March
+                17, 2020. We provide comprehensive business services across
+                production, manufacturing, logistics, and AgiTECH sectors.
               </p>
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium transition-all duration-300 mx-4 sm:mx-0"
+                className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium transition-all duration-300 mx-4 sm:mx-0"
               >
                 Explore Our Services
               </motion.button>
@@ -146,26 +120,29 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-6 px-4 sm:px-0">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-4 px-4 sm:px-0">
                 Our Story
               </h2>
-              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-6 px-4 sm:px-0">
-                Founded in 2018, Orchiddigital Consulting emerged from a vision
-                to bridge the gap between traditional business practices and the
-                digital future. We recognized that many organizations were
-                struggling to adapt to the rapidly evolving technological
-                landscape.
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed mb-4 sm:mb-4 px-4 sm:px-0">
+                Orchiddigital Consulting Limited was established in 2019 and
+                officially registered with the Corporate Affairs Commission
+                (CAC) on March 17, 2020, as a limited liability company. We are
+                a multi-dimensional corporate entity that provides comprehensive
+                business services across all sectors.
               </p>
-              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-6 px-4 sm:px-0">
-                Today, we stand as a trusted partner for businesses across
-                various industries, helping them navigate digital
-                transformation, optimize operations, and achieve sustainable
-                growth in an increasingly competitive market.
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed mb-4 sm:mb-4 px-4 sm:px-0">
+                The firm is affiliated with commercial banks and collaborates
+                with Partnership Initiatives in the Niger Delta (PIND). We offer
+                entrepreneurship development training, access to finance,
+                consultancy, inventory management, insurance audit and tax
+                clearance services.
               </p>
-              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed px-4 sm:px-0">
-                Our commitment to excellence and innovation has earned us the
-                trust of over 500 clients worldwide, from startups to Fortune
-                500 companies.
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed px-4 sm:px-0">
+                Our primary aim is to ensure that entrepreneurs are guided and
+                equipped with the right knowledge, feasible business
+                methodologies and strategies that will give them an edge in
+                achieving their set goals. We have successfully helped over 5000
+                businesses access funding and mentorship.
               </p>
             </motion.div>
             <motion.div
@@ -178,36 +155,28 @@ export default function AboutUs() {
               <div className="bg-gradient-to-br from-primary-500 to-green-500 p-6 sm:p-8 md:p-12 text-white">
                 <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                   <div className="text-center">
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">
-                      500+
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                      5000+
                     </div>
-                    <div className="text-sm sm:text-base md:text-lg opacity-90">
-                      Clients Served
-                    </div>
+                    <div className="text-sm opacity-90">Businesses Funded</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">
-                      50+
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                      2019
                     </div>
-                    <div className="text-sm sm:text-base md:text-lg opacity-90">
-                      Countries
-                    </div>
+                    <div className="text-sm opacity-90">Established</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">
-                      99%
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                      7+
                     </div>
-                    <div className="text-sm sm:text-base md:text-lg opacity-90">
-                      Success Rate
-                    </div>
+                    <div className="text-sm opacity-90">Years Experience</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">
-                      24/7
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                      100%
                     </div>
-                    <div className="text-sm sm:text-base md:text-lg opacity-90">
-                      Support
-                    </div>
+                    <div className="text-sm opacity-90">CAC Registered</div>
                   </div>
                 </div>
               </div>
@@ -235,14 +204,15 @@ export default function AboutUs() {
               <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-6 sm:mb-6 transition-colors duration-500">
                 <Target className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-4 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 Our Mission
               </h3>
-              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
-                To empower businesses worldwide by providing innovative digital
-                solutions, strategic guidance, and comprehensive support that
-                drives sustainable growth and transformation in an ever-evolving
-                marketplace.
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
+                To secure financial stability in Nigeria through
+                entrepreneurship programmes and workshop trainings. We provide
+                access to finance for SMEs, MSMEs and other business sectors
+                including Power, Entertainment, AgiTECH, Logistics, Advisory and
+                Consulting Services.
               </p>
             </motion.div>
             <motion.div
@@ -255,13 +225,14 @@ export default function AboutUs() {
               <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-6 sm:mb-6 transition-colors duration-500">
                 <Eye className="text-white transition-colors duration-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-6 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-4 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 Our Vision
               </h3>
-              <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
-                To become the global leader in digital consulting, recognized
-                for our ability to transform businesses and create lasting value
-                through technology, innovation, and strategic partnerships.
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
+                To be a bridge linking businesses to businesses, connecting
+                people and organizations to resources. We envision a Nigeria
+                where every entrepreneur has access to the knowledge, funding,
+                and support needed to build successful, sustainable businesses.
               </p>
             </motion.div>
           </div>
@@ -286,23 +257,23 @@ export default function AboutUs() {
           >
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              Our Values
+              Our Mission Goals
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
-              Principles That
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-3 sm:mb-4 px-4 leading-tight">
+              What We
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
-                Guide Us
+                Strive For
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
-              The core values that define who we are and how we serve our
-              clients.
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+              Our three core mission goals that drive everything we do to
+              support entrepreneurs and businesses.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => {
-              const Icon = value.icon;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {missionGoals.map((goal, index) => {
+              const Icon = goal.icon;
               return (
                 <motion.div
                   key={index}
@@ -320,20 +291,15 @@ export default function AboutUs() {
                       <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center transition-all duration-500 group-hover:scale-110 mx-auto">
                         <Icon className="text-white w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
-                        <span className="text-white text-xs font-bold">
-                          {index + 1}
-                        </span>
-                      </div>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 space-y-3">
-                      <h3 className="text-xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        {value.title}
+                      <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                        {goal.title}
                       </h3>
-                      <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
-                        {value.description}
+                      <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
+                        {goal.description}
                       </p>
                     </div>
                   </div>
@@ -362,21 +328,21 @@ export default function AboutUs() {
           >
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              Our Team
+              Leadership
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-6 sm:mb-6 px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-4 px-4 leading-tight">
               Meet Our
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
-                Leadership Team
+                CEO & Founder
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
-              The experienced professionals who drive our success and guide our
-              clients.
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+              The visionary leader who founded Orchiddigital Consulting and has
+              helped over 5000 businesses access funding.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-6 max-w-2xl mx-auto">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -395,12 +361,32 @@ export default function AboutUs() {
                   />
                 </div>
                 <div className="p-4 sm:p-6 md:p-8">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-2 sm:mb-3 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-text-primary mb-2 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                     {member.name}
                   </h3>
-                  <p className="text-primary-500 font-semibold text-sm sm:text-base md:text-lg">
+                  <p className="text-primary-500 font-semibold text-sm mb-4">
                     {member.role}
                   </p>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {member.bio}
+                  </p>
+                  <div className="mt-4 space-y-2">
+                    <p className="text-xs text-text-secondary">
+                      <strong>Education:</strong> Computer Science, B.S.Eds,
+                      PMP, PHRi
+                    </p>
+                    <p className="text-xs text-text-secondary">
+                      <strong>Experience:</strong> IT Manager at Arik Airline
+                      Services (3 years), Ojemaifarms Limited (3 years)
+                    </p>
+                    <p className="text-xs text-text-secondary">
+                      <strong>Author:</strong> "The Entrepreneur: Money Doubler"
+                    </p>
+                    <p className="text-xs text-text-secondary">
+                      <strong>Achievement:</strong> Helped 5000+ businesses
+                      access funding through CBN-AGSMEIS loans and TEF grants
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -437,24 +423,26 @@ export default function AboutUs() {
               {/* About Us */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
-                  About Us
+                  About Orchiddigital Consulting
                 </h3>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                  Orchiddigital Consulting Limited is committed to eradicating
-                  poverty, reducing unemployment, and promoting job creation
-                  through startups. We prevent business failure by supporting
-                  existing businesses and hand-holding entrepreneurs through a
-                  tried and tested education process resulting in stronger
-                  sustainable business growth.
+                  Orchiddigital Consulting Limited is a multi-dimensional
+                  corporate entity that provides comprehensive business services
+                  across all sectors. We are affiliated with commercial banks
+                  and collaborate with Partnership Initiatives in the Niger
+                  Delta (PIND). Our primary aim is to ensure that entrepreneurs
+                  are guided and equipped with the right knowledge, feasible
+                  business methodologies and strategies that will give them an
+                  edge in achieving their set goals.
                 </p>
               </div>
 
               {/* Accomplishment Plans */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
-                  ACCOMPLISHMENT PLANS
+                  Accomplishment Plans
                 </h3>
-                <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
                   Our entrepreneurship development program features a one-week
                   intensive program with online and physical classroom training
                   engagement model. Following our "Learning by Doing" maxim, we
@@ -462,6 +450,38 @@ export default function AboutUs() {
                   of education, gender or socio-economic status. The only
                   criterion is that participants must be 18 years & above.
                 </p>
+
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    Delivery Strategy:
+                  </h4>
+                  <p className="text-gray-300 text-sm mb-4">
+                    We deliver top-notch services with the following delivery
+                    strategies:
+                  </p>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">1.</span>
+                      <span>Using a Two-way Communication Cycle</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">2.</span>
+                      <span>Empowering action taking</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">3.</span>
+                      <span>Reward co-operation</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">4.</span>
+                      <span>Established workflow for executing strategy</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">5.</span>
+                      <span>A setup for course correction in place</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -540,13 +560,13 @@ export default function AboutUs() {
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               What Makes Us Different
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-6 sm:mb-6 px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-4 px-4 leading-tight">
               Our Unique
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Approach
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               Comprehensive expertise and proven methodologies that set us apart
               in the consulting industry.
             </p>
@@ -561,7 +581,7 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50 "
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-6 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-4 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Our Approach
               </h3>
               <ul className="space-y-3 sm:space-y-6">
@@ -569,7 +589,7 @@ export default function AboutUs() {
                   <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
                     <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
+                  <span className="text-text-secondary text-sm leading-relaxed">
                     Comprehensive assessment and strategic planning tailored to
                     your business goals
                   </span>
@@ -578,7 +598,7 @@ export default function AboutUs() {
                   <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
                     <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
+                  <span className="text-text-secondary text-sm leading-relaxed">
                     Custom solutions designed specifically for your industry and
                     challenges
                   </span>
@@ -587,7 +607,7 @@ export default function AboutUs() {
                   <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
                     <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
+                  <span className="text-text-secondary text-sm leading-relaxed">
                     End-to-end implementation support with dedicated project
                     management
                   </span>
@@ -596,7 +616,7 @@ export default function AboutUs() {
                   <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1  transition-colors duration-300">
                     <CheckCircle className="text-white transition-colors duration-300 w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
+                  <span className="text-text-secondary text-sm leading-relaxed">
                     Continuous monitoring and optimization for sustained growth
                   </span>
                 </li>
@@ -611,7 +631,7 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
               className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 md:p-10 transition-all duration-500 hover:border-green-300/50 "
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-6 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-4 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                 Our Expertise
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -619,10 +639,10 @@ export default function AboutUs() {
                   <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-3 sm:mb-4  transition-colors duration-300">
                     <Globe className="text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-green-500 transition-colors duration-300">
+                  <div className="font-bold text-text-primary text-sm group-hover/item:text-green-500 transition-colors duration-300">
                     Global Reach
                   </div>
-                  <div className="text-text-secondary text-xs sm:text-sm mt-1">
+                  <div className="text-text-secondary text-xs mt-1">
                     Serving clients worldwide
                   </div>
                 </div>
@@ -630,10 +650,10 @@ export default function AboutUs() {
                   <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-3 sm:mb-4  transition-colors duration-300">
                     <Briefcase className="text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-green-500 transition-colors duration-300">
+                  <div className="font-bold text-text-primary text-sm group-hover/item:text-green-500 transition-colors duration-300">
                     Multi-Industry
                   </div>
-                  <div className="text-text-secondary text-xs sm:text-sm mt-1">
+                  <div className="text-text-secondary text-xs mt-1">
                     Cross-sector expertise
                   </div>
                 </div>
@@ -641,10 +661,10 @@ export default function AboutUs() {
                   <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-3 sm:mb-4  transition-colors duration-300">
                     <Wrench className="text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-green-500 transition-colors duration-300">
+                  <div className="font-bold text-text-primary text-sm group-hover/item:text-green-500 transition-colors duration-300">
                     Full-Service
                   </div>
-                  <div className="text-text-secondary text-xs sm:text-sm mt-1">
+                  <div className="text-text-secondary text-xs mt-1">
                     Complete solutions
                   </div>
                 </div>
@@ -652,10 +672,10 @@ export default function AboutUs() {
                   <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-3 sm:mb-4  transition-colors duration-300">
                     <TrendingUp className="text-white transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="font-bold text-text-primary text-base sm:text-lg group-hover/item:text-green-500 transition-colors duration-300">
+                  <div className="font-bold text-text-primary text-sm group-hover/item:text-green-500 transition-colors duration-300">
                     Proven Results
                   </div>
-                  <div className="text-text-secondary text-xs sm:text-sm mt-1">
+                  <div className="text-text-secondary text-xs mt-1">
                     Track record of success
                   </div>
                 </div>

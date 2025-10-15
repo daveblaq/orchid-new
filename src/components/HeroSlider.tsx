@@ -17,7 +17,7 @@ const slides: SlideData[] = [
     subtext:
       "Transform your business with our comprehensive digital consulting services and strategic guidance.",
     backgroundImage:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1926&q=80",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80",
   },
   {
     id: 2,
@@ -33,14 +33,21 @@ const slides: SlideData[] = [
     subtext:
       "Navigate the digital landscape with confidence through our proven methodologies and expertise.",
     backgroundImage:
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80",
   },
 ];
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [imageErrors, setImageErrors] = useState<{ [key: number]: boolean }>(
+    {}
+  );
   const intervalRef = useRef<number | null>(null);
+
+  const handleImageError = (slideId: number) => {
+    setImageErrors((prev) => ({ ...prev, [slideId]: true }));
+  };
 
   const startAutoSlide = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -103,12 +110,25 @@ export default function HeroSlider() {
             transition={{ duration: 1.2, ease: "easeInOut" }}
             className="absolute inset-0"
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: `url(${slide.backgroundImage})`,
-              }}
-            />
+            {!imageErrors[slide.id] ? (
+              <>
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage: `url(${slide.backgroundImage})`,
+                  }}
+                />
+                {/* Hidden image element to detect loading errors */}
+                <img
+                  src={slide.backgroundImage}
+                  alt=""
+                  className="hidden"
+                  onError={() => handleImageError(slide.id)}
+                />
+              </>
+            ) : (
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-primary-600 to-green-600" />
+            )}
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/85" />
           </motion.div>
         ))}

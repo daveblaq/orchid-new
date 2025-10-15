@@ -170,13 +170,13 @@ export default function Home() {
               <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
               Our Services
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
               Comprehensive
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Digital Solutions
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               Accelerate your business growth with our cutting-edge technology
               solutions and strategic consulting services.
             </p>
@@ -211,10 +211,10 @@ export default function Home() {
 
                     {/* Content */}
                     <div className="flex-1 space-y-3">
-                      <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                      <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                         {service.title}
                       </h3>
-                      <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
+                      <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                         {service.description}
                       </p>
                     </div>
@@ -234,7 +234,7 @@ export default function Home() {
           >
             <Link
               to="/services"
-              className="group inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-10 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold transition-all duration-300  transform hover:-translate-y-2 hover:scale-105"
+              className="group inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-bold transition-all duration-300  transform hover:-translate-y-2 hover:scale-105"
             >
               <span>Explore All Services</span>
               <svg
@@ -279,19 +279,19 @@ export default function Home() {
                   <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                   Investment Service
                 </div>
-                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 leading-tight">
                   Orchiddigital Investment
                   <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                     Your Savings, Secured
                   </span>
                 </h2>
-                <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light mb-6 sm:mb-8">
+                <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed font-light mb-4 sm:mb-6">
                   Orchiddigital Investment is an exciting savings feature that
                   helps grow your savings with attractive interest rates. Lock
                   your savings for a specified period and receive interest
                   upfront, instantly!
                 </p>
-                <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
+                <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
                   Choose from our flexible investment plans with competitive
                   interest rates designed to maximize your returns.
                 </p>
@@ -312,7 +312,7 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                    <span className="text-text-primary text-sm sm:text-base font-medium">
                       Below ₦50M: 5% monthly interest
                     </span>
                   </div>
@@ -330,7 +330,7 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                    <span className="text-text-primary text-sm sm:text-base font-medium">
                       ₦50M and above: 3.3% monthly interest
                     </span>
                   </div>
@@ -348,7 +348,7 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                    <span className="text-text-primary text-sm sm:text-base font-medium">
                       365 days investment period
                     </span>
                   </div>
@@ -356,7 +356,7 @@ export default function Home() {
 
                 <a
                   href="/contact"
-                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300  transform hover:-translate-y-1 inline-block"
+                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold transition-all duration-300  transform hover:-translate-y-1 inline-block"
                 >
                   Get Started Now
                 </a>
@@ -490,15 +490,15 @@ export default function Home() {
                 <div className="text-primary-500 font-bold text-sm sm:text-base mb-4">
                   Loan Service
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 sm:mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6">
                   Orchiddigital Loan Plan - Quick and Reliable Financing
                 </h2>
-                <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
+                <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
                   Orchiddigital Loan Plan provides quick and reliable financing
                   solutions for your business and personal needs. Get the funds
                   you need with competitive rates and flexible terms.
                 </p>
-                <p className="text-text-secondary text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
+                <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
                   Whether you need capital for business expansion, equipment
                   purchase, or personal expenses, we've got you covered with
                   fast approval and transparent terms.
@@ -520,7 +520,7 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                    <span className="text-text-primary text-sm sm:text-base font-medium">
                       Quick approval in 24 hours
                     </span>
                   </div>
@@ -538,7 +538,7 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                    <span className="text-text-primary text-sm sm:text-base font-medium">
                       6 months repayment duration
                     </span>
                   </div>
@@ -556,7 +556,7 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <span className="text-text-primary text-sm sm:text-base md:text-lg font-medium">
+                    <span className="text-text-primary text-sm sm:text-base font-medium">
                       Competitive interest rates
                     </span>
                   </div>
@@ -564,7 +564,7 @@ export default function Home() {
 
                 <a
                   href="/contact"
-                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300  transform hover:-translate-y-1 inline-block"
+                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold transition-all duration-300  transform hover:-translate-y-1 inline-block"
                 >
                   Apply for Loan Now
                 </a>
@@ -591,7 +591,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-6 md:p-12 mb-12 sm:mb-16"
           >
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary text-center mb-8 sm:mb-12">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary text-center mb-6 sm:mb-8">
               Investment Calculator
             </h3>
 
@@ -599,7 +599,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 {/* Investment Amount Input */}
                 <div>
-                  <label className="block text-sm sm:text-base font-semibold text-text-primary mb-3">
+                  <label className="block text-sm font-semibold text-text-primary mb-2">
                     Investment Amount (₦)
                   </label>
                   <input
@@ -648,14 +648,14 @@ export default function Home() {
 
                 {/* Investment Summary */}
                 <div className="bg-primary-50 p-4 sm:p-6 border border-primary-200">
-                  <h4 className="text-lg sm:text-xl font-bold text-text-primary mb-4">
+                  <h4 className="text-base sm:text-lg font-bold text-text-primary mb-3">
                     Your Returns (12 Months)
                   </h4>
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span
                         id="monthly-roi-label"
-                        className="text-text-secondary text-sm sm:text-base"
+                        className="text-text-secondary text-sm"
                       >
                         Monthly ROI (5%):
                       </span>
@@ -667,7 +667,7 @@ export default function Home() {
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary text-sm sm:text-base">
+                      <span className="text-text-secondary text-sm">
                         Total ROI:
                       </span>
                       <span
@@ -678,7 +678,7 @@ export default function Home() {
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary text-sm sm:text-base">
+                      <span className="text-text-secondary text-sm">
                         Capital Returned:
                       </span>
                       <span
@@ -690,7 +690,7 @@ export default function Home() {
                     </div>
                     <div className="border-t border-primary-200 pt-3">
                       <div className="flex justify-between">
-                        <span className="text-text-primary font-bold text-sm sm:text-base">
+                        <span className="text-text-primary font-bold text-sm">
                           Total Payout:
                         </span>
                         <span
@@ -719,23 +719,23 @@ export default function Home() {
                       <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                       Investment Terms
                     </div>
-                    <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                    <h4 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                       Fixed Tenure
                     </h4>
-                    <div className="flex items-center justify-center gap-3 sm:gap-4">
-                      <div className="text-6xl sm:text-7xl md:text-8xl font-bold">
+                    <div className="flex items-center justify-center gap-2 sm:gap-3">
+                      <div className="text-4xl sm:text-5xl md:text-6xl font-bold">
                         12
                       </div>
                       <div className="text-left">
-                        <div className="text-xl sm:text-2xl font-bold">
+                        <div className="text-lg sm:text-xl font-bold">
                           Months
                         </div>
-                        <div className="text-white/80 text-sm sm:text-base">
+                        <div className="text-white/80 text-sm">
                           Investment Period
                         </div>
                       </div>
                     </div>
-                    <p className="mt-6 text-white/90 text-base sm:text-lg">
+                    <p className="mt-4 text-white/90 text-sm sm:text-base">
                       Lock your savings for 365 days and earn competitive
                       returns
                     </p>
@@ -744,136 +744,6 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-
-          {/* Investment Plans Table */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white border border-gray-200 overflow-hidden"
-          >
-            <div className="bg-primary-500 text-white px-4 sm:px-6 py-4 sm:py-6">
-              <h3 className="text-lg sm:text-xl font-bold text-center">
-                Orchiddigital Investment Plans
-              </h3>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
-                      S/N
-                    </th>
-                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
-                      Investment Amount (₦)
-                    </th>
-                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
-                      Monthly ROI (5%) (₦)
-                    </th>
-                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
-                      Total ROI (12 Months) (₦)
-                    </th>
-                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
-                      Capital Returned (₦)
-                    </th>
-                    <th className="px-3 sm:px-4 py-3 text-left text-xs sm:text-sm font-semibold text-text-primary">
-                      Total Payout After 12 Months (₦)
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {[
-                    {
-                      amount: 5000000,
-                      monthly: 250000,
-                      total: 3000000,
-                      payout: 8000000,
-                    },
-                    {
-                      amount: 10000000,
-                      monthly: 500000,
-                      total: 6000000,
-                      payout: 16000000,
-                    },
-                    {
-                      amount: 15000000,
-                      monthly: 750000,
-                      total: 9000000,
-                      payout: 24000000,
-                    },
-                    {
-                      amount: 20000000,
-                      monthly: 1000000,
-                      total: 12000000,
-                      payout: 32000000,
-                    },
-                    {
-                      amount: 25000000,
-                      monthly: 1250000,
-                      total: 15000000,
-                      payout: 40000000,
-                    },
-                    {
-                      amount: 30000000,
-                      monthly: 1500000,
-                      total: 18000000,
-                      payout: 48000000,
-                    },
-                    {
-                      amount: 40000000,
-                      monthly: 2000000,
-                      total: 24000000,
-                      payout: 64000000,
-                    },
-                    {
-                      amount: 50000000,
-                      monthly: 2500000,
-                      total: 30000000,
-                      payout: 80000000,
-                    },
-                    {
-                      amount: 75000000,
-                      monthly: 3750000,
-                      total: 45000000,
-                      payout: 120000000,
-                    },
-                    {
-                      amount: 100000000,
-                      monthly: 5000000,
-                      total: 60000000,
-                      payout: 160000000,
-                    },
-                  ].map((plan, index) => (
-                    <tr
-                      key={index}
-                      className="hover:bg-gray-50 transition-colors duration-200"
-                    >
-                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
-                        {index + 1}
-                      </td>
-                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary font-medium">
-                        {plan.amount.toLocaleString()}
-                      </td>
-                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
-                        {plan.monthly.toLocaleString()}
-                      </td>
-                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
-                        {plan.total.toLocaleString()}
-                      </td>
-                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary">
-                        {plan.amount.toLocaleString()}
-                      </td>
-                      <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-text-primary font-bold text-primary-500">
-                        {plan.payout.toLocaleString()}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </motion.div> */}
 
           {/* Investment CTA */}
           <motion.div
@@ -897,22 +767,22 @@ export default function Home() {
 
               {/* Content */}
               <div className="relative z-10 text-white p-6 md:p-12 lg:p-16">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
                   Ready to Start Investing?
                 </h3>
-                <p className="text-xl sm:text-2xl mb-8 sm:mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
                   Secure your financial future with our proven investment plans.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center">
                   <a
                     href="/contact"
-                    className="bg-white text-primary-500 px-6 sm:px-10 py-3 sm:py-5 text-base sm:text-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
+                    className="bg-white text-primary-500 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
                   >
                     Start Investing Now
                   </a>
                   <a
                     href="/contact"
-                    className="border-2 border-white text-white px-6 sm:px-10 py-3 sm:py-5 text-base sm:text-xl font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
+                    className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
                   >
                     Learn More
                   </a>
@@ -943,13 +813,13 @@ export default function Home() {
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Why Choose Us
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
               Proven Excellence in
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Digital Consulting
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               We combine industry expertise with innovative solutions to deliver
               exceptional results for our clients.
             </p>
@@ -978,10 +848,10 @@ export default function Home() {
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Expert Team
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-base sm:text-md font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                     Our experienced professionals bring deep industry knowledge
                     and proven expertise to every project.
                   </p>
@@ -1004,17 +874,14 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <TrendingUp className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">2</span>
-                  </div> */}
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Proven Results
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-base sm:text-md font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                     We deliver measurable outcomes that drive business growth
                     and operational efficiency.
                   </p>
@@ -1037,17 +904,14 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110 mx-auto">
                     <Globe className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                   </div>
-                  {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">3</span>
-                  </div> */}
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Global Reach
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-base sm:text-md font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                     We help businesses expand internationally with our global
                     network and market expertise.
                   </p>
@@ -1077,10 +941,10 @@ export default function Home() {
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Cost Effective
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-base sm:text-md font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                     Our solutions maximize ROI while minimizing costs through
                     efficient processes and smart technology.
                   </p>
@@ -1111,13 +975,13 @@ export default function Home() {
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Client Success Stories
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
               Trusted by
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Industry Leaders
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               Discover how we've transformed businesses with our proven
               expertise and innovative solutions.
             </p>
@@ -1190,16 +1054,16 @@ export default function Home() {
                           </div>
 
                           {/* Testimonial Text */}
-                          <blockquote className="text-text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed mb-6 sm:mb-8 md:mb-12 font-light">
+                          <blockquote className="text-text-primary text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6 font-light">
                             "{testimonial.testimonial}"
                           </blockquote>
 
                           {/* Author Info */}
                           <div>
-                            <div className="font-bold text-text-primary text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
+                            <div className="font-bold text-text-primary text-sm sm:text-base md:text-lg mb-1">
                               {testimonial.name}
                             </div>
-                            <div className="text-text-secondary text-sm sm:text-base md:text-lg">
+                            <div className="text-text-secondary text-xs sm:text-sm">
                               {testimonial.position} • {testimonial.company}
                             </div>
                           </div>
@@ -1305,10 +1169,10 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2">
                   500+
                 </div>
-                <div className="text-text-secondary text-sm sm:text-base font-medium">
+                <div className="text-text-secondary text-sm font-medium">
                   Happy Clients
                 </div>
               </motion.div>
@@ -1319,10 +1183,10 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2">
                   98%
                 </div>
-                <div className="text-text-secondary text-sm sm:text-base font-medium">
+                <div className="text-text-secondary text-sm font-medium">
                   Success Rate
                 </div>
               </motion.div>
@@ -1333,10 +1197,10 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2">
                   24/7
                 </div>
-                <div className="text-text-secondary text-sm sm:text-base font-medium">
+                <div className="text-text-secondary text-sm font-medium">
                   Support
                 </div>
               </motion.div>
@@ -1347,10 +1211,10 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center bg-white/60 backdrop-blur-sm border border-gray-300/50 p-6 transition-all duration-300 hover:border-green-300/50"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2 sm:mb-3">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent mb-2">
                   5★
                 </div>
-                <div className="text-text-secondary text-sm sm:text-base font-medium">
+                <div className="text-text-secondary text-sm font-medium">
                   Average Rating
                 </div>
               </motion.div>
@@ -1379,13 +1243,13 @@ export default function Home() {
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Trusted Partners
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
               Strategic
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Partnerships
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
               Collaborating with industry leaders to deliver exceptional results
               across diverse sectors.
             </p>
@@ -1416,10 +1280,10 @@ export default function Home() {
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Enterprise Partners
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                     Fortune 500 companies and large-scale organizations trust us
                     with their digital transformation needs.
                   </p>
@@ -1450,10 +1314,10 @@ export default function Home() {
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Startup Partners
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                     Innovative startups and emerging businesses rely on our
                     expertise to scale and grow rapidly.
                   </p>
@@ -1484,10 +1348,10 @@ export default function Home() {
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl sm:text-2xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Government Partners
                   </h3>
-                  <p className="text-text-secondary leading-relaxed text-sm sm:text-base font-light flex-1">
+                  <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                     Public sector organizations partner with us for digital
                     transformation and citizen services.
                   </p>
@@ -1504,7 +1368,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-6 md:p-12 lg:p-16"
           >
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary text-center mb-10 sm:mb-12 md:mb-16">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary text-center mb-8 sm:mb-10">
               Our{" "}
               <span className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Clients
@@ -1601,10 +1465,10 @@ export default function Home() {
             className="mt-12 sm:mt-16 md:mt-20 text-center"
           >
             <div className="bg-primary-500 text-white p-6 sm:p-8 md:p-12">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
                 Ready to Partner With Us?
               </h3>
-              <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90">
+              <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 opacity-90">
                 Join our network of successful partners and grow your business
                 with our expertise.
               </p>

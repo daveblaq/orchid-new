@@ -248,13 +248,13 @@ export default function Services() {
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 Our Services
               </div>
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
                 Comprehensive
                 <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                   Business Solutions
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
                 Designed to drive growth, efficiency, and success across all
                 aspects of your organization.
               </p>
@@ -279,10 +279,10 @@ export default function Services() {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-4 sm:mb-6  transition-colors duration-500">
                       <Icon className="text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="text-text-secondary leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
+                    <p className="text-text-secondary leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
                       {service.description}
                     </p>
                   </div>
@@ -292,7 +292,7 @@ export default function Services() {
                     {service.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center">
                         <CheckCircle className="text-green-500 mr-2 sm:mr-3 flex-shrink-0 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-                        <span className="text-text-secondary text-xs sm:text-sm">
+                        <span className="text-text-secondary text-sm">
                           {benefit}
                         </span>
                       </div>
@@ -300,7 +300,7 @@ export default function Services() {
                   </div>
 
                   <div className="pt-3 sm:pt-4 border-t border-gray-100 group-hover:border-green-200 transition-colors duration-300">
-                    <span className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-base sm:text-lg transition-colors duration-300 flex items-center">
+                    <span className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base transition-colors duration-300 flex items-center">
                       Learn More{" "}
                       <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                     </span>
@@ -332,13 +332,13 @@ export default function Services() {
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Service Details
             </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
               Explore Our
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Service Offerings
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
               Discover how we can help your business thrive with our
               comprehensive solutions.
             </p>
@@ -374,12 +374,12 @@ export default function Services() {
                           <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 sm:mb-0 sm:mr-4 md:mr-6">
                             <Icon className="text-white w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                           </div>
-                          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
                             {service.title}
                           </h3>
                         </div>
 
-                        <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-10 md:mb-12 opacity-90">
+                        <p className="text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 opacity-90">
                           {service.description}
                         </p>
 
@@ -387,7 +387,7 @@ export default function Services() {
                           {service.details.map((detail, detailIndex) => (
                             <div key={detailIndex} className="flex items-start">
                               <CheckCircle className="text-white mr-2 sm:mr-3 mt-1 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5" />
-                              <span className="text-white/90 text-sm sm:text-base md:text-lg">
+                              <span className="text-white/90 text-sm">
                                 {detail}
                               </span>
                             </div>
@@ -399,7 +399,7 @@ export default function Services() {
                     {/* Right Panel - Benefits & Stats */}
                     <div className="p-6 sm:p-8 bg-gray-50 flex flex-col justify-center">
                       <div className="mb-8 sm:mb-10 md:mb-12">
-                        <h4 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6 sm:mb-8">
+                        <h4 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6">
                           Why Choose This Service?
                         </h4>
                         <div className="space-y-4 sm:space-y-6">
@@ -411,7 +411,7 @@ export default function Services() {
                               <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-green-500 flex items-center justify-center mr-3 sm:mr-4 mt-1 flex-shrink-0">
                                 <CheckCircle className="text-white w-3 h-3 sm:w-4 sm:h-4" />
                               </div>
-                              <span className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
+                              <span className="text-text-secondary text-sm leading-relaxed">
                                 {benefit}
                               </span>
                             </div>
@@ -422,14 +422,14 @@ export default function Services() {
                       <div className="border-t border-gray-200 pt-6 sm:pt-8">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
                           <div className="mb-4 sm:mb-0">
-                            <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
+                            <div className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                               Get Started
                             </div>
-                            <div className="text-text-secondary text-sm sm:text-base">
+                            <div className="text-text-secondary text-sm">
                               Schedule a consultation
                             </div>
                           </div>
-                          <button className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 flex items-center w-full sm:w-auto justify-center sm:justify-start">
+                          <button className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 flex items-center w-full sm:w-auto justify-center sm:justify-start">
                             Learn More{" "}
                             <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                           </button>
@@ -464,13 +464,13 @@ export default function Services() {
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Our Process
             </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
               Proven
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Methodology
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
               Ensuring successful project delivery and client satisfaction every
               time.
             </p>
@@ -496,10 +496,10 @@ export default function Services() {
                         {step.step}
                       </div> */}
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                       {step.title}
                     </h3>
-                    <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg">
+                    <p className="text-text-secondary leading-relaxed text-sm">
                       {step.description}
                     </p>
                   </div>

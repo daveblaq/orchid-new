@@ -158,10 +158,10 @@ export default function FAQ() {
               <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 mb-6 sm:mb-8">
                 <HelpCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 sm:mb-8 px-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4">
                 Frequently Asked Questions
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4">
                 Find answers to common questions about our services, processes,
                 and how we can help your business grow.
               </p>
@@ -182,7 +182,7 @@ export default function FAQ() {
                 placeholder="Search for questions or topics..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 sm:pl-16 pr-4 sm:pr-6 py-4 sm:py-5 md:py-6 text-base sm:text-lg bg-white/80 backdrop-blur-sm border border-gray-300/50 focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none transition-colors duration-300"
+                className="w-full pl-12 sm:pl-16 pr-4 sm:pr-6 py-4 sm:py-5 md:py-6 text-sm sm:text-base bg-white/80 backdrop-blur-sm border border-gray-300/50 focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none transition-colors duration-300"
               />
             </div>
           </motion.div>
@@ -213,7 +213,7 @@ export default function FAQ() {
                   setActiveCategory(category.id);
                   setOpenIndex(null);
                 }}
-                className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base font-semibold transition-all duration-300 touch-manipulation ${
+                className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm font-semibold transition-all duration-300 touch-manipulation ${
                   activeCategory === category.id
                     ? "bg-gradient-to-r from-primary-500 to-green-500 text-white"
                     : "bg-white/80 backdrop-blur-sm text-text-secondary hover:bg-green-50 hover:text-green-500 border border-gray-300/50 hover:border-green-300/50"
@@ -239,7 +239,7 @@ export default function FAQ() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-4 sm:px-6 md:px-10 py-5 sm:py-6 md:py-8 text-left flex justify-between items-center hover:bg-green-50/30 transition-colors duration-300 touch-manipulation"
                 >
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-text-primary pr-4 sm:pr-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+                  <h3 className="text-sm sm:text-base font-bold text-text-primary pr-4 sm:pr-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                     {faq.question}
                   </h3>
                   <motion.div
@@ -261,7 +261,7 @@ export default function FAQ() {
                 >
                   <div className="px-4 sm:px-6 md:px-10 pb-5 sm:pb-6 md:pb-8">
                     <div className="border-t border-gray-100 pt-4 sm:pt-5 md:pt-6">
-                      <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg">
+                      <p className="text-text-secondary leading-relaxed text-sm">
                         {faq.answer}
                       </p>
                     </div>
@@ -280,10 +280,10 @@ export default function FAQ() {
               <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gray-100 flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Search className="text-gray-400 w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4 px-4">
+              <h3 className="text-base sm:text-lg font-bold text-text-primary mb-3 sm:mb-4 px-4">
                 No results found
               </h3>
-              <p className="text-text-secondary text-base sm:text-lg max-w-md mx-auto px-4">
+              <p className="text-text-secondary text-sm sm:text-base max-w-md mx-auto px-4">
                 {searchQuery
                   ? "Try adjusting your search terms or browse different categories."
                   : "Try selecting a different category to explore more questions."}
@@ -319,7 +319,7 @@ export default function FAQ() {
                 Questions?
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
+            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
               Our expert team is here to provide personalized support and
               detailed answers.
             </p>
@@ -342,15 +342,15 @@ export default function FAQ() {
                     <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mx-auto mb-6 sm:mb-8 transition-colors duration-500">
                       <Icon className="text-white transition-colors duration-500 w-7 h-7 sm:w-8 sm:h-8" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-4 sm:mb-6 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
+                    <h3 className="text-base sm:text-lg font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                       {method.title}
                     </h3>
-                    <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg mb-6 sm:mb-8">
+                    <p className="text-text-secondary leading-relaxed text-sm mb-4 sm:mb-6">
                       {method.description}
                     </p>
                     <a
                       href={method.href}
-                      className="inline-block bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
+                      className="inline-block bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
                     >
                       {method.action}
                     </a>
