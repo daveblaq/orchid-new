@@ -13,27 +13,24 @@ interface SlideData {
 const slides: SlideData[] = [
   {
     id: 1,
-    headline: "Empowering Businesses for Global Growth",
-    subtext:
-      "Transform your business with our comprehensive digital consulting services and strategic guidance.",
+    headline: "Empowering Business Growth",
+    subtext: "Transform your business with strategic consulting and guidance.",
     backgroundImage:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80",
+      "https://ik.imagekit.io/shiga/orchid/image-04.png?updatedAt=1760541599211",
   },
   {
     id: 2,
-    headline: "Driving Innovation Through Technology and Training",
-    subtext:
-      "Stay ahead of the competition with cutting-edge solutions and expert training programs.",
+    headline: "Innovation Through Technology",
+    subtext: "Stay ahead with cutting-edge solutions and training.",
     backgroundImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      "https://ik.imagekit.io/shiga/orchid/output-onlinepngtools.png?updatedAt=1760541933605",
   },
   {
     id: 3,
-    headline: "Your Partner in Digital and Enterprise Transformation",
-    subtext:
-      "Navigate the digital landscape with confidence through our proven methodologies and expertise.",
+    headline: "Your Transformation Partner",
+    subtext: "Navigate business growth with proven expertise.",
     backgroundImage:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80",
+      "https://ik.imagekit.io/shiga/orchid/image-03.png?updatedAt=1760541595541",
   },
 ];
 
@@ -168,10 +165,10 @@ export default function HeroSlider() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-5xl mx-auto"
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight px-4">
+              <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight tracking-tight px-4">
                 {slides[currentSlide].headline}
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-100 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-4xl mx-auto px-4">
+              <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-100 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto px-4">
                 {slides[currentSlide].subtext}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center max-w-md sm:max-w-none mx-auto px-4">

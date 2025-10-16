@@ -40,42 +40,65 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
 
-  const services = [
+  const mainServices = [
+    {
+      title: "Investment Service",
+      description:
+        "Grow your wealth with our secure investment plans. Earn up to 5% monthly returns on investments below ₦50M, or 3.3% monthly for ₦50M and above.",
+      icon: TrendingUp,
+      link: "/services/investment",
+    },
+    {
+      title: "Loan Service",
+      description:
+        "Get quick access to capital with our Orchiddigital Loan Plan. Flexible terms with competitive rates and fast approval process.",
+      icon: DollarSign,
+      link: "/services/loan",
+    },
+  ];
+
+  const otherServices = [
     {
       title: "Access to Market",
       description:
         "Connect bulk purchasers, sell across borders, and help enter foreign markets with strategic guidance.",
       icon: Globe,
+      link: "/services/access-to-market",
     },
     {
       title: "Entrepreneurship Training",
       description:
         "Develop individuals for self-employment and business leadership through comprehensive training programs.",
       icon: GraduationCap,
+      link: "/services/entrepreneurship-training",
     },
     {
       title: "Facility Management",
       description:
         "Coordinate everything that keeps business systems and assets running smoothly and efficiently.",
       icon: Building,
+      link: "/services/facility-management",
     },
     {
       title: "Insurance / Audit and Tax Clearance",
       description:
         "Provide financial protection and audit/tax services for businesses of all sizes.",
       icon: FileText,
+      link: "/services/insurance-audit-tax",
     },
     {
       title: "Enterprise Management Software Development",
       description:
         "Develop, maintain, and re-engineer business software solutions tailored to your needs.",
       icon: Code,
+      link: "/services/software-development",
     },
     {
       title: "Support Services",
       description:
         "End-to-end support from strategy development to implementation and beyond.",
       icon: Headphones,
+      link: "/services/support",
     },
   ];
 
@@ -182,8 +205,9 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => {
+          {/* Main Services - 2x2 Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {mainServices.map((service, index) => {
               const Icon = service.icon;
               return (
                 <motion.div
@@ -202,11 +226,6 @@ export default function Home() {
                       <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110">
                         <Icon className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
                       </div>
-                      {/* <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 flex items-center justify-center">
-                        <span className="text-white text-xs font-bold">
-                          {index + 1}
-                        </span>
-                      </div> */}
                     </div>
 
                     {/* Content */}
@@ -217,6 +236,90 @@ export default function Home() {
                       <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
                         {service.description}
                       </p>
+
+                      {/* Learn More Link */}
+                      <div className="pt-3">
+                        <Link
+                          to={service.link}
+                          className="inline-flex items-center text-primary-500 hover:text-primary-600 font-medium text-sm transition-colors duration-300 group/link"
+                        >
+                          Learn More
+                          <svg
+                            className="ml-1 w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Other Services - 3 Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {otherServices.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div
+                  key={`other-${index}`}
+                  initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: (index + 2) * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group relative h-full"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-green-500/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6  transition-all duration-500 group-hover:border-primary-300/50 h-full flex flex-col">
+                    {/* Icon Container */}
+                    <div className="relative mb-8">
+                      <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110">
+                        <Icon className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 space-y-3">
+                      <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
+                        {service.description}
+                      </p>
+
+                      {/* Learn More Link */}
+                      <div className="pt-3">
+                        <Link
+                          to={service.link}
+                          className="inline-flex items-center text-primary-500 hover:text-primary-600 font-medium text-sm transition-colors duration-300 group/link"
+                        >
+                          Learn More
+                          <svg
+                            className="ml-1 w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -251,544 +354,6 @@ export default function Home() {
                 />
               </svg>
             </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Major Services Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          {/* Investment Service */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mb-20 sm:mb-24 md:mb-32"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
-              {/* Content Section */}
-              <div className="order-2 lg:order-1">
-                <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  Investment Service
-                </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 leading-tight">
-                  Orchiddigital Investment
-                  <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
-                    Your Savings, Secured
-                  </span>
-                </h2>
-                <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed font-light mb-4 sm:mb-6">
-                  Orchiddigital Investment is an exciting savings feature that
-                  helps grow your savings with attractive interest rates. Lock
-                  your savings for a specified period and receive interest
-                  upfront, instantly!
-                </p>
-                <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
-                  Choose from our flexible investment plans with competitive
-                  interest rates designed to maximize your returns.
-                </p>
-
-                {/* Interest Rates */}
-                <div className="space-y-3 sm:space-y-6 mb-8 sm:mb-10">
-                  <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-text-primary text-sm sm:text-base font-medium">
-                      Below ₦50M: 5% monthly interest
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-text-primary text-sm sm:text-base font-medium">
-                      ₦50M and above: 3.3% monthly interest
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-text-primary text-sm sm:text-base font-medium">
-                      365 days investment period
-                    </span>
-                  </div>
-                </div>
-
-                <a
-                  href="/contact"
-                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold transition-all duration-300  transform hover:-translate-y-1 inline-block"
-                >
-                  Get Started Now
-                </a>
-              </div>
-
-              {/* Image Section */}
-              <div className="order-1 lg:order-2">
-                <div className="bg-primary-500 p-6 sm:p-8 md:p-12 text-white relative overflow-hidden">
-                  {/* Background Icons */}
-                  <div className="absolute top-4 right-4 opacity-10">
-                    <DollarSign size={32} />
-                  </div>
-                  <div className="absolute bottom-4 left-4 opacity-10">
-                    <TrendingUp size={28} />
-                  </div>
-
-                  <div className="relative z-10">
-                    <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8">
-                      Unlock your financial dreams with Orchiddigital
-                      Investment!
-                    </h3>
-
-                    {/* Interest Rate Highlights */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                      <div className="bg-white p-3 sm:p-4 text-center rounded">
-                        <div className="text-lg sm:text-xl font-bold text-green-500">
-                          5%
-                        </div>
-                        <div className="text-xs sm:text-sm text-gray-400">
-                          Below ₦50M
-                        </div>
-                      </div>
-                      <div className="bg-white p-3 sm:p-4 text-center rounded">
-                        <div className="text-lg sm:text-xl font-bold text-green-500">
-                          3.3%
-                        </div>
-                        <div className="text-xs sm:text-sm text-gray-400">
-                          ₦50M & above
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Main Message */}
-                    <div className="text-center">
-                      <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                        Orchiddigital Investment
-                      </h4>
-                      <p className="text-lg sm:text-xl md:text-2xl mb-6">
-                        Lock your deposit and receive your interest upfront.
-                      </p>
-                    </div>
-
-                    {/* Call to Action */}
-                    <div className="text-center">
-                      <p className="text-sm sm:text-base mb-4">
-                        Start your investment journey with us today!
-                      </p>
-                      <a
-                        href="/contact"
-                        className="inline-block bg-green-500 hover:bg-green-700 text-white px-6 py-3 text-sm sm:text-base font-semibold transition-all duration-300  transform hover:-translate-y-1"
-                      >
-                        Contact Us Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Loan Service */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-12 sm:mt-16"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
-              {/* Image Section */}
-              <div className="order-1">
-                <div className="bg-primary-500 p-6 sm:p-8 md:p-12 text-white relative overflow-hidden">
-                  {/* Background Icons */}
-                  <div className="absolute top-4 right-4 opacity-10">
-                    <FileText size={32} />
-                  </div>
-                  <div className="absolute bottom-4 left-4 opacity-10">
-                    <TrendingUp size={28} />
-                  </div>
-
-                  <div className="relative z-10">
-                    <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8">
-                      Get the funding you need with Orchid Loans!
-                    </h3>
-
-                    {/* Loan Features */}
-                    <div className="space-y-3 sm:space-y-6 mb-6 sm:mb-8">
-                      <div className="bg-white p-3 sm:p-4 rounded text-center">
-                        <div className="text-lg sm:text-xl font-bold text-green-500">
-                          Quick Approval
-                        </div>
-                        <div className="text-sm sm:text-base text-gray-400">
-                          24 hours processing
-                        </div>
-                      </div>
-                      <div className="bg-white p-3 sm:p-4 rounded text-center">
-                        <div className="text-lg sm:text-xl font-bold text-green-500">
-                          6 Months
-                        </div>
-                        <div className="text-sm sm:text-base text-gray-400">
-                          Repayment Duration
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Main Message */}
-                    <div className="text-center">
-                      <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                        Orchiddigital Loan Plan
-                      </h4>
-                      <p className="text-lg sm:text-xl md:text-2xl mb-6">
-                        Access funds when you need them most, FAST & EASY!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Content Section */}
-              <div className="order-2">
-                <div className="text-primary-500 font-bold text-sm sm:text-base mb-4">
-                  Loan Service
-                </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6">
-                  Orchiddigital Loan Plan - Quick and Reliable Financing
-                </h2>
-                <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-                  Orchiddigital Loan Plan provides quick and reliable financing
-                  solutions for your business and personal needs. Get the funds
-                  you need with competitive rates and flexible terms.
-                </p>
-                <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
-                  Whether you need capital for business expansion, equipment
-                  purchase, or personal expenses, we've got you covered with
-                  fast approval and transparent terms.
-                </p>
-
-                {/* Loan Features */}
-                <div className="space-y-3 sm:space-y-6 mb-8 sm:mb-10">
-                  <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-text-primary text-sm sm:text-base font-medium">
-                      Quick approval in 24 hours
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-text-primary text-sm sm:text-base font-medium">
-                      6 months repayment duration
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-text-primary text-sm sm:text-base font-medium">
-                      Competitive interest rates
-                    </span>
-                  </div>
-                </div>
-
-                <a
-                  href="/contact"
-                  className="bg-primary-500 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold transition-all duration-300  transform hover:-translate-y-1 inline-block"
-                >
-                  Apply for Loan Now
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Investment Service Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          {/* Investment Calculator */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white/80 backdrop-blur-sm border border-gray-300/50  p-6 md:p-12 mb-12 sm:mb-16"
-          >
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary text-center mb-6 sm:mb-8">
-              Investment Calculator
-            </h3>
-
-            <div className="max-w-2xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                {/* Investment Amount Input */}
-                <div>
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
-                    Investment Amount (₦)
-                  </label>
-                  <input
-                    type="number"
-                    placeholder="Enter amount"
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors duration-300 text-sm sm:text-base"
-                    onChange={(e) => {
-                      const amount = parseFloat(e.target.value);
-                      if (!isNaN(amount) && amount > 0) {
-                        // Determine interest rate based on amount
-                        // Below 50M = 5% monthly, 50M and above = 3.3% monthly
-                        const interestRate = amount >= 50000000 ? 0.033 : 0.05;
-                        const rateLabel = amount >= 50000000 ? "3.3%" : "5%";
-
-                        // Update calculation display
-                        const monthlyROI = amount * interestRate;
-                        const totalROI = monthlyROI * 12;
-                        const totalPayout = totalROI + amount;
-
-                        // Update display elements
-                        const monthlyDisplay =
-                          document.getElementById("monthly-roi");
-                        const monthlyLabel =
-                          document.getElementById("monthly-roi-label");
-                        const totalROIDisplay =
-                          document.getElementById("total-roi");
-                        const capitalDisplay =
-                          document.getElementById("capital-returned");
-                        const payoutDisplay =
-                          document.getElementById("total-payout");
-
-                        if (monthlyDisplay)
-                          monthlyDisplay.textContent = `₦${monthlyROI.toLocaleString()}`;
-                        if (monthlyLabel)
-                          monthlyLabel.textContent = `Monthly ROI (${rateLabel}):`;
-                        if (totalROIDisplay)
-                          totalROIDisplay.textContent = `₦${totalROI.toLocaleString()}`;
-                        if (capitalDisplay)
-                          capitalDisplay.textContent = `₦${amount.toLocaleString()}`;
-                        if (payoutDisplay)
-                          payoutDisplay.textContent = `₦${totalPayout.toLocaleString()}`;
-                      }
-                    }}
-                  />
-                </div>
-
-                {/* Investment Summary */}
-                <div className="bg-primary-50 p-4 sm:p-6 border border-primary-200">
-                  <h4 className="text-base sm:text-lg font-bold text-text-primary mb-3">
-                    Your Returns (12 Months)
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span
-                        id="monthly-roi-label"
-                        className="text-text-secondary text-sm"
-                      >
-                        Monthly ROI (5%):
-                      </span>
-                      <span
-                        id="monthly-roi"
-                        className="font-semibold text-primary-500"
-                      >
-                        ₦0
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-text-secondary text-sm">
-                        Total ROI:
-                      </span>
-                      <span
-                        id="total-roi"
-                        className="font-semibold text-primary-500"
-                      >
-                        ₦0
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-text-secondary text-sm">
-                        Capital Returned:
-                      </span>
-                      <span
-                        id="capital-returned"
-                        className="font-semibold text-primary-500"
-                      >
-                        ₦0
-                      </span>
-                    </div>
-                    <div className="border-t border-primary-200 pt-3">
-                      <div className="flex justify-between">
-                        <span className="text-text-primary font-bold text-sm">
-                          Total Payout:
-                        </span>
-                        <span
-                          id="total-payout"
-                          className="font-bold text-primary-500 text-lg"
-                        >
-                          ₦0
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Investment Terms */}
-              <div className="mt-16 sm:mt-20 md:mt-24 max-w-2xl mx-auto">
-                <div className="bg-gradient-to-br from-primary-500 to-green-500 p-6 md:p-12 text-white text-center relative overflow-hidden">
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-4 right-4 w-12 h-12 border-2 border-white"></div>
-                    <div className="absolute bottom-4 left-4 w-8 h-8 border border-white"></div>
-                  </div>
-
-                  <div className="relative z-10">
-                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 text-sm font-semibold mb-4">
-                      <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                      Investment Terms
-                    </div>
-                    <h4 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-                      Fixed Tenure
-                    </h4>
-                    <div className="flex items-center justify-center gap-2 sm:gap-3">
-                      <div className="text-4xl sm:text-5xl md:text-6xl font-bold">
-                        12
-                      </div>
-                      <div className="text-left">
-                        <div className="text-lg sm:text-xl font-bold">
-                          Months
-                        </div>
-                        <div className="text-white/80 text-sm">
-                          Investment Period
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mt-4 text-white/90 text-sm sm:text-base">
-                      Lock your savings for 365 days and earn competitive
-                      returns
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Investment CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 sm:mt-16 text-center"
-          >
-            <div className="relative overflow-hidden">
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
-                }}
-              />
-              {/* Black Overlay */}
-              <div className="absolute inset-0 bg-black/70" />
-
-              {/* Content */}
-              <div className="relative z-10 text-white p-6 md:p-12 lg:p-16">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
-                  Ready to Start Investing?
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
-                  Secure your financial future with our proven investment plans.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center">
-                  <a
-                    href="/contact"
-                    className="bg-white text-primary-500 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
-                  >
-                    Start Investing Now
-                  </a>
-                  <a
-                    href="/contact"
-                    className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -948,6 +513,234 @@ export default function Home() {
                     Our solutions maximize ROI while minimizing costs through
                     efficient processes and smart technology.
                   </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Executive Team Section */}
+      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-black mb-4 text-left ">
+              Executive Team
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Mayor Bright - CEO/Director */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="group relative h-full cursor-pointer"
+            >
+              <div className="relative overflow-hidden">
+                {/* Team Image */}
+                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Mayor Bright"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+
+                {/* Name and Role */}
+                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
+                  <h3 className="font-bold text-lg">Mayor Bright</h3>
+                  <p className="text-sm opacity-90">C.E.O/Director</p>
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-4">
+                    <h3 className="font-bold text-lg mb-2">Mayor Bright</h3>
+                    <p className="text-sm opacity-90 mb-4">C.E.O/Director</p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-left mb-6">
+                    Mayor Bright is the CEO of Mayak Services Ltd, co-founder,
+                    and overseeing two member companies. He previously worked as
+                    Head of Procurement at the Rivers State Bureau on Public
+                    Procurement. He holds a BSc in Accounting from the
+                    University of Jos and a Diploma/MSc in Supply Chain
+                    Management from the University of Liverpool. He is a
+                    director of several companies in Nigeria and an advocate for
+                    innovation and creativity.
+                  </p>
+                  <div className="text-left">
+                    <a
+                      href="#"
+                      className="text-white text-sm hover:underline inline-flex items-center"
+                    >
+                      LinkedIn <span className="ml-1">&gt;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Nene Ushie - Director */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="group relative h-full cursor-pointer"
+            >
+              <div className="relative overflow-hidden">
+                {/* Team Image */}
+                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Nene Ushie"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+
+                {/* Name and Role */}
+                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
+                  <h3 className="font-bold text-lg">Nene Ushie</h3>
+                  <p className="text-sm opacity-90">Director</p>
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-4">
+                    <h3 className="font-bold text-lg mb-2">Nene Ushie</h3>
+                    <p className="text-sm opacity-90 mb-4">Director</p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-left mb-6">
+                    Nene Ushie brings extensive experience in business
+                    development and strategic planning to our team. With over 10
+                    years in corporate leadership, she has successfully guided
+                    multiple organizations through periods of growth and
+                    transformation. Her expertise in market analysis and
+                    operational efficiency makes her an invaluable asset to our
+                    executive team.
+                  </p>
+                  <div className="text-left">
+                    <a
+                      href="#"
+                      className="text-white text-sm hover:underline inline-flex items-center"
+                    >
+                      LinkedIn <span className="ml-1">&gt;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* William Whyte Jnr. - Head Finance & Administration */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="group relative h-full cursor-pointer"
+            >
+              <div className="relative overflow-hidden">
+                {/* Team Image */}
+                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="William Whyte Jnr."
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+
+                {/* Name and Role */}
+                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
+                  <h3 className="font-bold text-lg">William Whyte Jnr.</h3>
+                  <p className="text-sm opacity-90">
+                    Head Finance & Administration
+                  </p>
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-4">
+                    <h3 className="font-bold text-lg mb-2">
+                      William Whyte Jnr.
+                    </h3>
+                    <p className="text-sm opacity-90 mb-4">
+                      Head Finance & Administration
+                    </p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-left mb-6">
+                    William Whyte Jnr. oversees all financial operations and
+                    administrative functions within our organization. With a
+                    strong background in accounting and financial management, he
+                    ensures our company maintains fiscal responsibility while
+                    supporting strategic growth initiatives. His attention to
+                    detail and analytical skills drive operational excellence.
+                  </p>
+                  <div className="text-left">
+                    <a
+                      href="#"
+                      className="text-white text-sm hover:underline inline-flex items-center"
+                    >
+                      LinkedIn <span className="ml-1">&gt;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Chima Ochigba - Head Operations */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="group relative h-full cursor-pointer"
+            >
+              <div className="relative overflow-hidden">
+                {/* Team Image */}
+                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Chima Ochigba"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+
+                {/* Name and Role */}
+                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
+                  <h3 className="font-bold text-lg">Chima Ochigba</h3>
+                  <p className="text-sm opacity-90">Head Operations</p>
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-4">
+                    <h3 className="font-bold text-lg mb-2">Chima Ochigba</h3>
+                    <p className="text-sm opacity-90 mb-4">Head Operations</p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-left mb-6">
+                    Chima Ochigba leads our operational excellence initiatives,
+                    ensuring smooth execution of all business processes. With
+                    expertise in project management and operational efficiency,
+                    he coordinates cross-functional teams to deliver exceptional
+                    results. His systematic approach and leadership skills drive
+                    continuous improvement across all departments.
+                  </p>
+                  <div className="text-left">
+                    <a
+                      href="#"
+                      className="text-white text-sm hover:underline inline-flex items-center"
+                    >
+                      LinkedIn <span className="ml-1">&gt;</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>

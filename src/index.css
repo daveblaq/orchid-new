@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +10,7 @@ body,
 #root {
   color-scheme: light !important;
   background-color: white !important;
+  font-family: "Sora", system-ui, -apple-system, sans-serif;
 }
 
 /* Ensure all backgrounds stay light in dark mode */

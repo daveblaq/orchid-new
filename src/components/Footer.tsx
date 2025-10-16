@@ -28,27 +28,41 @@ export default function Footer() {
       icon: Linkedin,
       href: "#",
       label: "LinkedIn",
-      color: "hover:text-blue-400",
+      bgColor: "bg-blue-600",
+      hoverBgColor: "hover:bg-blue-700",
+      textColor: "text-white",
     },
     {
       icon: Twitter,
       href: "#",
       label: "X (Twitter)",
-      color: "hover:text-gray-300",
+      bgColor: "bg-black",
+      hoverBgColor: "hover:bg-black",
+      textColor: "text-white",
     },
     {
       icon: Instagram,
       href: "#",
       label: "Instagram",
-      color: "hover:text-pink-400",
+      bgColor: "bg-gradient-to-r from-purple-500 to-pink-500",
+      hoverBgColor: "hover:from-purple-600 hover:to-pink-600",
+      textColor: "text-white",
     },
-    { icon: Youtube, href: "#", label: "YouTube", color: "hover:text-red-400" },
-
+    {
+      icon: Youtube,
+      href: "#",
+      label: "YouTube",
+      bgColor: "bg-red-600",
+      hoverBgColor: "hover:bg-red-700",
+      textColor: "text-white",
+    },
     {
       icon: Facebook,
       href: "#",
       label: "Facebook",
-      color: "hover:text-blue-500",
+      bgColor: "bg-blue-500",
+      hoverBgColor: "hover:bg-blue-600",
+      textColor: "text-white",
     },
   ];
 
@@ -134,7 +148,7 @@ export default function Footer() {
                     <motion.a
                       key={social.label}
                       href={social.href}
-                      className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/50 hover:bg-gray-700/50 text-gray-300 hover:text-green-400 transition-all duration-300 shadow-md hover:shadow-lg touch-manipulation"
+                      className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 ${social.bgColor} ${social.hoverBgColor} ${social.textColor} transition-all duration-300 shadow-md hover:shadow-lg touch-manipulation`}
                       aria-label={social.label}
                       whileHover={{ scale: 1.1, y: -2 }}
                       initial={{ opacity: 0, y: 20 }}

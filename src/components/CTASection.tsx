@@ -32,7 +32,7 @@ export default function CTASection({
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage:
-                "url('https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202025-10-13%20at%2014.20.25%20(2).jpeg?updatedAt=1760530992802')",
+                "url('https://ik.imagekit.io/shiga/orchid/image-04.png?updatedAt=1760541599211')",
             }}
           />
           <div className="absolute inset-0 bg-black/70" />
