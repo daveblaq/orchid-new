@@ -3,7 +3,6 @@ import {
   DollarSign,
   Clock,
   Shield,
-  Users,
   CheckCircle,
   FileText,
 } from "lucide-react";
