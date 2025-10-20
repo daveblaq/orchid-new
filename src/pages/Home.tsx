@@ -536,6 +536,59 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Mr. Chiadikaobi David Okoh - CEO/Director */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="group relative h-full cursor-pointer"
+            >
+              <div className="relative overflow-hidden">
+                {/* Team Image */}
+                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+                  <img
+                    src="https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-19%20at%206.10.11%E2%80%AFpm.png?updatedAt=1760893829383"
+                    alt="Mr. Chiadikaobi David Okoh"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+
+                {/* Name and Role */}
+                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
+                  <h3 className="font-bold text-lg">Chiadikaobi David O.</h3>
+                  <p className="text-sm opacity-90">Managing Director</p>
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-4">
+                    <h3 className="font-bold text-lg mb-2">
+                      Mr. Chiadikaobi David Okoh
+                    </h3>
+                    <p className="text-sm opacity-90 mb-4">Managing Director</p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-left mb-6">
+                    Mr. Chiadikaobi David Okoh is the Managing Director of
+                    Orchiddigital Consulting. He has a wealth of experience in
+                    the business industry, having worked in various roles in the
+                    sector. He is a highly skilled professional with a deep
+                    understanding of the industry and the challenges facing
+                    businesses in this sector.
+                  </p>
+                  <div className="text-left">
+                    <a
+                      href="https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-sm hover:underline inline-flex items-center"
+                    >
+                      LinkedIn <span className="ml-1">&gt;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
             {/* Mayor Bright - CEO/Director */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
@@ -548,7 +601,7 @@ export default function Home() {
                 {/* Team Image */}
                 <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    src="https://ik.imagekit.io/shiga/orchid/adedeji.jpg?updatedAt=1760893627747"
                     alt="Mayor Bright"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
@@ -556,29 +609,34 @@ export default function Home() {
 
                 {/* Name and Role */}
                 <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Mayor Bright</h3>
-                  <p className="text-sm opacity-90">C.E.O/Director</p>
+                  <h3 className="font-bold text-lg">Adedeji Adewara</h3>
+                  <p className="text-sm opacity-90">
+                    Technical Partner on Power/Telecommunication
+                  </p>
                 </div>
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
                   <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">Mayor Bright</h3>
-                    <p className="text-sm opacity-90 mb-4">C.E.O/Director</p>
+                    <h3 className="font-bold text-lg mb-2">Adedeji Adewara</h3>
+                    <p className="text-sm opacity-90 mb-4">
+                      Technical Partner on Power/Telecommunication
+                    </p>
                   </div>
                   <p className="text-sm leading-relaxed text-left mb-6">
-                    Mayor Bright is the CEO of Mayak Services Ltd, co-founder,
-                    and overseeing two member companies. He previously worked as
-                    Head of Procurement at the Rivers State Bureau on Public
-                    Procurement. He holds a BSc in Accounting from the
-                    University of Jos and a Diploma/MSc in Supply Chain
-                    Management from the University of Liverpool. He is a
-                    director of several companies in Nigeria and an advocate for
-                    innovation and creativity.
+                    Adedeji Adewara is the Technical Partner on
+                    Power/Telecommunication at Orchiddigital Consulting. He has
+                    a wealth of experience in the power and telecommunication
+                    industry, having worked in various roles in the sector. He
+                    is a highly skilled professional with a deep understanding
+                    of the industry and the challenges facing businesses in this
+                    sector.
                   </p>
                   <div className="text-left">
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-white text-sm hover:underline inline-flex items-center"
                     >
                       LinkedIn <span className="ml-1">&gt;</span>
@@ -600,26 +658,30 @@ export default function Home() {
                 {/* Team Image */}
                 <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                    alt="Nene Ushie"
+                    src="https://ik.imagekit.io/shiga/orchid/buchi.png?updatedAt=1760898266865"
+                    alt="Buchi Ijeh"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
 
                 {/* Name and Role */}
                 <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Nene Ushie</h3>
-                  <p className="text-sm opacity-90">Director</p>
+                  <h3 className="font-bold text-lg">Buchi Ijeh</h3>
+                  <p className="text-sm opacity-90">
+                    Partner On Oil and Gas services{" "}
+                  </p>
                 </div>
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
                   <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">Nene Ushie</h3>
-                    <p className="text-sm opacity-90 mb-4">Director</p>
+                    <h3 className="font-bold text-lg mb-2">Buchi Ijeh</h3>
+                    <p className="text-sm opacity-90 mb-4">
+                      Partner On Oil and Gas services{" "}
+                    </p>
                   </div>
                   <p className="text-sm leading-relaxed text-left mb-6">
-                    Nene Ushie brings extensive experience in business
+                    Buchi Ijeh brings extensive experience in business
                     development and strategic planning to our team. With over 10
                     years in corporate leadership, she has successfully guided
                     multiple organizations through periods of growth and
@@ -639,7 +701,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* William Whyte Jnr. - Head Finance & Administration */}
+            {/* Promise Obioha - Head Finance & Administration */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -651,37 +713,33 @@ export default function Home() {
                 {/* Team Image */}
                 <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                    alt="William Whyte Jnr."
+                    src="https://ik.imagekit.io/shiga/orchid/1000577504.jpg?updatedAt=1760945979405"
+                    alt="Promise Obioha"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
 
                 {/* Name and Role */}
                 <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">William Whyte Jnr.</h3>
-                  <p className="text-sm opacity-90">
-                    Head Finance & Administration
-                  </p>
+                  <h3 className="font-bold text-lg">Promise Obioha</h3>
+                  <p className="text-sm opacity-90">Project Manager</p>
                 </div>
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
                   <div className="text-center mb-4">
                     <h3 className="font-bold text-lg mb-2">
-                      William Whyte Jnr.
+                      Promise Obioha
                     </h3>
-                    <p className="text-sm opacity-90 mb-4">
-                      Head Finance & Administration
-                    </p>
+                    <p className="text-sm opacity-90 mb-4">Project Manager</p>
                   </div>
                   <p className="text-sm leading-relaxed text-left mb-6">
-                    William Whyte Jnr. oversees all financial operations and
-                    administrative functions within our organization. With a
-                    strong background in accounting and financial management, he
-                    ensures our company maintains fiscal responsibility while
-                    supporting strategic growth initiatives. His attention to
-                    detail and analytical skills drive operational excellence.
+                    Promise Obioha is the Project Manager at Orchiddigital
+                    Consulting. He has a wealth of experience in the project
+                    management industry, having worked in various roles in the
+                    sector. He is a highly skilled professional with a deep
+                    understanding of the industry and the challenges facing
+                    businesses in this sector.
                   </p>
                   <div className="text-left">
                     <a

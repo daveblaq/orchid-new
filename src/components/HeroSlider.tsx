@@ -16,7 +16,7 @@ const slides: SlideData[] = [
     headline: "Empowering Business Growth",
     subtext: "Transform your business with strategic consulting and guidance.",
     backgroundImage:
-      "https://ik.imagekit.io/shiga/orchid/image-04.png?updatedAt=1760541599211",
+      "https://ik.imagekit.io/shiga/orchid/slidee.png?updatedAt=1760892882516",
   },
   {
     id: 2,
@@ -31,6 +31,13 @@ const slides: SlideData[] = [
     subtext: "Navigate business growth with proven expertise.",
     backgroundImage:
       "https://ik.imagekit.io/shiga/orchid/image-03.png?updatedAt=1760541595541",
+  },
+  {
+    id: 4,
+    headline: "Digital Excellence Delivered",
+    subtext: "Experience premium consulting services that drive real results.",
+    backgroundImage:
+      "https://ik.imagekit.io/shiga/orchid/slide-01.png?updatedAt=1760893281130",
   },
 ];
 
