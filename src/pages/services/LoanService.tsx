@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  DollarSign,
-  Clock,
-  Shield,
-  CheckCircle,
-  FileText,
-} from "lucide-react";
+import { DollarSign, Clock, Shield, CheckCircle, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function LoanService() {
@@ -39,7 +33,7 @@ export default function LoanService() {
   const loanTypes = [
     {
       name: "Business Loan",
-      amount: "₦100K - ₦10M",
+      amount: "₦1M - ₦10M",
       duration: "6 months",
       description:
         "Perfect for business expansion, inventory, or working capital needs.",
@@ -47,7 +41,7 @@ export default function LoanService() {
     },
     {
       name: "Personal Loan",
-      amount: "₦50K - ₦5M",
+      amount: "₦1M - ₦5M",
       duration: "6 months",
       description:
         "Quick personal financing for emergencies or personal expenses.",
