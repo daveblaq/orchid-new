@@ -104,25 +104,26 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      position: "CEO",
-      company: "TechCorp Solutions",
+      name: "Everyday Supermarket",
+      position: "Director",
+      company: "Everyday Supermarket",
       testimonial:
         "Orchiddigital Consulting transformed our business operations. Their expertise in digital transformation helped us increase efficiency by 40% and expand into new markets.",
-      image: "/api/placeholder/200/200",
+      image:
+        "https://ik.imagekit.io/shiga/orchid/everydaymart.jpg?updatedAt=1761303462761",
     },
     {
-      name: "Michael Chen",
+      name: "Zaffiro",
       position: "Founder",
-      company: "StartupXYZ",
+      company: "Zaffiro",
       testimonial:
         "The entrepreneurship training program was exceptional. It gave me the skills and confidence to scale my business successfully.",
       image: "/api/placeholder/200/200",
     },
     {
-      name: "Emily Rodriguez",
+      name: "Ifeoma",
       position: "Operations Director",
-      company: "Global Enterprises",
+      company: "Ifeoma",
       testimonial:
         "Their facility management services streamlined our operations and reduced costs significantly. Highly recommended!",
       image: "/api/placeholder/200/200",
@@ -130,6 +131,22 @@ export default function Home() {
   ];
 
   const clients = [
+    {
+      name: "Rivers State Government",
+      logo: "https://ik.imagekit.io/shiga/orchid/rivers.avif?updatedAt=1761441810863",
+    },
+    {
+      name: "PIND",
+      logo: "https://ik.imagekit.io/shiga/orchid/pind.svg?updatedAt=1761441906401",
+    },
+    {
+      name: "CBN",
+      logo: "https://ik.imagekit.io/shiga/orchid/CBN-logo.jpg?updatedAt=1761442293980",
+    },
+    {
+      name: "SSEDC",
+      logo: "https://ik.imagekit.io/shiga/orchid/ssedc.png?updatedAt=1761442222970",
+    },
     {
       name: "Sycamore",
       logo: "https://ik.imagekit.io/shiga/orchid/sycamore.png?updatedAt=1761095197346",
@@ -142,15 +159,26 @@ export default function Home() {
       name: "Parallex",
       logo: "https://ik.imagekit.io/shiga/orchid/parallex.jpg?updatedAt=1761095403390",
     },
-    { name: "Innovation Labs", logo: "/api/placeholder/120/80" },
-    { name: "Digital Solutions", logo: "/api/placeholder/120/80" },
-    { name: "Future Systems", logo: "/api/placeholder/120/80" },
-    { name: "Smart Tech", logo: "/api/placeholder/120/80" },
-    { name: "NextGen Corp", logo: "/api/placeholder/120/80" },
-    { name: "Alpha Ventures", logo: "/api/placeholder/120/80" },
-    { name: "Beta Industries", logo: "/api/placeholder/120/80" },
-    { name: "Gamma Tech", logo: "/api/placeholder/120/80" },
-    { name: "Delta Solutions", logo: "/api/placeholder/120/80" },
+    {
+      name: "Irvin Global",
+      logo: "https://ik.imagekit.io/shiga/orchid/IRVIN.logo_.png?updatedAt=1761302883201",
+    },
+    {
+      name: "Alliance Global",
+      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot_2025-10-24_at_11.49.50_am-removebg-preview.png?updatedAt=1761303025891",
+    },
+    {
+      name: "Rosabon Financial Services",
+      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot_2025-10-24_at_11.51.42_am-removebg-preview.png?updatedAt=1761303135588",
+    },
+    {
+      name: "Nirsalmfb",
+      logo: "https://ik.imagekit.io/shiga/orchid/NIRSAL-Microfinance-1.jpg?updatedAt=1761303218873",
+    },
+    {
+      name: "Everyday Supermarket",
+      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-24%20at%2011.55.23%E2%80%AFam.png?updatedAt=1761303337687",
+    },
   ];
 
   const goToNextTestimonial = () => {

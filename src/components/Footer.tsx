@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Linkedin,
+  MessageCircle,
   Twitter,
   Instagram,
   Mail,
@@ -25,16 +25,16 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      icon: Linkedin,
-      href: "#",
-      label: "LinkedIn",
-      bgColor: "bg-blue-600",
-      hoverBgColor: "hover:bg-blue-700",
+      icon: MessageCircle,
+      href: "https://api.whatsapp.com/send?phone=+2349132129458&text=Hello%21%20%20",
+      label: "WhatsApp",
+      bgColor: "bg-green-500",
+      hoverBgColor: "hover:bg-green-600",
       textColor: "text-white",
     },
     {
       icon: Twitter,
-      href: "#",
+      href: "https://twitter.com/Orchiddigitale1",
       label: "X (Twitter)",
       bgColor: "bg-black",
       hoverBgColor: "hover:bg-black",
@@ -42,7 +42,7 @@ export default function Footer() {
     },
     {
       icon: Instagram,
-      href: "#",
+      href: "https://www.instagram.com/orchiddigitaledc/",
       label: "Instagram",
       bgColor: "bg-gradient-to-r from-purple-500 to-pink-500",
       hoverBgColor: "hover:from-purple-600 hover:to-pink-600",
@@ -50,7 +50,7 @@ export default function Footer() {
     },
     {
       icon: Youtube,
-      href: "#",
+      href: "https://m.youtube.com/channel/UCs-A6_ceAfUXl7M8OgPw-YQ",
       label: "YouTube",
       bgColor: "bg-red-600",
       hoverBgColor: "hover:bg-red-700",
@@ -58,7 +58,7 @@ export default function Footer() {
     },
     {
       icon: Facebook,
-      href: "#",
+      href: "https://web.facebook.com/Orchiddigitaledc-635826767038728",
       label: "Facebook",
       bgColor: "bg-blue-500",
       hoverBgColor: "hover:bg-blue-600",

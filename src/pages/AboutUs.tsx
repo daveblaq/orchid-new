@@ -18,7 +18,7 @@ export default function AboutUs() {
       role: "CEO & Founder",
       bio: "Entrepreneur, writer, consultant, and business coach with 7+ years of experience. Author of 'The Entrepreneur: Money Doubler' and has helped over 5000 businesses access funding.",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-19%20at%206.10.11%E2%80%AFpm.png?updatedAt=1760893829383",
     },
   ];
 
@@ -86,7 +86,7 @@ export default function AboutUs() {
               {/* Top Image */}
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  src="https://ik.imagekit.io/shiga/orchid/IMG-20250313-WA0015%20(1).jpg?updatedAt=1761301275857"
                   alt="Professional business meeting"
                   className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
                 />
@@ -95,7 +95,7 @@ export default function AboutUs() {
               {/* Bottom Image */}
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  src="https://ik.imagekit.io/shiga/orchid/IMG-20251022-WA0008%20(1).jpg?updatedAt=1761301351391"
                   alt="Team collaboration and innovation"
                   className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
                 />
@@ -156,27 +156,27 @@ export default function AboutUs() {
                 <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                      5000+
-                    </div>
-                    <div className="text-sm opacity-90">Businesses Funded</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                      2019
-                    </div>
-                    <div className="text-sm opacity-90">Established</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                      7+
+                      10+
                     </div>
                     <div className="text-sm opacity-90">Years Experience</div>
                   </div>
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                      100%
+                      500M+
                     </div>
-                    <div className="text-sm opacity-90">CAC Registered</div>
+                    <div className="text-sm opacity-90">Disbursed Funds</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                      50+
+                    </div>
+                    <div className="text-sm opacity-90">Projects Completed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                    3 Stated
+                    </div>
+                    <div className="text-sm opacity-90">National Coverage</div>
                   </div>
                 </div>
               </div>
@@ -371,7 +371,7 @@ export default function AboutUs() {
                     {member.bio}
                   </p>
                   <div className="mt-4 space-y-2">
-                    <p className="text-xs text-text-secondary">
+                    {/* <p className="text-xs text-text-secondary">
                       <strong>Education:</strong> Computer Science, B.S.Eds,
                       PMP, PHRi
                     </p>
@@ -381,9 +381,9 @@ export default function AboutUs() {
                     </p>
                     <p className="text-xs text-text-secondary">
                       <strong>Author:</strong> "The Entrepreneur: Money Doubler"
-                    </p>
+                    </p> */}
                     <p className="text-xs text-text-secondary">
-                      <strong>Achievement:</strong> Helped 5000+ businesses
+                      <strong>Achievement:</strong> Helped 50+ businesses
                       access funding through CBN-AGSMEIS loans and TEF grants
                     </p>
                   </div>
