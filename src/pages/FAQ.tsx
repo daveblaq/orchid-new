@@ -126,14 +126,14 @@ export default function FAQ() {
       title: "Email Support",
       description: "Get detailed responses within 24 hours",
       action: "Send us an email",
-      href: "mailto:hello@orchidconsulting.com",
+      href: "mailto:info@orchiddigitalconsulting.com",
     },
     {
       icon: Phone,
       title: "Phone Support",
       description: "Speak directly with our experts",
       action: "Call us now",
-      href: "tel:+15551234567",
+      href: "tel:+2347032533822",
     },
     {
       icon: MessageCircle,

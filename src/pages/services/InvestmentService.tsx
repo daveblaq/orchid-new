@@ -6,8 +6,12 @@ import {
   DollarSign,
   Users,
   CheckCircle,
+  ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+
+const investmentGuideUrl =
+  "https://ik.imagekit.io/shiga/orchid/Orchid%20Digital%20investment%20form.pdf?updatedAt=1763192225449";
 
 export default function InvestmentService() {
   const features = [
@@ -231,188 +235,69 @@ export default function InvestmentService() {
         </div>
       </section>
 
-      {/* Investment Calculator Section */}
       <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="bg-white/80 border border-gray-200 p-6 sm:p-10"
           >
-            <h2 className="text-xl sm:text-2xl font-bold text-text-primary mb-4">
-              Investment Calculator
+            <h2 className="text-2xl font-bold text-text-primary mb-4">
+              Want to estimate your potential returns?
             </h2>
-            <p className="text-sm text-text-secondary max-w-2xl mx-auto">
-              Calculate your potential returns with our investment calculator.
-              See how much you can earn based on your investment amount.
+            <p className="text-text-secondary max-w-2xl mx-auto mb-6">
+              Use our dedicated investment calculator to forecast your monthly
+              and annual ROI based on your preferred amount.
             </p>
+            <Link
+              to="/investment-calculator"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 py-3 font-semibold transition-all duration-300"
+            >
+              Launch Calculator
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Resource Download */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-32 -left-32 w-72 h-72 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute -bottom-32 -right-32 w-72 h-72 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 md:p-12 max-w-4xl mx-auto"
+            transition={{ duration: 0.8 }}
+            className="bg-white/90 backdrop-blur-sm border border-gray-200 p-6 sm:p-10 text-center shadow-xl"
           >
-            <div className="max-w-2xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                {/* Investment Amount Input */}
-                <div>
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
-                    Investment Amount (₦)
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter amount (e.g., 1,000,000)"
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors duration-300 text-sm sm:text-base"
-                    onChange={(e) => {
-                      // Remove commas and get numeric value
-                      const numericValue = e.target.value.replace(/,/g, "");
-                      const amount = parseFloat(numericValue);
-
-                      // Format the display with commas
-                      if (numericValue && !isNaN(amount) && amount > 0) {
-                        e.target.value = amount.toLocaleString();
-                      } else if (numericValue === "") {
-                        e.target.value = "";
-                      }
-
-                      if (!isNaN(amount) && amount > 0) {
-                        // Determine interest rate based on amount
-                        // Below 50M = 5% monthly, 50M and above = 3.3% monthly
-                        const interestRate = amount >= 50000000 ? 0.033 : 0.05;
-                        const rateLabel = amount >= 50000000 ? "3.3%" : "5%";
-
-                        // Update calculation display
-                        const monthlyROI = amount * interestRate;
-                        const totalROI = monthlyROI * 12;
-                        const totalPayout = totalROI + amount;
-
-                        // Update display elements
-                        const monthlyDisplay =
-                          document.getElementById("monthly-roi");
-                        const monthlyLabel =
-                          document.getElementById("monthly-roi-label");
-                        const totalROIDisplay =
-                          document.getElementById("total-roi");
-                        const capitalDisplay =
-                          document.getElementById("capital-returned");
-                        const payoutDisplay =
-                          document.getElementById("total-payout");
-
-                        if (monthlyDisplay)
-                          monthlyDisplay.textContent = `₦${monthlyROI.toLocaleString()}`;
-                        if (monthlyLabel)
-                          monthlyLabel.textContent = `Monthly ROI (${rateLabel}):`;
-                        if (totalROIDisplay)
-                          totalROIDisplay.textContent = `₦${totalROI.toLocaleString()}`;
-                        if (capitalDisplay)
-                          capitalDisplay.textContent = `₦${amount.toLocaleString()}`;
-                        if (payoutDisplay)
-                          payoutDisplay.textContent = `₦${totalPayout.toLocaleString()}`;
-                      }
-                    }}
-                  />
-                </div>
-
-                {/* Investment Summary */}
-                <div className="bg-primary-50 p-4 sm:p-6 border border-primary-200">
-                  <h4 className="text-base sm:text-lg font-bold text-text-primary mb-3">
-                    Your Returns (12 Months)
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span
-                        id="monthly-roi-label"
-                        className="text-text-secondary text-sm"
-                      >
-                        Monthly ROI (5%):
-                      </span>
-                      <span
-                        id="monthly-roi"
-                        className="font-semibold text-primary-500"
-                      >
-                        ₦0
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-text-secondary text-sm">
-                        Total ROI:
-                      </span>
-                      <span
-                        id="total-roi"
-                        className="font-semibold text-primary-500"
-                      >
-                        ₦0
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-text-secondary text-sm">
-                        Capital Returned:
-                      </span>
-                      <span
-                        id="capital-returned"
-                        className="font-semibold text-primary-500"
-                      >
-                        ₦0
-                      </span>
-                    </div>
-                    <div className="border-t border-primary-200 pt-3">
-                      <div className="flex justify-between">
-                        <span className="text-text-primary font-bold text-sm">
-                          Total Payout:
-                        </span>
-                        <span
-                          id="total-payout"
-                          className="font-bold text-primary-500 text-lg"
-                        >
-                          ₦0
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Investment Terms */}
-              <div className="mt-8 sm:mt-12 max-w-2xl mx-auto">
-                <div className="bg-gradient-to-br from-primary-500 to-green-500 p-6 md:p-8 text-white text-center relative overflow-hidden">
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-4 right-4 w-12 h-12 border-2 border-white"></div>
-                    <div className="absolute bottom-4 left-4 w-8 h-8 border border-white"></div>
-                  </div>
-
-                  <div className="relative z-10">
-                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 text-sm font-semibold mb-4">
-                      <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                      Investment Terms
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-bold mb-4">
-                      Fixed Tenure
-                    </h4>
-                    <div className="flex items-center justify-center gap-2 sm:gap-3">
-                      <div className="text-3xl sm:text-4xl font-bold">365</div>
-                      <div className="text-left">
-                        <div className="text-base sm:text-lg font-bold">
-                          Days
-                        </div>
-                        <div className="text-white/80 text-sm">
-                          Investment Period
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mt-4 text-white/90 text-sm">
-                      Lock your savings for 365 days and earn competitive
-                      returns
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-5">
+              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+              Resource Download
             </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
+              Orchiddigital Investment Service Pack
+            </h2>
+            <p className="text-text-secondary text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8">
+              Get the full brochure covering investment options, onboarding
+              requirements, due diligence checklist, payout schedules, and FAQs.
+              Click below and the PDF will open in a new tab.
+            </p>
+            <a
+              href={investmentGuideUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+            >
+              Open PDF
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            </a>
           </motion.div>
         </div>
       </section>

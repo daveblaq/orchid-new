@@ -20,6 +20,7 @@ export default function Navbar() {
     { path: "/", label: "Home" },
     { path: "/about-us", label: "About" },
     { path: "/services", label: "Services" },
+    { path: "/investment-calculator", label: "Investment Calculator" },
     { path: "/team", label: "Team" },
     { path: "/faq", label: "FAQ" },
     { path: "/contact", label: "Contact" },
@@ -78,12 +79,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-10">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-4 xl:px-6 py-3 text-sm xl:text-base font-semibold transition-colors duration-300 ${
+                className={` py-3 text-sm xl:text-base font-semibold transition-colors duration-300 ${
                   isActive(item.path)
                     ? "text-primary-500 hover:text-green-500"
                     : "text-text-secondary hover:text-green-500"
@@ -92,14 +93,6 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <div className="ml-4 pl-4 border-l border-gray-200">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 xl:px-8 py-3 text-sm xl:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                Get Started
-              </Link>
-            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -143,15 +136,6 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <div className="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-gray-200">
-              <Link
-                to="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl touch-manipulation"
-              >
-                Get Started
-              </Link>
-            </div>
           </div>
         </motion.div>
       </div>

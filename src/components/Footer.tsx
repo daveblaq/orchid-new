@@ -26,7 +26,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: MessageCircle,
-      href: "https://api.whatsapp.com/send?phone=+2349132129458&text=Hello%21%20%20",
+      href: "https://api.whatsapp.com/send?phone=+2347032533822&text=Hello%20Orchiddigital%21",
       label: "WhatsApp",
       bgColor: "bg-green-500",
       hoverBgColor: "hover:bg-green-600",
@@ -135,6 +135,9 @@ export default function Footer() {
               training, and enterprise transformation. Your trusted partner in
               digital innovation.
             </p>
+            <p className="text-green-400 font-semibold uppercase tracking-wide text-sm sm:text-base mb-6">
+              Limitless Possibilities
+            </p>
 
             {/* Social Media */}
             <div>
@@ -202,13 +205,13 @@ export default function Footer() {
               <div className="flex items-start space-x-2 sm:space-x-3">
                 <Mail className="text-green-400 mt-1 flex-shrink-0" size={18} />
                 <span className="text-gray-300 text-sm sm:text-base md:text-lg">
-                  hello@orchidconsulting.com
+                  info@orchiddigitalconsulting.com
                 </span>
               </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Phone className="text-green-400 flex-shrink-0" size={18} />
                 <span className="text-gray-300 text-sm sm:text-base md:text-lg">
-                  +1 (555) 123-4567
+                  07032533822, 09077251862
                 </span>
               </div>
               <div className="flex items-start space-x-2 sm:space-x-3">
@@ -217,9 +220,11 @@ export default function Footer() {
                   size={18}
                 />
                 <span className="text-gray-300 text-sm sm:text-base md:text-lg">
-                  123 Innovation Street
+                  Plot 5 Off Peter Odili Extension Road,
                   <br />
-                  Tech City, TC 12345
+                  Gbajalam, Woji, Opposite Chelsea Filling Station,
+                  <br />
+                  Port Harcourt, Rivers State.
                 </span>
               </div>
             </div>

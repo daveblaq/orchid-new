@@ -143,7 +143,7 @@ export default function Team() {
               </div>
             </motion.div>
 
-            {/* Mr. Blessing Nwasuruba - Technical Partner */}
+            {/* Mr. Blessing Nwasuruba - Chief Laison officer */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ export default function Team() {
                 {/* Name and Role */}
                 <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
                   <h3 className="font-bold text-lg">Blessing Nwasuruba</h3>
-                  <p className="text-sm opacity-90">Technical Partner</p>
+                  <p className="text-sm opacity-90">Chief Laison Officer</p>
                 </div>
 
                 {/* Hover Overlay */}
@@ -173,11 +173,13 @@ export default function Team() {
                     <h3 className="font-bold text-lg mb-2">
                       Blessing Nwasuruba
                     </h3>
-                    <p className="text-sm opacity-90 mb-4">Technical Partner</p>
+                    <p className="text-sm opacity-90 mb-4">
+                      Chief Laison Officer
+                    </p>
                   </div>
                   <p className="text-sm leading-relaxed text-left mb-6">
-                    Technical Partner specializing in innovative solutions and
-                    system architecture. Brings deep technical expertise to
+                    Chief Laison Officer specializing in innovative solutions
+                    and system architecture. Brings deep technical expertise to
                     drive our digital transformation initiatives.
                   </p>
                   <div className="text-left">
@@ -194,7 +196,7 @@ export default function Team() {
               </div>
             </motion.div>
 
-            {/* Adedeji Adewara - Technical Partner */}
+            {/* Adedeji Adewara - Laison Officer */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -215,7 +217,7 @@ export default function Team() {
                 {/* Name and Role */}
                 <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
                   <h3 className="font-bold text-lg">Adedeji Adewara</h3>
-                  <p className="text-sm opacity-90">Technical Partner</p>
+                  <p className="text-sm opacity-90">Laison Officer</p>
                 </div>
 
                 {/* Hover Overlay */}
@@ -223,19 +225,63 @@ export default function Team() {
                   <div className="text-center mb-4">
                     <h3 className="font-bold text-lg mb-2">Adedeji Adewara</h3>
                     <p className="text-sm opacity-90 mb-4">
-                      Technical Partner on Power/Telecommunication
+                      Laison Officer on Power/Telecommunication
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed text-left mb-6">
-                    Technical Partner focused on power and telecommunication
-                    solutions. Expert in infrastructure development and
-                    technical consulting with extensive industry experience.
+                    Laison Officer focused on power and telecommunication
+                    solutions. Expert in infrastructure development and Laison
+                    consulting with extensive industry experience.
                   </p>
                   <div className="text-left">
                     <a
                       href="https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="text-white text-sm hover:underline inline-flex items-center"
+                    >
+                      LinkedIn <span className="ml-1">&gt;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Promise Obioha - Project Manager */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="group relative h-full cursor-pointer"
+            >
+              <div className="relative overflow-hidden">
+                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+                  <img
+                    src="https://ik.imagekit.io/shiga/orchid/1000577504.jpg?updatedAt=1760945979405"
+                    alt="Promise Obioha"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+
+                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
+                  <h3 className="font-bold text-lg">Promise Obioha</h3>
+                  <p className="text-sm opacity-90">Project Manager</p>
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-4">
+                    <h3 className="font-bold text-lg mb-2">Promise Obioha</h3>
+                    <p className="text-sm opacity-90 mb-4">Project Manager</p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-left mb-6">
+                    Project Manager with extensive experience in project
+                    management and team coordination. Ensures successful
+                    delivery of complex projects and client satisfaction.
+                  </p>
+                  <div className="text-left">
+                    <a
+                      href="#"
                       className="text-white text-sm hover:underline inline-flex items-center"
                     >
                       LinkedIn <span className="ml-1">&gt;</span>
@@ -270,53 +316,6 @@ export default function Team() {
 
           {/* Other Staffs Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Promise Obioha - Project Manager */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                {/* Team Image */}
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://ik.imagekit.io/shiga/orchid/1000577504.jpg?updatedAt=1760945979405"
-                    alt="Promise Obioha"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                {/* Name and Role */}
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Promise Obioha</h3>
-                  <p className="text-sm opacity-90">Project Manager</p>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">Promise Obioha</h3>
-                    <p className="text-sm opacity-90 mb-4">Project Manager</p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Project Manager with extensive experience in project
-                    management and team coordination. Ensures successful
-                    delivery of complex projects and client satisfaction.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
             {/* Miracle Moneke - Admin */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
@@ -329,7 +328,7 @@ export default function Team() {
                 {/* Team Image */}
                 <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    src="https://ik.imagekit.io/shiga/orchid/IMG_20250806_170912.jpg?updatedAt=1761505228846"
                     alt="Miracle Moneke"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
@@ -400,57 +399,6 @@ export default function Team() {
                     Social Media Manager with expertise in digital marketing and
                     brand management. Creates engaging content and builds strong
                     online presence across multiple platforms.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Comfort Etim - Business Development Officer */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                {/* Team Image */}
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                    alt="Comfort Etim"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                {/* Name and Role */}
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Comfort Etim</h3>
-                  <p className="text-sm opacity-90">
-                    Business Development Officer
-                  </p>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">Comfort Etim</h3>
-                    <p className="text-sm opacity-90 mb-4">
-                      Business Development Officer
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Business Development Officer focused on growth strategies
-                    and client acquisition. Builds partnerships and identifies
-                    new business opportunities to expand our market reach.
                   </p>
                   <div className="text-left">
                     <a

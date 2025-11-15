@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import CTASection from "../components/CTASection";
 import {
   Globe,
@@ -20,6 +21,7 @@ export default function Services() {
   const services = [
     {
       title: "Access to Market",
+      link: "/services/access-to-market",
       icon: Globe,
       backgroundImage:
         "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -42,6 +44,7 @@ export default function Services() {
     },
     {
       title: "Entrepreneurship Training",
+      link: "/services/entrepreneurship-training",
       icon: GraduationCap,
       backgroundImage:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -64,6 +67,7 @@ export default function Services() {
     },
     {
       title: "Facility Management",
+      link: "/services/facility-management",
       icon: Building,
       backgroundImage:
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -86,6 +90,7 @@ export default function Services() {
     },
     {
       title: "Insurance / Audit and Tax Clearance",
+      link: "/services/insurance-audit-tax",
       icon: FileText,
       backgroundImage:
         "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -108,6 +113,7 @@ export default function Services() {
     },
     {
       title: "Enterprise Management Software Development",
+      link: "/services/software-development",
       icon: Code,
       backgroundImage:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -130,6 +136,7 @@ export default function Services() {
     },
     {
       title: "Access to Finance",
+      link: "/contact",
       icon: DollarSign,
       backgroundImage:
         "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -152,6 +159,7 @@ export default function Services() {
     },
     {
       title: "Orchiddigital Investment Service",
+      link: "/services/investment",
       icon: TrendingUp,
       backgroundImage:
         "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -174,6 +182,7 @@ export default function Services() {
     },
     {
       title: "Orchiddigital Loan Service",
+      link: "/services/loan",
       icon: CreditCard,
       backgroundImage:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -300,10 +309,13 @@ export default function Services() {
                   </div>
 
                   <div className="pt-3 sm:pt-4 border-t border-gray-100 group-hover:border-green-200 transition-colors duration-300">
-                    <span className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base transition-colors duration-300 flex items-center">
+                    <Link
+                      to={service.link ?? "/contact"}
+                      className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base transition-colors duration-300 flex items-center"
+                    >
                       Learn More{" "}
                       <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-                    </span>
+                    </Link>
                   </div>
                 </motion.div>
               );
@@ -429,10 +441,13 @@ export default function Services() {
                               Schedule a consultation
                             </div>
                           </div>
-                          <button className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 flex items-center w-full sm:w-auto justify-center sm:justify-start">
+                          <Link
+                            to={service.link ?? "/contact"}
+                            className="bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-4 sm:px-5 md:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 transform hover:-translate-y-1 flex items-center w-full sm:w-auto justify-center sm:justify-start"
+                          >
                             Learn More{" "}
                             <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>

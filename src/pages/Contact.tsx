@@ -130,10 +130,10 @@ export default function Contact() {
                 Send us a detailed message and we'll respond within 24 hours
               </p>
               <a
-                href="mailto:hello@orchidconsulting.com"
+                href="mailto:info@orchiddigitalconsulting.com"
                 className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center touch-manipulation break-all"
               >
-                hello@orchidconsulting.com{" "}
+                info@orchiddigitalconsulting.com{" "}
                 <ArrowRight className="ml-2 flex-shrink-0 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
               </a>
             </motion.div>
@@ -155,13 +155,23 @@ export default function Contact() {
               <p className="text-text-secondary text-sm mb-3 sm:mb-4">
                 Speak directly with our experts for immediate assistance
               </p>
-              <a
-                href="tel:+15551234567"
-                className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center justify-center touch-manipulation"
-              >
-                +1 (555) 123-4567{" "}
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-              </a>
+              <div className="flex items-center justify-center gap-2 flex-wrap text-sm sm:text-base font-semibold">
+                <a
+                  href="tel:+2347032533822"
+                  className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center touch-manipulation"
+                >
+                  07032533822
+                
+                </a>
+                <span className="text-text-secondary">,</span>
+                <a
+                  href="tel:+2349077251862"
+                  className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center touch-manipulation"
+                >
+                  09077251862
+                 
+                </a>
+              </div>
             </motion.div>
 
             <motion.div
@@ -299,7 +309,7 @@ export default function Contact() {
                         type="tel"
                         {...register("phone")}
                         className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="07032533822, 09077251862"
                       />
                     </div>
                   </div>
@@ -398,14 +408,9 @@ export default function Contact() {
                       <h4 className="text-base sm:text-lg font-bold text-text-primary mb-2">
                         Email
                       </h4>
-                      <div className="space-y-1">
-                        <p className="text-text-secondary text-sm break-all">
-                          hello@orchidconsulting.com
-                        </p>
-                        <p className="text-text-secondary text-sm break-all">
-                          partnerships@orchidconsulting.com
-                        </p>
-                      </div>
+                      <p className="text-text-secondary text-sm break-all">
+                        info@orchiddigitalconsulting.com
+                      </p>
                     </div>
                   </div>
 
@@ -417,14 +422,9 @@ export default function Contact() {
                       <h4 className="text-base sm:text-lg font-bold text-text-primary mb-2">
                         Phone
                       </h4>
-                      <div className="space-y-1">
-                        <p className="text-text-secondary text-sm">
-                          +1 (555) 123-4567
-                        </p>
-                        <p className="text-text-secondary text-sm">
-                          +1 (555) 987-6543
-                        </p>
-                      </div>
+                      <p className="text-text-secondary text-sm">
+                        07032533822, 09077251862
+                      </p>
                     </div>
                   </div>
 
@@ -437,11 +437,11 @@ export default function Contact() {
                         Address
                       </h4>
                       <p className="text-text-secondary text-sm">
-                        123 Innovation Street
+                        Plot 5 Off Peter Odili Extension Road,
                         <br />
-                        Tech City, TC 12345
+                        Gbajalam, Woji, Opposite Chelsea Filling Station,
                         <br />
-                        United States
+                        Port Harcourt, Rivers State.
                       </p>
                     </div>
                   </div>
@@ -455,9 +455,8 @@ export default function Contact() {
                         Business Hours
                       </h4>
                       <div className="text-text-secondary text-sm space-y-1">
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p>Saturday: 10:00 AM - 4:00 PM</p>
-                        <p>Sunday: Closed</p>
+                        <p>Monday - Friday: 08:00 AM – 06:00 PM</p>
+                        <p>Saturday & Sunday: Closed</p>
                       </div>
                     </div>
                   </div>
@@ -542,8 +541,8 @@ export default function Contact() {
               </span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
-              Located in the heart of the business district with convenient
-              access and parking.
+              Visit us at Plot 5 Off Peter Odili Extension Road, Gbajalam, Woji
+              — directly opposite Chelsea Filling Station.
             </p>
           </motion.div>
 
@@ -555,7 +554,7 @@ export default function Contact() {
             className="border border-gray-300/50 overflow-hidden"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.95373631531654!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sus!4v1635151234567!5m2!1sen!2sus"
+              src="https://www.google.com/maps?q=Plot+5+Off+Peter+Odili+Extension+Road,+Gbajalam,+Woji&output=embed"
               width="100%"
               height="450"
               style={{ border: 0 }}
@@ -575,7 +574,7 @@ export default function Contact() {
             className="mt-8 sm:mt-12 text-center"
           >
             <a
-              href="https://maps.google.com/?q=123+Innovation+Street+Tech+City+TC+12345"
+              href="https://maps.google.com/?q=Plot+5+Off+Peter+Odili+Extension+Road,+Gbajalam,+Woji"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
