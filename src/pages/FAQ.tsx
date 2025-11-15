@@ -133,7 +133,7 @@ export default function FAQ() {
       title: "Phone Support",
       description: "Speak directly with our experts",
       action: "Call us now",
-      href: "tel:+2347032533822",
+      href: "tel:+2349077251862",
     },
     {
       icon: MessageCircle,

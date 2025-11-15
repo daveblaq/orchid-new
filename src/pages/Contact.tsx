@@ -155,23 +155,13 @@ export default function Contact() {
               <p className="text-text-secondary text-sm mb-3 sm:mb-4">
                 Speak directly with our experts for immediate assistance
               </p>
-              <div className="flex items-center justify-center gap-2 flex-wrap text-sm sm:text-base font-semibold">
-                <a
-                  href="tel:+2347032533822"
-                  className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center touch-manipulation"
-                >
-                  07032533822
-                
-                </a>
-                <span className="text-text-secondary">,</span>
-                <a
-                  href="tel:+2349077251862"
-                  className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 flex items-center touch-manipulation"
-                >
-                  09077251862
-                 
-                </a>
-              </div>
+              <a
+                href="tel:+2349077251862"
+                className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300 inline-flex items-center justify-center gap-2 touch-manipulation text-sm sm:text-base font-semibold"
+              >
+                09077251862
+                <ArrowRight className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+              </a>
             </motion.div>
 
             <motion.div
@@ -309,7 +299,7 @@ export default function Contact() {
                         type="tel"
                         {...register("phone")}
                         className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-green-200 focus:border-green-500 focus:border-transparent transition-all duration-300"
-                        placeholder="07032533822, 09077251862"
+                        placeholder="09077251862"
                       />
                     </div>
                   </div>
@@ -422,9 +412,7 @@ export default function Contact() {
                       <h4 className="text-base sm:text-lg font-bold text-text-primary mb-2">
                         Phone
                       </h4>
-                      <p className="text-text-secondary text-sm">
-                        07032533822, 09077251862
-                      </p>
+                      <p className="text-text-secondary text-sm">09077251862</p>
                     </div>
                   </div>
 

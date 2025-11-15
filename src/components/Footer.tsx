@@ -26,7 +26,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: MessageCircle,
-      href: "https://api.whatsapp.com/send?phone=+2347032533822&text=Hello%20Orchiddigital%21",
+      href: "https://api.whatsapp.com/send?phone=+2349077251862&text=Hello%20Orchiddigital%21",
       label: "WhatsApp",
       bgColor: "bg-green-500",
       hoverBgColor: "hover:bg-green-600",
@@ -211,7 +211,7 @@ export default function Footer() {
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Phone className="text-green-400 flex-shrink-0" size={18} />
                 <span className="text-gray-300 text-sm sm:text-base md:text-lg">
-                  07032533822, 09077251862
+                  09077251862
                 </span>
               </div>
               <div className="flex items-start space-x-2 sm:space-x-3">

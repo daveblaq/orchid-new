@@ -234,24 +234,13 @@ Emails and Communications: If you no longer wish to receive correspondence, emai
                 <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 info@orchiddigitalconsulting.com
               </a>
-              <div className="flex items-center gap-2 sm:gap-3 text-white text-sm sm:text-base md:text-lg">
+              <a
+                href="tel:+2349077251862"
+                className="flex items-center gap-2 sm:gap-3 text-white hover:text-green-200 transition-colors duration-300 text-sm sm:text-base md:text-lg"
+              >
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
-                <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-                  <a
-                    href="tel:+2347032533822"
-                    className="hover:text-green-200 transition-colors duration-300"
-                  >
-                    07032533822
-                  </a>
-                  <span>,</span>
-                  <a
-                    href="tel:+2349077251862"
-                    className="hover:text-green-200 transition-colors duration-300"
-                  >
-                    09077251862
-                  </a>
-                </div>
-              </div>
+                09077251862
+              </a>
             </div>
           </motion.div>
         </div>

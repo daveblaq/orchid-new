@@ -137,24 +137,12 @@ export default function Home() {
       logo: "https://ik.imagekit.io/shiga/orchid/rivers.avif?updatedAt=1761441810863",
     },
     {
-      name: "PIND",
-      logo: "https://ik.imagekit.io/shiga/orchid/pind.svg?updatedAt=1761441906401",
-    },
-    {
-      name: "CBN",
-      logo: "https://ik.imagekit.io/shiga/orchid/CBN-logo.jpg?updatedAt=1761442293980",
-    },
-    {
       name: "SSEDC",
-      logo: "https://ik.imagekit.io/shiga/orchid/ssedc.png?updatedAt=1761442222970",
+      logo: "https://ik.imagekit.io/shiga/orchid/ssdec.jpg?updatedAt=1763193180345",
     },
     {
       name: "Sycamore",
       logo: "https://ik.imagekit.io/shiga/orchid/sycamore.png?updatedAt=1761095197346",
-    },
-    {
-      name: "Wakacredit",
-      logo: "https://ik.imagekit.io/shiga/orchid/wakacredit.jpg?updatedAt=1761095306364",
     },
     {
       name: "Parallex",
@@ -166,7 +154,7 @@ export default function Home() {
     },
     {
       name: "Alliance Global",
-      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot_2025-10-24_at_11.49.50_am-removebg-preview.png?updatedAt=1761303025891",
+      logo: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202025-10-26%20at%2010.11.01.jpeg?updatedAt=1763193265896",
     },
     {
       name: "Rosabon Financial Services",
@@ -183,14 +171,14 @@ export default function Home() {
   ];
 
   const partners = [
-    { name: "Global Innovations", logo: "/api/placeholder/120/80" },
-    { name: "Unity Capital", logo: "/api/placeholder/120/80" },
-    { name: "Prime Logistics", logo: "/api/placeholder/120/80" },
-    { name: "BluePeak Energy", logo: "/api/placeholder/120/80" },
-    { name: "Metro Realty", logo: "/api/placeholder/120/80" },
-    { name: "Evergreen Holdings", logo: "/api/placeholder/120/80" },
-    { name: "Frontier Labs", logo: "/api/placeholder/120/80" },
-    { name: "Quantum Ventures", logo: "/api/placeholder/120/80" },
+    {
+      name: "PIND",
+      logo: "https://ik.imagekit.io/shiga/orchid/pind.svg?updatedAt=1761441906401",
+    },
+    {
+      name: "Wakacredit",
+      logo: "https://ik.imagekit.io/shiga/orchid/wakacredit.jpg?updatedAt=1761095306364",
+    },
   ];
 
   const goToNextTestimonial = () => {
