@@ -397,91 +397,81 @@ export default function AboutUs() {
       {/* Company Mission & Programs */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center mb-12 sm:mb-16 md:mb-20">
-            {/* Left - Office Image */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-12 sm:mb-16 md:mb-20">
+            {/* About Us Card */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="bg-gray-800/70 border border-gray-700 p-6 sm:p-8 text-white space-y-6"
             >
-              <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Professional office environment with team collaboration"
-                className="w-full h-64 sm:h-80 md:h-96 object-cover"
-              />
-            </motion.div>
-
-            {/* Right - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8 sm:space-y-10 md:space-y-12"
-            >
-              {/* About Us */}
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">
                   About Orchiddigital Consulting
                 </h3>
-                <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                   Orchiddigital Consulting Limited is a multi-dimensional
-                  corporate entity that provides comprehensive business services
-                  across all sectors. We are affiliated with commercial banks
-                  and collaborate with Partnership Initiatives in the Niger
-                  Delta (PIND). Our primary aim is to ensure that entrepreneurs
-                  are guided and equipped with the right knowledge, feasible
-                  business methodologies and strategies that will give them an
-                  edge in achieving their set goals.
+                  corporate entity that partners with commercial banks and PIND
+                  to provide entrepreneurs with finance, training, and advisory
+                  services. Our goal is to equip founders with practical
+                  methodologies and strategies that help them scale sustainably.
                 </p>
               </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { label: "Years Experience", value: "10+" },
+                  { label: "Funds Disbursed", value: "₦500M+" },
+                  { label: "Projects Delivered", value: "50+" },
+                  { label: "National Coverage", value: "3 States" },
+                ].map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <div className="text-xl font-bold">{stat.value}</div>
+                    <div className="text-xs uppercase tracking-wide text-gray-400">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
 
-              {/* Accomplishment Plans */}
+            {/* Accomplishment Plans Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-gray-800/70 border border-gray-700 p-6 sm:p-8 text-white space-y-6"
+            >
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">
                   Accomplishment Plans
                 </h3>
-                <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
-                  Our entrepreneurship development program features a one-week
-                  intensive program with online and physical classroom training
-                  engagement model. Following our "Learning by Doing" maxim, we
-                  engage aspiring and existing entrepreneurs regardless of level
-                  of education, gender or socio-economic status. The only
-                  criterion is that participants must be 18 years & above.
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                  Our entrepreneurship bootcamp blends virtual learning with
+                  physical workshops. Following our “learning by doing” doctrine,
+                  we welcome participants 18+ from any educational background and
+                  guide them through ideation, validation, and funding readiness.
                 </p>
-
-                <div className="space-y-4">
-                  <h4 className="text-xl font-semibold text-white mb-3">
-                    Delivery Strategy:
-                  </h4>
-                  <p className="text-gray-300 text-sm mb-4">
-                    We deliver top-notch services with the following delivery
-                    strategies:
-                  </p>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li className="flex items-start">
-                      <span className="text-primary-400 mr-2">1.</span>
-                      <span>Using a Two-way Communication Cycle</span>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-3">Delivery Strategy</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  {[
+                    "Two-way communication cycles for rapid feedback",
+                    "Action-oriented assignments with mentor checkpoints",
+                    "Recognition programs that reward collaboration",
+                    "Documented workflows for executing strategy",
+                    "Course-correction loops built into every module",
+                  ].map((item, idx) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-primary-400 font-semibold">
+                        {idx + 1}.
+                      </span>
+                      <span>{item}</span>
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-primary-400 mr-2">2.</span>
-                      <span>Empowering action taking</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary-400 mr-2">3.</span>
-                      <span>Reward co-operation</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary-400 mr-2">4.</span>
-                      <span>Established workflow for executing strategy</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary-400 mr-2">5.</span>
-                      <span>A setup for course correction in place</span>
-                    </li>
-                  </ul>
-                </div>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           </div>
