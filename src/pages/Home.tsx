@@ -53,7 +53,7 @@ export default function Home() {
       position: "Founder",
       company: "Zaffiro",
       testimonial:
-        "The entrepreneurship training program was exceptional. It gave me the skills and confidence to scale my business successfully.",
+        "Orchiddigital Consulting Limited really came through for us. We needed funds to push our projects forward, and they handled the entire process smoothly and professionally. Thanks to their support, we were able to secure the financing we needed on time. We appreciate their help and highly recommend them.",
       image: "/api/placeholder/200/200",
     },
     {
@@ -61,7 +61,7 @@ export default function Home() {
       position: "Operations Director",
       company: "Ifeoma",
       testimonial:
-        "Their facility management services streamlined our operations and reduced costs significantly. Highly recommended!",
+        "Orchiddigital Consulting Limited was instrumental in helping us secure the funding we needed to expand our operations. As a leading beverage distributor with over 150 brands and a growing network of warehouses across the South-South, we needed a partner who understood both our scale and our vision. Orchid digital’s team worked confidently, transparently, and professionally — they helped us refine our pitch, open doors to investors, and close funding quickly.",
       image: "/api/placeholder/200/200",
     },
   ];

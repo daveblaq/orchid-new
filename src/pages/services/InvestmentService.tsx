@@ -37,7 +37,7 @@ export default function InvestmentService() {
       icon: DollarSign,
       title: "Flexible Amounts",
       description:
-        "Invest any amount from ₦100,000 to unlimited amounts with competitive rates.",
+        "Invest any amount from ₦5M to unlimited amounts with competitive rates.",
     },
   ];
 
