@@ -40,7 +40,7 @@ export default function LoanService() {
       features: ["Fast approval", "Flexible terms", "No collateral required"],
     },
     {
-      name: "Personal Loan",
+      name: "Salary Loan",
       amount: "₦1M - ₦5M",
       duration: "6 months",
       description:
@@ -65,7 +65,7 @@ export default function LoanService() {
   const requirements = [
     "Valid government-issued ID",
     "Proof of income (3 months)",
-    "Bank statement (3 months)",
+    "Bank statement (6 months)",
     "Business registration (for business loans)",
     "Utility bill (not older than 3 months)",
   ];
@@ -128,7 +128,7 @@ export default function LoanService() {
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-8 py-4 text-sm font-semibold transition-all duration-300 transform hover:-translate-y-1"
               >
                 Apply Now
-                <DollarSign size={20} />
+              
               </Link>
               <Link
                 to="/contact"
@@ -336,7 +336,7 @@ export default function LoanService() {
               className="inline-flex items-center gap-3 bg-white text-primary-500 hover:bg-gray-100 px-8 py-4 text-sm font-semibold transition-all duration-300 transform hover:-translate-y-1"
             >
               Apply Now
-              <DollarSign size={20} />
+        
             </Link>
           </motion.div>
         </div>

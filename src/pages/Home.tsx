@@ -132,11 +132,33 @@ export default function Home() {
   ];
 
   const clients = [
+  {
+      name: "Everyday Supermarket",
+      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-24%20at%2011.55.23%E2%80%AFam.png?updatedAt=1761303337687",
+    },
+  ];
+
+  const partners = [
     {
       name: "Rivers State Government",
       logo: "https://ik.imagekit.io/shiga/orchid/rivers.avif?updatedAt=1761441810863",
     },
-
+    {
+      name: "Nirsalmfb",
+      logo: "https://ik.imagekit.io/shiga/orchid/NIRSAL-MFB.webp",
+    },
+    {
+      name: "SSEDC",
+      logo: "https://ik.imagekit.io/shiga/orchid/ssdec.jpg?updatedAt=1763193180345",
+    },
+    {
+      name: "PIND",
+      logo: "https://ik.imagekit.io/shiga/orchid/pind.svg?updatedAt=1761441906401",
+    },
+    {
+      name: "Wakacredit",
+      logo: "https://ik.imagekit.io/shiga/orchid/wakacredit.jpg?updatedAt=1761095306364",
+    },
     {
       name: "Sycamore",
       logo: "https://ik.imagekit.io/shiga/orchid/sycamore.png?updatedAt=1761095197346",
@@ -150,35 +172,12 @@ export default function Home() {
       logo: "https://ik.imagekit.io/shiga/orchid/IRVIN.logo_.png?updatedAt=1761302883201",
     },
     {
-      name: "Alliance Global",
+      name: "Alliance",
       logo: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202025-10-26%20at%2010.11.01.jpeg?updatedAt=1763193265896",
     },
     {
       name: "Rosabon Financial Services",
       logo: "https://ik.imagekit.io/shiga/orchid/Screenshot_2025-10-24_at_11.51.42_am-removebg-preview.png?updatedAt=1761303135588",
-    },
-    {
-      name: "Nirsalmfb",
-      logo: "https://ik.imagekit.io/shiga/orchid/NIRSAL-Microfinance-1.jpg?updatedAt=1761303218873",
-    },
-    {
-      name: "Everyday Supermarket",
-      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-24%20at%2011.55.23%E2%80%AFam.png?updatedAt=1761303337687",
-    },
-  ];
-
-  const partners = [
-    {
-      name: "SSEDC",
-      logo: "https://ik.imagekit.io/shiga/orchid/ssdec.jpg?updatedAt=1763193180345",
-    },
-    {
-      name: "PIND",
-      logo: "https://ik.imagekit.io/shiga/orchid/pind.svg?updatedAt=1761441906401",
-    },
-    {
-      name: "Wakacredit",
-      logo: "https://ik.imagekit.io/shiga/orchid/wakacredit.jpg?updatedAt=1761095306364",
     },
   ];
 
@@ -220,192 +219,6 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroSlider />
-
-      {/* Services Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12 sm:mb-16"
-          >
-            <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
-              Our Services
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
-              Comprehensive
-              <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
-                Digital Solutions
-              </span>
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-5xl mx-auto leading-relaxed px-4 font-light">
-              Accelerate your business growth with our cutting-edge technology
-              solutions and strategic consulting services.
-            </p>
-          </motion.div>
-
-          {/* Main Services - 2x2 Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            {mainServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 60, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="group relative h-full"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-green-500/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6  transition-all duration-500 group-hover:border-primary-300/50 h-full flex flex-col">
-                    {/* Icon Container */}
-                    <div className="relative mb-8">
-                      <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110">
-                        <Icon className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 space-y-3">
-                      <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        {service.title}
-                      </h3>
-                      <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
-                        {service.description}
-                      </p>
-
-                      {/* Learn More Link */}
-                      <div className="pt-3">
-                        <Link
-                          to={service.link}
-                          className="inline-flex items-center text-primary-500 hover:text-primary-600 font-medium text-sm transition-colors duration-300 group/link"
-                        >
-                          Learn More
-                          <svg
-                            className="ml-1 w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Other Services - 3 Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div
-                  key={`other-${index}`}
-                  initial={{ opacity: 0, y: 60, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: (index + 2) * 0.1 }}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="group relative h-full"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-green-500/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6  transition-all duration-500 group-hover:border-primary-300/50 h-full flex flex-col">
-                    {/* Icon Container */}
-                    <div className="relative mb-8">
-                      <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center  group- transition-all duration-500 group-hover:scale-110">
-                        <Icon className="text-white w-8 h-8 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" />
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 space-y-3">
-                      <h3 className="text-lg sm:text-xl font-bold text-text-primary group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        {service.title}
-                      </h3>
-                      <p className="text-text-secondary leading-relaxed text-sm font-light flex-1">
-                        {service.description}
-                      </p>
-
-                      {/* Learn More Link */}
-                      <div className="pt-3">
-                        <Link
-                          to={service.link}
-                          className="inline-flex items-center text-primary-500 hover:text-primary-600 font-medium text-sm transition-colors duration-300 group/link"
-                        >
-                          Learn More
-                          <svg
-                            className="ml-1 w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* View All Services Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center mt-16 sm:mt-20 md:mt-24"
-          >
-            <Link
-              to="/services"
-              className="group inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-bold transition-all duration-300  transform hover:-translate-y-2 hover:scale-105"
-            >
-              <span>Explore All Services</span>
-              <svg
-                className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">

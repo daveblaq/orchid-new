@@ -15,14 +15,6 @@ import {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const quickLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about-us", label: "About Us" },
-    { path: "/services", label: "Services" },
-    { path: "/faq", label: "FAQ" },
-    { path: "/contact", label: "Contact" },
-  ];
-
   const socialLinks = [
     {
       icon: MessageCircle,
@@ -167,29 +159,7 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-white">
-              Quick Links
-            </h3>
-            <ul className="space-y-2 sm:space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm sm:text-base md:text-lg touch-manipulation block py-1"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        
 
           {/* Contact Info */}
           <motion.div
