@@ -2,16 +2,11 @@ import HeroSlider from "../components/HeroSlider";
 import CTASection from "../components/CTASection";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import {
   Users,
   Globe,
   Shield,
-  Headphones,
   Building,
-  GraduationCap,
-  FileText,
-  Code,
   DollarSign,
   TrendingUp,
 } from "lucide-react";
@@ -41,67 +36,7 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
 
-  const mainServices = [
-    {
-      title: "Investment Service",
-      description:
-        "Grow your wealth with our secure investment plans. Earn up to 5% monthly returns on investments below ₦50M, or 3.3% monthly for ₦50M and above.",
-      icon: TrendingUp,
-      link: "/services/investment",
-    },
-    {
-      title: "Loan Service",
-      description:
-        "Get quick access to capital with our Orchiddigital Loan Plan. Flexible terms with competitive rates and fast approval process.",
-      icon: DollarSign,
-      link: "/services/loan",
-    },
-  ];
-
-  const otherServices = [
-    {
-      title: "Access to Market",
-      description:
-        "Connect bulk purchasers, sell across borders, and help enter foreign markets with strategic guidance.",
-      icon: Globe,
-      link: "/services/access-to-market",
-    },
-    {
-      title: "Entrepreneurship Training",
-      description:
-        "Develop individuals for self-employment and business leadership through comprehensive training programs.",
-      icon: GraduationCap,
-      link: "/services/entrepreneurship-training",
-    },
-    {
-      title: "Facility Management",
-      description:
-        "Coordinate everything that keeps business systems and assets running smoothly and efficiently.",
-      icon: Building,
-      link: "/services/facility-management",
-    },
-    {
-      title: "Insurance / Audit and Tax Clearance",
-      description:
-        "Provide financial protection and audit/tax services for businesses of all sizes.",
-      icon: FileText,
-      link: "/services/insurance-audit-tax",
-    },
-    {
-      title: "Enterprise Management Software Development",
-      description:
-        "Develop, maintain, and re-engineer business software solutions tailored to your needs.",
-      icon: Code,
-      link: "/services/software-development",
-    },
-    {
-      title: "Support Services",
-      description:
-        "End-to-end support from strategy development to implementation and beyond.",
-      icon: Headphones,
-      link: "/services/support",
-    },
-  ];
+ 
 
   const testimonials = [
     {
