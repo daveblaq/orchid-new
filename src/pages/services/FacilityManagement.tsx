@@ -200,6 +200,60 @@ export default function FacilityManagement() {
         </div>
       </section>
 
+      {/* Facility Management Highlight Image */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-white via-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+                Operational Excellence
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
+                Keep Your Facilities Running Smoothly
+              </h3>
+              <p className="text-text-secondary mb-6 leading-relaxed">
+                Our comprehensive facility management services ensure your business operations run efficiently. From maintenance to security, we coordinate everything that keeps your systems and assets running smoothly.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "24/7 facility monitoring",
+                  "Preventive maintenance programs",
+                  "Professional staff management",
+                  "Cost-effective solutions",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-text-secondary text-sm sm:text-base">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <img
+                  src="https://ik.imagekit.io/shiga/orchid/facility.jpg?updatedAt=1763192755920"
+                  alt="Facility management service"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-16 sm:py-20 bg-gradient-to-br from-primary-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

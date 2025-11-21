@@ -115,7 +115,9 @@ export default function Team() {
                 {/* Name and Role */}
                 <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
                   <h3 className="font-bold text-lg">Buchi Ijeh</h3>
-                  <p className="text-sm opacity-90">Partner On Oil and Gas</p>
+                  <p className="text-sm opacity-90">
+                    Business Development Executive on Oil and Gas
+                  </p>
                 </div>
 
                 {/* Hover Overlay */}
@@ -123,11 +125,12 @@ export default function Team() {
                   <div className="text-center mb-4">
                     <h3 className="font-bold text-lg mb-2">Buchi Ijeh</h3>
                     <p className="text-sm opacity-90 mb-4">
-                      Partner On Oil and Gas services
+                      Business Development Executive on Oil and Gas
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed text-left mb-6">
-                    Partner specializing in oil and gas services with over 10
+                    Business Development Executive specializing in oil and gas
+                    services with over 10
                     years of corporate leadership experience. Expert in business
                     development and strategic planning.
                   </p>
@@ -316,7 +319,6 @@ export default function Team() {
 
           {/* Other Staffs Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
             {/* Victoria Ajayi - Social Media Manager */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}

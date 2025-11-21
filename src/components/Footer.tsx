@@ -83,7 +83,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
           {/* Company Info */}
           <motion.div
             className="lg:col-span-2"
@@ -122,7 +122,7 @@ export default function Footer() {
                 }}
               />
             </div>
-            <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base md:text-lg">
+            <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base md:text-lg md:max-w-xl">
               Empowering businesses for global growth through technology,
               training, and enterprise transformation. Your trusted partner in
               digital innovation.

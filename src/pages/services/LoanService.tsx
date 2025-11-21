@@ -128,7 +128,6 @@ export default function LoanService() {
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-8 py-4 text-sm font-semibold transition-all duration-300 transform hover:-translate-y-1"
               >
                 Apply Now
-              
               </Link>
               <Link
                 to="/contact"
@@ -184,6 +183,62 @@ export default function LoanService() {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Loan Service Highlight Image */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-white via-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+                Quick Access
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
+                Fast and Flexible Loan Solutions
+              </h3>
+              <p className="text-text-secondary mb-6 leading-relaxed">
+                Our loan service provides quick access to capital when you need
+                it most. With competitive rates and flexible repayment terms, we
+                help businesses and individuals achieve their financial goals.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "24-48 hour approval process",
+                  "Flexible repayment options",
+                  "Competitive interest rates",
+                  "No hidden fees or charges",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-text-secondary text-sm sm:text-base">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <img
+                  src="https://ik.imagekit.io/shiga/orchid/loan.jpg?updatedAt=1763192755920"
+                  alt="Loan service"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -336,7 +391,6 @@ export default function LoanService() {
               className="inline-flex items-center gap-3 bg-white text-primary-500 hover:bg-gray-100 px-8 py-4 text-sm font-semibold transition-all duration-300 transform hover:-translate-y-1"
             >
               Apply Now
-        
             </Link>
           </motion.div>
         </div>

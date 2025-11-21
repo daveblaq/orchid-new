@@ -23,76 +23,82 @@ export default function FAQ() {
 
   const faqs: FAQItem[] = [
     {
-      question: "How can I partner with Orchiddigital Consulting?",
+      question: "What does Orchiddigital Consulting Limited do?",
       answer:
-        "We welcome partnerships with businesses, organizations, and individuals who share our vision of driving digital transformation. You can partner with us through strategic alliances, referral programs, or by becoming a client. Contact our partnership team to discuss collaboration opportunities tailored to your needs and objectives.",
-      category: "partnership",
-    },
-    {
-      question: "Do you work with startups?",
-      answer:
-        "Absolutely! We specialize in working with startups and early-stage companies. Our entrepreneurship training programs, access to finance services, and startup-friendly pricing models make us an ideal partner for emerging businesses. We understand the unique challenges startups face and provide tailored solutions to help them scale effectively.",
+        "We provide financial solutions and business consulting services that help individuals, employees, and businesses access funding, investments, and strategic support for growth.",
       category: "services",
     },
     {
-      question: "What industries do you specialize in?",
+      question: "What services do you offer?",
       answer:
-        "We serve clients across multiple industries including technology, manufacturing, healthcare, finance, retail, and professional services. Our diverse expertise allows us to adapt our solutions to industry-specific challenges and regulatory requirements. We have particular strength in helping traditional businesses undergo digital transformation.",
+        "Our core services include: Salary Loans, Business Loans, Car-Backed Loans, Proof of Funds (Embassy-Compliant), Investment Opportunities, Business Advisory & Development, Facility Management, Enterprise Management & Software development, and Entrepreneurship Training.",
       category: "services",
     },
     {
-      question: "Do you provide international services?",
+      question: "Who can apply for your loan services?",
       answer:
-        "Yes, we provide services to clients in over 50 countries worldwide. Our global network of partners and expertise in international business practices enables us to help clients expand across borders, navigate different regulatory environments, and access international markets effectively.",
+        "Employees, business owners, SMEs, and entrepreneurs can apply. Requirements vary by loan type, but basic documentation and income/business verification are needed.",
       category: "services",
     },
     {
-      question: "How long does a typical consulting engagement take?",
+      question: "What are your Business Loans for?",
       answer:
-        "Project timelines vary based on scope and complexity. Our market access projects typically take 3-6 months, entrepreneurship training programs run for 6-12 weeks, while software development projects can range from 2-12 months. We provide detailed timelines during our initial consultation and maintain flexibility to adjust based on your needs.",
+        "Business loans support growth activities such as expansion, inventory purchase, operations, and project financing. Loan terms depend on business size, capacity, and documentation.",
+      category: "services",
+    },
+    {
+      question: "Do you offer investment opportunities?",
+      answer:
+        "Yes. We provide safe, structured investment options designed for clients who want steady returns. We guide you through risks, timelines, and expected returns.",
+      category: "services",
+    },
+    {
+      question: "What is Proof of Funds, and how does it work?",
+      answer:
+        "Our Proof-of-Funds service provides clean, professional, embassy-compliant financial documentation for visa applications, business verification, and funding requirements.",
+      category: "services",
+    },
+    {
+      question: "How fast is the loan or proof-of-funds process?",
+      answer:
+        "Processing is fast once documentation is complete. Salary loans and proof-of-funds are typically quicker, while business loans may require more evaluation.",
       category: "process",
     },
     {
-      question: "What is your approach to digital transformation?",
+      question: "Do I need collateral to access funding?",
       answer:
-        "We take a holistic approach to digital transformation, starting with a comprehensive assessment of your current state, followed by strategic planning, phased implementation, and continuous optimization. Our methodology ensures minimal disruption to your operations while maximizing the benefits of digital adoption.",
+        "Car-Backed Loans: Yes. Business Loans: May require collateral or guarantors depending on the amount. Salary Loans: Usually no collateral. Proof of Funds: No collateral required.",
       category: "process",
     },
     {
-      question: "Do you offer ongoing support after project completion?",
+      question: "Are your services legitimate and secure?",
       answer:
-        "Yes, we provide comprehensive post-project support including maintenance, optimization, training, and strategic guidance. Our support packages are designed to ensure long-term success and can be customized based on your specific requirements and budget.",
-      category: "support",
-    },
-    {
-      question: "What makes your training programs different?",
-      answer:
-        "Our entrepreneurship training programs combine theoretical knowledge with practical application, mentorship opportunities, and access to our business network. We focus on real-world scenarios, provide hands-on experience, and offer ongoing support even after program completion.",
-      category: "services",
-    },
-    {
-      question: "How do you ensure data security and compliance?",
-      answer:
-        "We maintain the highest standards of data security and compliance across all our services. Our team is trained in international data protection regulations, we use enterprise-grade security measures, and we conduct regular audits to ensure compliance with industry standards and client requirements.",
+        "Yes. Orchiddigital Consulting Limited is fully registered in Nigeria (RC-1668812). We operate with transparency, professionalism, and confidentiality.",
       category: "security",
     },
     {
-      question: "What is your pricing model?",
+      question: "Who do you serve?",
       answer:
-        "We offer flexible pricing models including fixed-price projects, hourly consulting, retainer agreements, and performance-based pricing for certain services. Our pricing is transparent and tailored to your specific needs, budget, and project scope. We provide detailed proposals with no hidden costs.",
-      category: "pricing",
-    },
-    {
-      question: "Can you help with funding and investment opportunities?",
-      answer:
-        "Yes, our Access to Finance service helps connect businesses with funding opportunities through our network of banks, investors, and financial institutions. We assist with business plan development, financial projections, due diligence preparation, and investor presentations to maximize your chances of securing funding.",
+        "We work with: Government & private employees, Small and medium-scale businesses, and Individuals seeking proof-of-funds or investments.",
       category: "services",
     },
     {
-      question: "How do you measure success in your projects?",
+      question: "How do I apply for a service?",
       answer:
-        "We establish clear KPIs and success metrics at the beginning of each project, aligned with your business objectives. We provide regular progress reports, conduct milestone reviews, and measure both quantitative results (ROI, efficiency gains) and qualitative outcomes (client satisfaction, strategic alignment).",
+        "Contact us via phone, email, or Instagram. Share the service you need, submit required documents, receive an assessment and offer, then approve and complete the process.",
       category: "process",
+    },
+    {
+      question: "Where are you located?",
+      answer:
+        "Plot 5, Peter Odili Extension Road, Gbajalam, Port Harcourt (Opposite Chelsea Filling Station).",
+      category: "contact",
+    },
+    {
+      question: "How can I contact you?",
+      answer:
+        "Phone: 0907-725-1862. Email: info@orchiddigitalconsulting.com. Instagram: @orchiddigitaledc",
+      category: "contact",
     },
   ];
 
@@ -100,10 +106,8 @@ export default function FAQ() {
     { id: "all", label: "All Questions" },
     { id: "services", label: "Services" },
     { id: "process", label: "Process" },
-    { id: "support", label: "Support" },
-    { id: "pricing", label: "Pricing" },
-    { id: "partnership", label: "Partnership" },
     { id: "security", label: "Security" },
+    { id: "contact", label: "Contact" },
   ];
 
   const filteredFAQs = faqs.filter((faq) => {
