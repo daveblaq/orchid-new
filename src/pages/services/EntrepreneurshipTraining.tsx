@@ -254,15 +254,15 @@ export default function EntrepreneurshipTraining() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <img
-                  src="https://ik.imagekit.io/shiga/orchid/training.8b99a2cb.jpeg?updatedAt=1763192755920"
+                  src="https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_olubk3olubk3olub.png"
                   alt="Entrepreneurship training cohort presentation"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-xs text-text-secondary mt-3 text-center">
+              {/* <p className="text-xs text-text-secondary mt-3 text-center">
                 Cohort 5 founders during the final presentation day at the Woji
                 training center.
-              </p>
+              </p> */}
             </motion.div>
           </div>
         </div>

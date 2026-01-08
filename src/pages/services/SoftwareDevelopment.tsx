@@ -237,7 +237,7 @@ export default function SoftwareDevelopment() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <img
-                  src="https://ik.imagekit.io/shiga/orchid/software.jpg?updatedAt=1763192755920"
+                  src="https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_lv12qalv12qalv12.png"
                   alt="Software development service"
                   className="w-full h-full object-cover"
                 />

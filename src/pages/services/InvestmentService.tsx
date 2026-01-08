@@ -230,7 +230,7 @@ export default function InvestmentService() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <img
-                  src="https://ik.imagekit.io/shiga/orchid/investment.jpg?updatedAt=1763192755920"
+                  src="https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_5yy1cz5yy1cz5yy1.png"
                   alt="Investment service success"
                   className="w-full h-full object-cover"
                 />

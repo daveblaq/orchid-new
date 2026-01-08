@@ -237,7 +237,7 @@ export default function AccessToMarket() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <img
-                  src="https://ik.imagekit.io/shiga/orchid/market.jpg?updatedAt=1763192755920"
+                  src="https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_smaaidsmaaidsmaa.png"
                   alt="Market access service"
                   className="w-full h-full object-cover"
                 />

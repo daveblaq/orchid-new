@@ -24,7 +24,7 @@ export default function Services() {
       link: "/services/access-to-market",
       icon: Globe,
       backgroundImage:
-        "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_smaaidsmaaidsmaa.png",
       description:
         "Expand your business reach and connect with global opportunities through our comprehensive market access solutions.",
       details: [
@@ -47,7 +47,7 @@ export default function Services() {
       link: "/services/entrepreneurship-training",
       icon: GraduationCap,
       backgroundImage:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_olubk3olubk3olub.png",
       description:
         "Develop the next generation of business leaders with our comprehensive entrepreneurship and leadership training programs.",
       details: [
@@ -70,7 +70,7 @@ export default function Services() {
       link: "/services/facility-management",
       icon: Building,
       backgroundImage:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://ik.imagekit.io/shiga/orchid/fm.5481be26.jpeg",
       description:
         "Optimize your business operations with our comprehensive facility management and system coordination services.",
       details: [
@@ -93,7 +93,7 @@ export default function Services() {
       link: "/services/insurance-audit-tax",
       icon: FileText,
       backgroundImage:
-        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_rte1zhrte1zhrte1.png",
       description:
         "Ensure financial compliance and protection with our comprehensive insurance, audit, and tax clearance services.",
       details: [
@@ -116,7 +116,7 @@ export default function Services() {
       link: "/services/software-development",
       icon: Code,
       backgroundImage:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_lv12qalv12qalv12.png",
       description:
         "Transform your business operations with custom software solutions designed to meet your specific needs and objectives.",
       details: [
@@ -139,7 +139,7 @@ export default function Services() {
       link: "/contact",
       icon: DollarSign,
       backgroundImage:
-        "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_3hr7iz3hr7iz3hr7.png",
       description:
         "Secure the funding you need to grow and expand your business through our extensive network of financial partners.",
       details: [
@@ -151,8 +151,7 @@ export default function Services() {
         "Financial due diligence support",
       ],
       benefits: [
-        "90% funding success rate",
-        "Access to $50M+ funding pool",
+        "High success rate",
         "Expedited approval process",
         "Comprehensive financial planning",
       ],
@@ -162,7 +161,7 @@ export default function Services() {
       link: "/services/investment",
       icon: TrendingUp,
       backgroundImage:
-        "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_5yy1cz5yy1cz5yy1.png",
       description:
         "Grow your savings with attractive interest rates. Lock your savings for 365 days and receive competitive returns on your investment.",
       details: [
@@ -185,7 +184,7 @@ export default function Services() {
       link: "/services/loan",
       icon: CreditCard,
       backgroundImage:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_jpg7sqjpg7sqjpg7.png",
       description:
         "Access funds when you need them most with our fast and easy loan service. Get the financial support your business needs to thrive.",
       details: [
@@ -238,91 +237,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-4">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Our Services
-              </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 sm:mb-6 px-4 leading-tight">
-                Comprehensive
-                <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
-                  Business Solutions
-                </span>
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
-                Designed to drive growth, efficiency, and success across all
-                aspects of your organization.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  whileHover={{ y: -8 }}
-                  className="group bg-white/80 backdrop-blur-sm border border-gray-300/50 p-6 sm:p-8 transition-all duration-500 hover:border-green-300/50 "
-                >
-                  <div className="mb-4 sm:mb-6">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-green-500 flex items-center justify-center mb-4 sm:mb-6  transition-colors duration-500">
-                      <Icon className="text-white transition-colors duration-500 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-text-secondary leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center">
-                        <CheckCircle className="text-green-500 mr-2 sm:mr-3 flex-shrink-0 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-                        <span className="text-text-secondary text-sm">
-                          {benefit}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="pt-3 sm:pt-4 border-t border-gray-100 group-hover:border-green-200 transition-colors duration-300">
-                    <Link
-                      to={service.link ?? "/contact"}
-                      className="bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base transition-colors duration-300 flex items-center"
-                    >
-                      Learn More{" "}
-                      <ArrowRight className="ml-2 w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-                    </Link>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Detailed Services Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">

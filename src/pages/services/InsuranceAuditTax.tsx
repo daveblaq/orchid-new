@@ -243,7 +243,7 @@ export default function InsuranceAuditTax() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <img
-                  src="https://ik.imagekit.io/shiga/orchid/financial.jpg?updatedAt=1763192755920"
+                  src="https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_rte1zhrte1zhrte1.png"
                   alt="Financial services"
                   className="w-full h-full object-cover"
                 />

@@ -244,7 +244,7 @@ export default function FacilityManagement() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <img
-                  src="https://ik.imagekit.io/shiga/orchid/facility.jpg?updatedAt=1763192755920"
+                  src="https://ik.imagekit.io/shiga/orchid/fm.5481be26.jpeg"
                   alt="Facility management service"
                   className="w-full h-full object-cover"
                 />
