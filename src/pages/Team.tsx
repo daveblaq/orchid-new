@@ -93,6 +93,56 @@ export default function Team() {
                 </div>
               </div>
             </motion.div>
+               {/* Mr. Paul Ugwu - Chief Operation officer */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="group relative h-full cursor-pointer"
+            >
+              <div className="relative overflow-hidden">
+                {/* Team Image */}
+                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+                  <img
+                    src="https://ik.imagekit.io/shiga/orchid/IMG-20260109-WA0002(1).jpg"
+                    alt="Mr. Paul Ugwu"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+
+                {/* Name and Role */}
+                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
+                  <h3 className="font-bold text-lg">Mr. Paul Ugwu</h3>
+                  <p className="text-sm opacity-90">Chief Operation officer</p>
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-4">
+                    <h3 className="font-bold text-lg mb-2">
+                      Mr. Paul Ugwu     
+                    </h3>
+                    <p className="text-sm opacity-90 mb-4">Chief Operation officer</p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-left mb-6">
+                    Chief Operation officer with extensive experience in business
+                    strategy and digital transformation. Leads our team with
+                    deep industry knowledge and proven leadership skills.
+                  </p>
+                  <div className="text-left">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-sm hover:underline inline-flex items-center"
+                    >
+                      LinkedIn <span className="ml-1">&gt;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Buchi Ijeh - Partner */}
             <motion.div

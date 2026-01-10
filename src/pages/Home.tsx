@@ -71,6 +71,14 @@ export default function Home() {
       name: "Everyday Supermarket",
       logo: "https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-24%20at%2011.55.23%E2%80%AFam.png?updatedAt=1761303337687",
     },
+      {
+      name: "Ifeoma Chukwuka",
+      logo: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-01-09%20at%2011.17.23%20(1).jpeg",
+    },
+        {
+      name: "Ampai Construction",
+      logo: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-01-09%20at%2011.17.23.jpeg",
+    },
   ];
 
   const partners = [
@@ -833,54 +841,65 @@ export default function Home() {
             {/* Carousel Container */}
             <div className="relative overflow-hidden">
               {/* Navigation Buttons */}
-              <button
-                onClick={goToPreviousClient}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 flex items-center justify-center transition-all duration-300 "
-              >
-                <svg
-                  className="w-5 h-5 text-gray-600 hover:text-green-500 transition-colors duration-200"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
+              {clients.length > itemsPerView && (
+                <>
+                  <button
+                    onClick={goToPreviousClient}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 flex items-center justify-center transition-all duration-300 "
+                  >
+                    <svg
+                      className="w-5 h-5 text-gray-600 hover:text-green-500 transition-colors duration-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                  </button>
 
-              <button
-                onClick={goToNextClient}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 flex items-center justify-center transition-all duration-300 "
-              >
-                <svg
-                  className="w-5 h-5 text-gray-600 hover:text-green-500 transition-colors duration-200"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
+                  <button
+                    onClick={goToNextClient}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-300/50 hover:border-green-300/50 flex items-center justify-center transition-all duration-300 "
+                  >
+                    <svg
+                      className="w-5 h-5 text-gray-600 hover:text-green-500 transition-colors duration-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
+                </>
+              )}
 
               {/* Client Logos Row - Mobile: 1 logo, SM: 2 logos, MD: 3 logos, LG: 4 logos */}
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className={`flex transition-transform duration-500 ease-in-out ${
+                  clients.length <= itemsPerView ? "justify-center" : ""
+                }`}
                 style={{
-                  transform: `translateX(-${
-                    ((currentClientIndex + clients.length) * 100) / itemsPerView
-                  }%)`,
+                  transform:
+                    clients.length > itemsPerView
+                      ? `translateX(-${
+                          ((currentClientIndex + clients.length) * 100) /
+                          itemsPerView
+                        }%)`
+                      : "none",
                 }}
               >
-                {extendedClients.map((client, index) => (
+                {(clients.length > itemsPerView ? extendedClients : clients).map(
+                  (client, index) => (
                   <div
                     key={index}
                     className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 px-2 sm:px-3 md:px-4"
