@@ -13,73 +13,73 @@ export default function InsuranceAuditTax() {
   const features = [
     {
       icon: Shield,
-      title: "Insurance Protection",
+      title: "Proper Protection",
       description:
-        "Comprehensive insurance solutions to protect your business assets and operations.",
+        "Thorough assessment of your insurance coverage to ensure your business stays protected.",
     },
     {
       icon: Calculator,
-      title: "Tax Services",
+      title: "Tax Efficiency",
       description:
-        "Expert tax planning, preparation, and compliance services for businesses of all sizes.",
+        "Smart tax planning strategies that reduce liabilities and improve cash flow.",
     },
     {
       icon: FileText,
-      title: "Audit Services",
+      title: "Thorough Audits",
       description:
-        "Professional audit services to ensure financial accuracy and regulatory compliance.",
+        "Financial audits and compliance checks to meet the highest regulatory standards.",
     },
     {
       icon: Award,
-      title: "Compliance Support",
+      title: "Safe Compliance",
       description:
-        "Complete regulatory compliance support to keep your business in good standing.",
+        "Ongoing support and documentation to keep you aligned with changing regulations.",
     },
   ];
 
   const services = [
     {
-      title: "Business Insurance",
+      title: "Insurance & Risk",
       description:
-        "Comprehensive insurance coverage for all aspects of your business operations.",
+        "Well-structured risk coverage and identification to protect your business from unexpected issues.",
       features: [
-        "General liability",
-        "Professional liability",
-        "Property insurance",
-        "Workers compensation",
+        "Coverage assessment",
+        "Risk identification",
+        "Protective planning",
+        "Mitigation support",
       ],
     },
     {
-      title: "Tax Planning & Preparation",
+      title: "Audit & Compliance",
       description:
-        "Expert tax services to minimize your tax burden and ensure compliance.",
-      features: [
-        "Tax planning",
-        "Tax preparation",
-        "Tax compliance",
-        "Tax optimization",
-      ],
-    },
-    {
-      title: "Financial Auditing",
-      description:
-        "Professional audit services to ensure financial accuracy and transparency.",
+        "Thorough financial audits and proper documentation for authorities and regulators.",
       features: [
         "Financial audits",
-        "Compliance audits",
-        "Internal audits",
-        "Risk assessment",
+        "Compliance checks",
+        "Clear reporting",
+        "Expert guidance",
+      ],
+    },
+    {
+      title: "Tax & Regulation",
+      description:
+        "Smart strategies to reduce risk and stay aligned with ever-changing tax regulations.",
+      features: [
+        "Tax planning",
+        "Liability reduction",
+        "Regulatory alignment",
+        "Efficiency strategy",
       ],
     },
   ];
 
   const benefits = [
-    "Expert financial guidance",
-    "Regulatory compliance assurance",
-    "Cost-effective solutions",
-    "Risk mitigation strategies",
-    "Professional audit services",
-    "Comprehensive tax support",
+    "Confidence in meeting all regulations",
+    "Reduced tax liabilities and risks",
+    "Improved business cash flow",
+    "End-to-end guidance through audits",
+    "Protection from unexpected issues",
+    "Financial soundness and peace of mind",
   ];
 
   return (

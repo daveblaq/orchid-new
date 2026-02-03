@@ -425,9 +425,9 @@ export default function Contact() {
                         Address
                       </h4>
                       <p className="text-text-secondary text-sm">
-                        Plot 5 Off Peter Odili Extension Road,
+                        Head Office: NO 314 Peter Odili Extension by
                         <br />
-                        Gbajalam, Woji, Opposite Chelsea Filling Station,
+                        Old Refinery Road Opposite Genesis Fastfood,
                         <br />
                         Port Harcourt, Rivers State.
                       </p>
@@ -529,8 +529,8 @@ export default function Contact() {
               </span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed px-4 font-light">
-              Visit us at Plot 5 Off Peter Odili Extension Road, Gbajalam, Woji
-              — directly opposite Chelsea Filling Station.
+              Visit us at NO 314 Peter Odili Extension by Old Refinery Road
+              Opposite Genesis Fastfood, Port Harcourt, Rivers State.
             </p>
           </motion.div>
 
@@ -542,7 +542,7 @@ export default function Contact() {
             className="border border-gray-300/50 overflow-hidden"
           >
             <iframe
-              src="https://www.google.com/maps?q=Plot+5+Off+Peter+Odili+Extension+Road,+Gbajalam,+Woji&output=embed"
+              src="https://www.google.com/maps?q=NO+314+Peter+Odili+Extension+by+Old+Refinery+Road+Opposite+Genesis+Fastfood,+Port+Harcourt,+Rivers+State&output=embed"
               width="100%"
               height="450"
               style={{ border: 0 }}
@@ -562,7 +562,7 @@ export default function Contact() {
             className="mt-8 sm:mt-12 text-center"
           >
             <a
-              href="https://maps.google.com/?q=Plot+5+Off+Peter+Odili+Extension+Road,+Gbajalam,+Woji"
+              href="https://maps.google.com/?q=NO+314+Peter+Odili+Extension+by+Old+Refinery+Road+Opposite+Genesis+Fastfood,+Port+Harcourt,+Rivers+State"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"

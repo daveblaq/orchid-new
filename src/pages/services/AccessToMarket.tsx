@@ -13,66 +13,66 @@ export default function AccessToMarket() {
   const features = [
     {
       icon: Globe,
-      title: "Global Market Access",
+      title: "International Growth",
       description:
-        "Connect with bulk purchasers and buyers across international markets.",
+        "Practical strategies to enter and grow in high-value international markets.",
     },
     {
       icon: TrendingUp,
-      title: "Market Expansion",
+      title: "Direct Connections",
       description:
-        "Enter new markets with strategic guidance and proven methodologies.",
+        "Direct connections to bulk buyers and large purchasing networks globally.",
     },
     {
       icon: Users,
-      title: "Buyer Networks",
+      title: "Cross-Border Sales",
       description:
-        "Access our extensive network of verified bulk purchasers and distributors.",
+        "Comprehensive support with cross-border sales and international transactions.",
     },
     {
       icon: Target,
-      title: "Strategic Planning",
+      title: "Market Transition",
       description:
-        "Develop market entry strategies tailored to your business and products.",
+        "Hands-on assistance to help your products gain traction in foreign markets.",
     },
   ];
 
   const services = [
     {
-      title: "Bulk Purchaser Connections",
+      title: "Market Strategy & Growth",
       description:
-        "Connect with verified bulk purchasers looking for quality products and suppliers.",
+        "We provide practical strategies and hands-on assistance to help your products gain traction.",
       features: [
-        "Verified buyer database",
-        "Direct introductions",
-        "Negotiation support",
+        "International entry strategy",
+        "Competitor insights",
+        "Trade documentation guidance",
       ],
     },
     {
-      title: "Cross-Border Trading",
+      title: "Sales & Transactions",
       description:
-        "Facilitate international trade with regulatory compliance and logistics support.",
+        "Direct connections to bulk buyers and support with cross-border international sales.",
       features: [
-        "Export documentation",
-        "Customs clearance",
-        "Logistics coordination",
+        "Buyer network access",
+        "Transaction support",
+        "Regulatory compliance",
       ],
     },
     {
-      title: "Market Entry Strategy",
+      title: "Insights & Research",
       description:
-        "Develop comprehensive strategies for entering new markets successfully.",
-      features: ["Market research", "Competitive analysis", "Entry planning"],
+        "In-depth market research and insights to help you make smarter expansion decisions.",
+      features: ["Market research", "Trend analysis", "Compliance guidance"],
     },
   ];
 
   const benefits = [
-    "Access to verified bulk purchasers",
-    "International market expansion",
-    "Regulatory compliance support",
-    "Logistics and shipping assistance",
-    "Market research and analysis",
-    "Strategic business development",
+    "Grow revenue faster in high-value markets",
+    "Access 50+ international markets easily",
+    "Significantly reduced market entry time",
+    "End-to-end regulatory compliance guidance",
+    "Stress-free international trade management",
+    "Proven hands-on expansion support",
   ];
 
   return (

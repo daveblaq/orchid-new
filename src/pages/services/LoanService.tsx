@@ -54,12 +54,12 @@ export default function LoanService() {
   ];
 
   const benefits = [
-    "Fast approval process (24-48 hours)",
-    "No hidden fees or charges",
-    "Flexible repayment options",
-    "Competitive interest rates",
-    "Minimal documentation required",
-    "Dedicated customer support",
+    "Fast approval (get authorized within 24-48 hours)",
+    "Transparent fee structure with no hidden charges",
+    "6-month flexible repayment plans tailored to you",
+    "Dedicated loan support to guide you through the process",
+    "Minimal documentation required for application",
+    "Professional financial assistance and guidance",
   ];
 
   const requirements = [

@@ -13,73 +13,73 @@ export default function SupportServices() {
   const features = [
     {
       icon: Headphones,
-      title: "End-to-End Support",
+      title: "Expert Consulting",
       description:
-        "Comprehensive support from strategy development to implementation and beyond.",
+        "General business consulting for both everyday and complex challenges.",
     },
     {
       icon: Users,
-      title: "Expert Team",
+      title: "Strategic Growth",
       description:
-        "Professional team of consultants and support specialists ready to help your business.",
+        "Practical and strategic advice on how to scale and grow your operations effectively.",
     },
     {
       icon: Clock,
-      title: "24/7 Availability",
+      title: "Troubleshooting",
       description:
-        "Round-the-clock support to ensure your business operations never stop.",
+        "Identification and removal of operational bottlenecks for smoother business flow.",
     },
     {
       icon: Target,
-      title: "Strategic Guidance",
+      title: "Performance Focus",
       description:
-        "Expert strategic guidance to help you achieve your business goals and objectives.",
+        "Strategies designed to drive measurable improvements and better bottom-line results.",
     },
   ];
 
   const services = [
     {
-      title: "Strategy Development",
+      title: "Consulting & Strategy",
       description:
-        "Comprehensive business strategy development and planning services.",
+        "We provide expert guidance and hands-on support to help you solve challenges and grow.",
       features: [
-        "Business planning",
-        "Market analysis",
+        "Business consulting",
+        "Scaling advice",
         "Strategic planning",
-        "Goal setting",
+        "Transition support",
       ],
     },
     {
-      title: "Implementation Support",
+      title: "Operations & Partnerships",
       description:
-        "Full implementation support to ensure successful project execution.",
+        "Practical troubleshooting and facilitation of strategic partnerships for your success.",
       features: [
-        "Project management",
+        "Operational troubleshooting",
+        "Strategic partnerships",
+        "Bottleneck removal",
+        "Process optimization",
+      ],
+    },
+    {
+      title: "Performance & Growth",
+      description:
+        "Clean focus on driving measurable improvements and finding the clearest path to success.",
+      features: [
+        "Performance improvement",
+        "Growth roadmaps",
         "Change management",
-        "Training",
-        "Quality assurance",
-      ],
-    },
-    {
-      title: "Ongoing Support",
-      description:
-        "Continuous support and maintenance services for long-term success.",
-      features: [
-        "24/7 support",
-        "Regular monitoring",
-        "Performance optimization",
-        "Troubleshooting",
+        "Hands-on implementation",
       ],
     },
   ];
 
   const benefits = [
-    "Comprehensive business support",
-    "Expert consultation services",
-    "24/7 availability",
-    "Strategic planning guidance",
-    "Implementation assistance",
-    "Ongoing maintenance support",
+    "Practical, actionable real-world advice",
+    "Experienced multi-industry consultants",
+    "Hands-on implementation support",
+    "Focus on measurable business results",
+    "Facilitation of key strategic partnerships",
+    "Smoother business transitions and scaling",
   ];
 
   return (
@@ -102,7 +102,7 @@ export default function SupportServices() {
             >
               <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 text-sm font-semibold mb-6">
                 <Headphones size={16} />
-                Support Services
+                Business Advisory and Support
               </div>
             </motion.div>
 
@@ -112,7 +112,7 @@ export default function SupportServices() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-lg sm:text-lg md:text-5xl lg:text-6xl font-bold text-text-primary mb-6"
             >
-              Complete Business
+              Business Advisory and
               <span className="block bg-gradient-to-r from-primary-500 to-green-500 bg-clip-text text-transparent">
                 Support Solutions
               </span>
@@ -164,7 +164,7 @@ export default function SupportServices() {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-lg font-bold text-text-primary mb-4">
-              Why Choose Our Support Services
+              Why Choose Our Business Advisory
             </h2>
             <p className="text-sm text-text-secondary max-w-2xl mx-auto">
               We provide comprehensive support services to help your business
@@ -265,7 +265,7 @@ export default function SupportServices() {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-lg font-bold text-text-primary mb-4">
-              Our Support Services
+              Our Advisory & Support Services
             </h2>
             <p className="text-sm text-text-secondary max-w-2xl mx-auto">
               Comprehensive support services designed to help your business
@@ -317,7 +317,7 @@ export default function SupportServices() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-lg sm:text-lg font-bold text-text-primary mb-6">
-                Support Services Benefits
+                Business Advisory Benefits
               </h2>
               <p className="text-sm text-text-secondary mb-8 leading-relaxed">
                 Our comprehensive support services provide the guidance,

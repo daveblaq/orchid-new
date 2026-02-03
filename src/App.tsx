@@ -17,6 +17,7 @@ import FacilityManagement from "./pages/services/FacilityManagement";
 import InsuranceAuditTax from "./pages/services/InsuranceAuditTax";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
 import SupportServices from "./pages/services/SupportServices";
+import AccessToFinance from "./pages/services/AccessToFinance";
 
 function App() {
   return (
@@ -62,6 +63,10 @@ function App() {
               element={<SoftwareDevelopment />}
             />
             <Route path="/services/support" element={<SupportServices />} />
+            <Route
+              path="/services/access-to-finance"
+              element={<AccessToFinance />}
+            />
           </Routes>
         </main>
         <Footer />

@@ -67,6 +67,10 @@ export default function Home() {
   ];
 
   const clients = [
+    {
+      name: "Zaffiro International",
+      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot%202026-02-03%20at%2010.08.07%E2%80%AFam.png",
+    },
   {
       name: "Everyday Supermarket",
       logo: "https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-24%20at%2011.55.23%E2%80%AFam.png?updatedAt=1761303337687",
@@ -78,6 +82,34 @@ export default function Home() {
         {
       name: "Ampai Construction",
       logo: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-01-09%20at%2011.17.23.jpeg",
+    },
+    {
+      name: "Zaradera",
+      logo: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-01-12%20at%2010.01.42.jpeg",
+    },
+    {
+      name: "Mayak Services",
+      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot%202026-02-03%20at%209.29.24%E2%80%AFam.png",
+    },
+    {
+      name: "Bokolo Hsic group ltd",
+      logo: "https://ik.imagekit.io/shiga/orchid/logo-2.png",
+    },
+    {
+      name: "PIND",
+      logo: "https://ik.imagekit.io/shiga/orchid/pind.svg?updatedAt=1761441906401",
+    },
+    {
+      name: "Livichun Supermarket",
+      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot%202026-02-03%20at%209.52.36%E2%80%AFam.png",
+    },
+    {
+      name: "Megastar",
+      logo: "https://ik.imagekit.io/shiga/orchid/megastar_weblogo.png",
+    },
+    {
+      name: "Climax",
+      logo: "https://ik.imagekit.io/shiga/orchid/climax_white_trans.webp",
     },
   ];
 
@@ -117,10 +149,6 @@ export default function Home() {
     {
       name: "Alliance",
       logo: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202025-10-26%20at%2010.11.01.jpeg?updatedAt=1763193265896",
-    },
-    {
-      name: "Rosabon Financial Services",
-      logo: "https://ik.imagekit.io/shiga/orchid/Screenshot_2025-10-24_at_11.51.42_am-removebg-preview.png?updatedAt=1761303135588",
     },
   ];
 

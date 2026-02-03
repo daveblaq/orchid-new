@@ -15,6 +15,7 @@ import {
   Zap,
   TrendingUp,
   CreditCard,
+  Headphones,
 } from "lucide-react";
 
 export default function Services() {
@@ -26,20 +27,20 @@ export default function Services() {
       backgroundImage:
         "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_smaaidsmaaidsmaa.png",
       description:
-        "Expand your business reach and connect with global opportunities through our comprehensive market access solutions.",
+        "Practical and strategic strategies to enter and grow in high-value international markets through our direct buyer connections.",
       details: [
-        "International market entry strategy development",
-        "Bulk purchaser network connections",
-        "Cross-border sales facilitation",
-        "Foreign market penetration support",
-        "Trade compliance and regulatory guidance",
-        "Market research and competitive analysis",
+        "International entry strategy development",
+        "Direct connections to bulk buyers globally",
+        "Cross-border sales and transaction support",
+        "Strategic transition to foreign markets",
+        "Regulatory and trade documentation guidance",
+        "Market insights and competitor analysis",
       ],
       benefits: [
-        "Increase revenue by 40% on average",
-        "Access to 50+ international markets",
-        "Reduced market entry time by 60%",
-        "Comprehensive compliance support",
+        "Grow revenue faster in high-value markets",
+        "Access 50+ international markets easily",
+        "Significantly reduced market entry time",
+        "End-to-end regulatory compliance guidance",
       ],
     },
     {
@@ -49,20 +50,20 @@ export default function Services() {
       backgroundImage:
         "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_olubk3olubk3olub.png",
       description:
-        "Develop the next generation of business leaders with our comprehensive entrepreneurship and leadership training programs.",
+        "Equipping aspiring and growing entrepreneurs with the practical skills, mindset, and support needed to build sustainable businesses.",
       details: [
-        "Business plan development and validation",
-        "Leadership and management skills training",
-        "Financial literacy and investment readiness",
-        "Marketing and sales strategy development",
-        "Technology adoption and digital transformation",
-        "Mentorship and networking opportunities",
+        "Idea creation, refinement, and validation",
+        "Practical leadership and management training",
+        "Financial mastery for investor attraction",
+        "Growth-driving marketing and sales strategies",
+        "Tech adoption for operational efficiency",
+        "Access to mentor and industry networks",
       ],
       benefits: [
-        "95% business success rate",
-        "500+ entrepreneurs trained",
-        "Comprehensive mentorship program",
-        "Industry-leading curriculum",
+        "Practical, industry-relevant curriculum",
+        "Track record of successful business growth",
+        "Ongoing mentorship beyond training",
+        "Access to valuable expert networks",
       ],
     },
     {
@@ -72,20 +73,20 @@ export default function Services() {
       backgroundImage:
         "https://ik.imagekit.io/shiga/orchid/fm.5481be26.jpeg",
       description:
-        "Optimize your business operations with our comprehensive facility management and system coordination services.",
+        "Keep your assets, systems, and operations working smoothly together so you can focus on growing your business without disruptions.",
       details: [
-        "Asset management and maintenance planning",
-        "System integration and optimization",
-        "Operational efficiency improvements",
-        "Resource allocation and utilization",
-        "Safety and compliance management",
-        "Performance monitoring and reporting",
+        "Proactive asset management and planning",
+        "Smart system integration for reliability",
+        "Day-to-day operational efficiency boosts",
+        "Resource optimization to control costs",
+        "Safety standards and regulatory compliance",
+        "Predictive maintenance for asset longevity",
       ],
       benefits: [
-        "30% reduction in operational costs",
-        "99% uptime guarantee",
-        "24/7 monitoring and support",
-        "Predictive maintenance systems",
+        "Significantly lower operational costs",
+        "Reliable systems with minimal downtime",
+        "24/7 monitoring and issue escalation",
+        "Proactive asset lifespan extension",
       ],
     },
     {
@@ -95,20 +96,20 @@ export default function Services() {
       backgroundImage:
         "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_rte1zhrte1zhrte1.png",
       description:
-        "Ensure financial compliance and protection with our comprehensive insurance, audit, and tax clearance services.",
+        "Taking the complexity out of insurance, audits, and tax matters so you can operate with confidence and financial soundness.",
       details: [
-        "Comprehensive insurance coverage assessment",
-        "Financial audit and compliance reviews",
-        "Tax planning and optimization strategies",
-        "Regulatory compliance management",
-        "Risk assessment and mitigation",
-        "Documentation and reporting support",
+        "Insurance coverage assessment and review",
+        "Financial audits and compliance checks",
+        "Smart tax planning and risk reduction",
+        "Ongoing regulatory alignment support",
+        "Risk identification and mitigation",
+        "Audit-ready documentation and reporting",
       ],
       benefits: [
-        "100% compliance guarantee",
-        "Average 25% tax savings",
-        "Expert audit support",
-        "Comprehensive risk coverage",
+        "Confidence in meeting all regulations",
+        "Reduced liabilities and improved cash flow",
+        "Experienced guidance through audits",
+        "Well-structured protective risk coverage",
       ],
     },
     {
@@ -118,42 +119,42 @@ export default function Services() {
       backgroundImage:
         "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_lv12qalv12qalv12.png",
       description:
-        "Transform your business operations with custom software solutions designed to meet your specific needs and objectives.",
+        "Build software that fits the way your business actually works—streamlining operations, improving visibility, and scaling with confidence.",
       details: [
-        "Custom software development and implementation",
-        "Legacy system modernization and re-engineering",
-        "Cloud migration and integration services",
-        "API development and system integration",
-        "User interface and experience design",
-        "Ongoing maintenance and support",
+        "Custom software tailored to your processes",
+        "Legacy system modernization and upgrades",
+        "Secure cloud migration and integration",
+        "API development for tool connectivity",
+        "User-friendly interfaces for productivity",
+        "Ongoing technical system maintenance",
       ],
       benefits: [
-        "50% increase in productivity",
-        "Custom-built solutions",
-        "Seamless system integration",
-        "Ongoing technical support",
+        "Noticeable team productivity improvements",
+        "Purpose-built, non-off-the-shelf tools",
+        "Seamless workflow system integration",
+        "Reliable, ongoing technical support",
       ],
     },
     {
       title: "Access to Finance",
-      link: "/contact",
+      link: "/services/access-to-finance",
       icon: DollarSign,
       backgroundImage:
         "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_3hr7iz3hr7iz3hr7.png",
       description:
-        "Secure the funding you need to grow and expand your business through our extensive network of financial partners.",
+        "Secure the capital you need to scale through our expertise in loan facilitation, investment sourcing, and financial planning.",
       details: [
         "Business loan and credit facilitation",
         "Investment capital sourcing and preparation",
-        "Financial planning and projections",
+        "Financial planning and ROI projections",
         "Grant and funding opportunity identification",
         "Banking relationship management",
-        "Financial due diligence support",
+        "Financial due diligence and compliance",
       ],
       benefits: [
-        "High success rate",
-        "Expedited approval process",
-        "Comprehensive financial planning",
+        "High success rate in funding approvals",
+        "Access to diverse capital and grant sources",
+        "Professional investment readiness",
       ],
     },
     {
@@ -202,6 +203,98 @@ export default function Services() {
         "Dedicated loan support team",
       ],
     },
+    {
+      title: "Sourcing of Goods and Services",
+      link: "/contact",
+      icon: Target,
+      backgroundImage:
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_vubz6fvubz6fvubz.png",
+      description:
+        "We handle the complexity of finding the right suppliers and managing procurement so you get the best quality at the right price.",
+      details: [
+        "Reliable supplier identification and vetting",
+        "Negotiation for better pricing and terms",
+        "Quality control and inspection services",
+        "Logistics and supply chain coordination",
+        "Bulk purchasing strategies for cost savings",
+        "Vendor relationship management",
+      ],
+      benefits: [
+        "Significant savings on procurement costs",
+        "Access to a verified network of suppliers",
+        "Guaranteed quality and delivery timelines",
+        "Reduced administrative burden for your team",
+      ],
+    },
+    {
+      title: "Business Advisory and Support",
+      link: "/services/support",
+      icon: Headphones,
+      backgroundImage:
+        "https://ik.imagekit.io/shiga/orchid/support.jpg?updatedAt=1763192755920",
+      description:
+        "We provide expert guidance and hands-on support to help you solve business challenges, improve performance, and find the clearest path to growth.",
+      details: [
+        "General business consulting and problem solving",
+        "Strategic advice on scaling and growth",
+        "Operational troubleshooting and optimization",
+        "Strategic partnership identification",
+        "Performance improvement strategies",
+        "Expert guidance for business transitions",
+      ],
+      benefits: [
+        "Practical, actionable real-world advice",
+        "Experienced multi-industry consultants",
+        "Hands-on implementation support",
+        "Measurable business improvements",
+      ],
+    },
+    {
+      title: "Human Resource Training and Management",
+      link: "/contact",
+      icon: Users,
+      backgroundImage:
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_m9c1zhm9c1zhm9c1.png",
+      description:
+        "We help you build and manage high-performing teams through professional training, recruitment, and structured HR systems.",
+      details: [
+        "Staff recruitment and talent placement",
+        "Professional skill development training",
+        "HR policy and system development",
+        "Performance management systems",
+        "Team building and culture development",
+        "Employee engagement and retention",
+      ],
+      benefits: [
+        "Improved team productivity and morale",
+        "Compliance with latest labor regulations",
+        "Lower staff turnover and better hiring",
+        "Structured, professional work environment",
+      ],
+    },
+    {
+      title: "Project Management",
+      link: "/contact",
+      icon: Zap,
+      backgroundImage:
+        "https://ik.imagekit.io/shiga/orchid/Gemini_Generated_Image_px3v5kpx3v5kpx3v.png",
+      description:
+        "We ensure your projects stay on track, on budget, and deliver the results you expect through professional planning and execution.",
+      details: [
+        "Comprehensive project planning and scope",
+        "Timeline and milestone management",
+        "Budget planning and cost control",
+        "Risk identification and mitigation",
+        "Resource allocation and coordination",
+        "Progress tracking and quality assurance",
+      ],
+      benefits: [
+        "Projects delivered on time and on budget",
+        "Reduced risk of project failure or delays",
+        "Clear visibility into project progress",
+        "Professional execution from start to finish",
+      ],
+    },
   ];
 
   const processSteps = [
@@ -237,7 +330,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-white">
-     
+
 
       {/* Detailed Services Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">

@@ -13,73 +13,73 @@ export default function FacilityManagement() {
   const features = [
     {
       icon: Building,
-      title: "Property Management",
+      title: "Asset Protection",
       description:
-        "Complete oversight of your facilities and property maintenance needs.",
+        "Proactive asset management and maintenance planning to reduce downtime.",
     },
     {
       icon: Shield,
-      title: "Security Services",
+      title: "Smart Integration",
       description:
-        "Comprehensive security solutions to protect your assets and personnel.",
+        "System integration that improves performance, reliability and safety.",
     },
     {
       icon: Users,
-      title: "Staff Management",
+      title: "Resource Efficiency",
       description:
-        "Professional staff coordination and management for optimal operations.",
+        "Better use of resources to cut waste, control costs and boost efficiency.",
     },
     {
       icon: Wrench,
-      title: "Maintenance Services",
+      title: "Predictive Care",
       description:
-        "Regular maintenance and repair services to keep systems running smoothly.",
+        "Maintenance that prevents breakdowns and extends your asset lifespan.",
     },
   ];
 
   const services = [
     {
-      title: "Building Maintenance",
+      title: "Operational Efficiency",
       description:
-        "Regular upkeep and maintenance of all building systems and infrastructure.",
+        "Practical improvements and resource management to cut waste and control costs.",
       features: [
-        "HVAC systems",
-        "Electrical systems",
-        "Plumbing",
-        "Structural maintenance",
+        "Asset management",
+        "Maintenance planning",
+        "Waste reduction",
+        "Cost control",
       ],
     },
     {
-      title: "Security Management",
+      title: "System Reliability",
       description:
-        "24/7 security services and access control systems for your facilities.",
+        "Smart system integration designed to keep operations running smoothly with minimal downtime.",
       features: [
-        "Access control",
-        "Surveillance systems",
-        "Security personnel",
-        "Emergency response",
+        "System integration",
+        "Performance tracking",
+        "Reliability checks",
+        "Safety compliance",
       ],
     },
     {
-      title: "Cleaning Services",
+      title: "Monitoring & Support",
       description:
-        "Professional cleaning and janitorial services for all facility types.",
+        "Round-the-clock monitoring and support to address issues before they escalate.",
       features: [
-        "Daily cleaning",
-        "Deep cleaning",
-        "Sanitization",
-        "Waste management",
+        "24/7 monitoring",
+        "Reporting & insights",
+        "Incident response",
+        "Predictive maintenance",
       ],
     },
   ];
 
   const benefits = [
-    "24/7 facility monitoring",
-    "Preventive maintenance programs",
-    "Cost-effective solutions",
-    "Professional staff management",
-    "Compliance with regulations",
-    "Emergency response services",
+    "Significantly lower operational costs",
+    "Smarter planning for facility needs",
+    "Maximized system reliability",
+    "Minimized operational downtime",
+    "24/7 monitoring and issue escalation",
+    "Proactive predictive maintenance",
   ];
 
   return (

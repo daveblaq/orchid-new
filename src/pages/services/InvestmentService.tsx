@@ -57,12 +57,12 @@ export default function InvestmentService() {
   ];
 
   const benefits = [
-    "Monthly returns paid directly to your account",
-    "Capital guaranteed at maturity",
-    "No hidden fees or charges",
-    "Flexible investment amounts",
-    "Professional portfolio management",
-    "24/7 customer support",
+    "Up to 60% total annual return on investment",
+    "Monthly ROI payments directly to your account",
+    "Guaranteed return of capital at maturity",
+    "Flexible investment amounts to suit your goals",
+    "Professional portfolio management and tracking",
+    "Secure and transparent multi-channel support",
   ];
 
   return (

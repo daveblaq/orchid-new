@@ -6,73 +6,73 @@ export default function SoftwareDevelopment() {
   const features = [
     {
       icon: Code,
-      title: "Custom Development",
+      title: "Custom Built",
       description:
-        "Tailored software solutions designed specifically for your business needs and requirements.",
+        "Software tailored specifically to your business processes and unique goals.",
     },
     {
       icon: Cpu,
-      title: "System Maintenance",
+      title: "Legacy Upgrade",
       description:
-        "Ongoing maintenance and support to keep your software systems running optimally.",
+        "Modernizing legacy systems for improved performance and reliability.",
     },
     {
       icon: Smartphone,
-      title: "Re-engineering",
+      title: "Cloud Migration",
       description:
-        "Modernize and upgrade existing systems to improve performance and functionality.",
+        "Secure cloud migration and seamless system integration for your tools.",
     },
     {
       icon: Users,
-      title: "Team Support",
+      title: "User Focused",
       description:
-        "Dedicated development team to support your business software needs.",
+        "Clean, user-friendly interfaces that improve adoption and productivity.",
     },
   ];
 
   const services = [
     {
-      title: "Enterprise Software Development",
+      title: "Custom Development",
       description:
-        "Custom enterprise software solutions tailored to your business processes.",
+        "We build purpose-built software that fits the way your business actually works.",
       features: [
         "Custom applications",
-        "Database design",
         "API development",
-        "Integration services",
+        "User-centric design",
+        "Modern technology stack",
       ],
     },
     {
-      title: "System Maintenance & Support",
+      title: "Modernization & Integration",
       description:
-        "Comprehensive maintenance and support services for your existing software systems.",
-      features: [
-        "Bug fixes",
-        "Performance optimization",
-        "Security updates",
-        "24/7 support",
-      ],
-    },
-    {
-      title: "Software Re-engineering",
-      description:
-        "Modernize legacy systems with cutting-edge technology and improved architecture.",
+        "Upgrading legacy tools and connecting your systems for uninterrupted workflows.",
       features: [
         "Legacy modernization",
-        "Architecture redesign",
-        "Performance enhancement",
-        "Technology upgrade",
+        "Cloud migration",
+        "System integration",
+        "API connectivity",
+      ],
+    },
+    {
+      title: "Maintenance & Support",
+      description:
+        "Ongoing technical support to keep your systems running at their absolute best.",
+      features: [
+        "Continuous monitoring",
+        "System updates",
+        "Technical support",
+        "Performance optimization",
       ],
     },
   ];
 
   const benefits = [
-    "Custom software solutions",
-    "Scalable architecture design",
-    "24/7 technical support",
-    "Regular system updates",
-    "Performance optimization",
-    "Security compliance",
+    "Noticeable team productivity boosts",
+    "Tailored solutions, not off-the-shelf",
+    "Interrupted workflow integration",
+    "Reliable, ongoing technical support",
+    "Improved operational visibility",
+    "Modern, scalable performance",
   ];
 
   return (

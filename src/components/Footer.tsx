@@ -159,7 +159,7 @@ export default function Footer() {
             </div>
           </motion.div>
 
-        
+
 
           {/* Contact Info */}
           <motion.div
@@ -190,9 +190,9 @@ export default function Footer() {
                   size={18}
                 />
                 <span className="text-gray-300 text-sm sm:text-base md:text-lg">
-                  Plot 5 Off Peter Odili Extension Road,
+                  Head Office: NO 314 Peter Odili Extension by
                   <br />
-                  Gbajalam, Woji, Opposite Chelsea Filling Station,
+                  Old Refinery Road Opposite Genesis Fastfood,
                   <br />
                   Port Harcourt, Rivers State.
                 </span>

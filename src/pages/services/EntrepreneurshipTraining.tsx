@@ -13,81 +13,86 @@ export default function EntrepreneurshipTraining() {
   const features = [
     {
       icon: GraduationCap,
-      title: "Comprehensive Training",
+      title: "Idea Validation",
       description:
-        "Complete entrepreneurship development program with practical skills and knowledge.",
+        "Hands-on support to create, refine, and validate winning business ideas.",
     },
     {
       icon: Users,
-      title: "Expert Instructors",
+      title: "Leadership Skills",
       description:
-        "Learn from experienced entrepreneurs and business leaders with proven track records.",
+        "Practical leadership and management training for real-world challenges.",
     },
     {
       icon: BookOpen,
-      title: "Practical Learning",
+      title: "Financial Mastery",
       description:
-        "Hands-on training with real-world case studies and business simulations.",
+        "Master the skills to manage money, attract investors, and scale wisely.",
     },
     {
       icon: Target,
-      title: "Goal Achievement",
+      title: "Growth Strategy",
       description:
-        "Structured program designed to help you achieve your business goals and objectives.",
+        "Clear marketing and sales strategies that drive growth and loyalty.",
     },
   ];
 
   const programModules = [
     {
-      title: "Business Fundamentals",
+      title: "Business Leadership",
       description:
-        "Core business concepts, planning, and strategy development.",
-      duration: "2 weeks",
+        "Equipping you with the practical skills and mindset to lead with confidence.",
+      duration: "Flexible",
       topics: [
-        "Business planning",
-        "Market analysis",
-        "Financial management",
-        "Legal requirements",
+        "Idea refinement",
+        "Leadership mindset",
+        "Real-world challenges",
+        "Team management",
       ],
     },
     {
-      title: "Leadership Development",
-      description: "Build leadership skills and team management capabilities.",
-      duration: "2 weeks",
-      topics: [
-        "Team building",
-        "Communication",
-        "Decision making",
-        "Conflict resolution",
-      ],
-    },
-    {
-      title: "Marketing & Sales",
-      description: "Learn effective marketing strategies and sales techniques.",
-      duration: "2 weeks",
+      title: "Growth & Technology",
+      description:
+        "Using technology to leverage operations and drive customer loyalty.",
+      duration: "Flexible",
       topics: [
         "Digital marketing",
-        "Brand building",
-        "Sales strategies",
-        "Customer relations",
+        "Tech integration",
+        "Operations scaling",
+        "Market growth",
       ],
     },
     {
-      title: "Financial Management",
-      description:
-        "Master financial planning, budgeting, and investment strategies.",
-      duration: "2 weeks",
-      topics: ["Budgeting", "Cash flow", "Investment", "Risk management"],
+      title: "Financial Strategy",
+      description: "Comprehensive financial skills to help you attract investment.",
+      duration: "Flexible",
+      topics: [
+        "Money management",
+        "Investor attraction",
+        "Wise scaling",
+        "Resource allocation",
+      ],
+    },
+    {
+      title: "Network & Mentorship",
+      description: "Access to industry experts and valuable business networks.",
+      duration: "Ongoing",
+      topics: [
+        "Expert connections",
+        "Peer networking",
+        "Mentorship guidance",
+        "Industry insights",
+      ],
     },
   ];
 
   const benefits = [
-    "One-week intensive program",
-    "Online and physical classroom training",
-    "Learning by doing methodology",
-    "18+ years age requirement",
-    "No education barriers",
-    "Comprehensive support materials",
+    "Practical, industry-relevant curriculum",
+    "Track record of successful business growth",
+    "Over 500 entrepreneurs trained already",
+    "Ongoing mentorship beyond training",
+    "Real-world management guidance",
+    "Access to valuable expert networks",
   ];
 
   return (

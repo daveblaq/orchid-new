@@ -62,9 +62,10 @@ export default function AboutUs() {
               </h1>
               <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-4 sm:px-0">
                 A finance-based consulting firm established in 2019 and
-                registered with the Corporate Affairs Commission (CAC) on March
-                17, 2020. We provide comprehensive business services across
-                production, manufacturing, logistics, and AgiTECH sectors.
+                officially registered with the Corporate Affairs Commission
+                (CAC) on March 17, 2020 (RC: 1530396). We provide comprehensive
+                business services across production, manufacturing, logistics,
+                agriculture and digital sectors.
               </p>
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
@@ -174,7 +175,7 @@ export default function AboutUs() {
                   </div>
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                    3 Stated
+                      3 Stated
                     </div>
                     <div className="text-sm opacity-90">National Coverage</div>
                   </div>

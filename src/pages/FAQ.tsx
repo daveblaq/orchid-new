@@ -91,7 +91,7 @@ export default function FAQ() {
     {
       question: "Where are you located?",
       answer:
-        "Plot 5, Peter Odili Extension Road, Gbajalam, Port Harcourt (Opposite Chelsea Filling Station).",
+        "NO 314 Peter Odili Extension by Old Refinery Road Opposite Genesis Fastfood, Port Harcourt, Rivers State.",
       category: "contact",
     },
     {
@@ -217,11 +217,10 @@ export default function FAQ() {
                   setActiveCategory(category.id);
                   setOpenIndex(null);
                 }}
-                className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm font-semibold transition-all duration-300 touch-manipulation ${
-                  activeCategory === category.id
+                className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm font-semibold transition-all duration-300 touch-manipulation ${activeCategory === category.id
                     ? "bg-gradient-to-r from-primary-500 to-green-500 text-white"
                     : "bg-white/80 backdrop-blur-sm text-text-secondary hover:bg-green-50 hover:text-green-500 border border-gray-300/50 hover:border-green-300/50"
-                }`}
+                  }`}
               >
                 {category.label}
               </button>

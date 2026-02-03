@@ -166,7 +166,7 @@ export default function Team() {
                 <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
                   <h3 className="font-bold text-lg">Buchi Ijeh</h3>
                   <p className="text-sm opacity-90">
-                    Business Development Executive on Oil and Gas
+                    Business Development Manager
                   </p>
                 </div>
 
@@ -175,11 +175,11 @@ export default function Team() {
                   <div className="text-center mb-4">
                     <h3 className="font-bold text-lg mb-2">Buchi Ijeh</h3>
                     <p className="text-sm opacity-90 mb-4">
-                      Business Development Executive on Oil and Gas
+                      Business Development Manager
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed text-left mb-6">
-                    Business Development Executive specializing in oil and gas
+                    Business Development Manager specializing in oil and gas
                     services with over 10
                     years of corporate leadership experience. Expert in business
                     development and strategic planning.
