@@ -1,6 +1,139 @@
 import { motion } from "framer-motion";
 
 export default function Team() {
+  const executives = [
+    {
+      name: "Chiadikaobi David O.",
+      fullName: "Mr. Chiadikaobi David Okoh",
+      role: "Managing Director",
+      image: "https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-19%20at%206.10.11%E2%80%AFpm.png?updatedAt=1760893829383",
+      bio: "Our Managing Director has broad experience across finance, business development, and professional services.With hands- on involvement in access to finance, loans, market access, enterprise training, and advisory services, they lead the team with a practical understanding of what businesses truly need to grow and succeed",
+      linkedin: "https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8",
+    },
+    {
+      name: "Mr. Paul Ugwu",
+      fullName: "Mr. Paul Ugwu",
+      role: "Chief Operation officer",
+      image: "https://ik.imagekit.io/shiga/orchid/IMG-20260109-WA0002(1).jpg",
+      bio: "He brings structure, clarity, and operational discipline to the business, ensuring strategies are executed efficiently and systems work seamlessly",
+      linkedin: "#",
+    },
+    {
+      name: "Buchi Ijeh",
+      fullName: "Buchi Ijeh",
+      role: "Business Development Manager",
+      image: "https://ik.imagekit.io/shiga/orchid/buchi.png?updatedAt=1760898266865",
+      bio: "With more than a decade in corporate leadership, she helps the company grow by identifying opportunities, building relationships, and shaping strategies that work.",
+      linkedin: "#",
+    },
+    {
+      name: "Blessing Nwasuruba",
+      fullName: "Blessing Nwasuruba",
+      role: "Chief Laison Officer",
+      image: "https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-22%20at%201.38.41%E2%80%AFam.png?updatedAt=1761093644059",
+      bio: "He specializes in innovative solutions and system architecture, using his technical expertise to make our digital initiatives practical, efficient, and impactful.",
+      linkedin: "#",
+    },
+    {
+      name: "Adedeji Adewara",
+      fullName: "Adedeji Adewara",
+      role: "Laison Officer",
+      hoverRole: "Laison Officer on Power/Telecommunication",
+      image: "https://ik.imagekit.io/shiga/orchid/adedeji.jpg?updatedAt=1760893627747",
+      bio: "With deep experience in power and telecom, he oversees infrastructure development and project execution, turning complex challenges into practical solutions for clients.",
+      linkedin: "https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8",
+    },
+    {
+      name: "Promise Obioha",
+      fullName: "Promise Obioha",
+      role: "Project Manager",
+      image: "https://ik.imagekit.io/shiga/orchid/1000577504.jpg?updatedAt=1760945979405",
+      bio: "He has extensive experience in project management and team coordination, ensuring projects are delivered successfully while also connecting clients with the right loan solutions.",
+      linkedin: "#",
+    },
+  ];
+
+  const otherStaff = [
+    {
+      name: "Victoria Ajayi",
+      fullName: "Victoria Ajayi",
+      role: "Social Media Manager",
+      image: "https://ik.imagekit.io/shiga/orchid/AJAYE8.jpg?updatedAt=1761094336871",
+      bio: "She manages our social media presence, creating engaging content and helping the brand connect with people across multiple platforms.",
+      linkedin: "#",
+    },
+    {
+      name: "Martin Nwosu",
+      fullName: "Martin Nwosu",
+      role: "IT Personnel",
+      image: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-02-04%20at%2009.57.00.jpeg",
+      bio: "He keeps our systems running smoothly, providing technical support and ensuring our digital tools work efficiently for the team.",
+      linkedin: "#",
+    },
+    {
+      name: "Confidence Itoro",
+      fullName: "Confidence Itoro",
+      role: "Business Development Officer",
+      image: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-02-04%20at%2009.57.15.jpeg",
+      bio: "She supports business growth by identifying opportunities, engaging clients, and helping convert leads into lasting partnerships.",
+      linkedin: "#",
+    },
+    {
+      name: "Salome Uduak",
+      fullName: "Salome Uduak",
+      role: "Admin Officer",
+      image: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-02-04%20at%2009.58.26.jpeg",
+      bio: "She handles daily administrative tasks, keeps records organised, and supports the team to ensure smooth office operations.",
+      linkedin: "#",
+    },
+  ];
+
+  const MemberCard = ({ member, index }: { member: any; index: number }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: index * 0.1 }}
+      className="group relative h-full cursor-pointer"
+    >
+      <div className="relative overflow-hidden">
+        {/* Team Image */}
+        <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+          <img
+            src={member.image}
+            alt={member.fullName}
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
+        </div>
+
+        {/* Name and Role */}
+        <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
+          <h3 className="font-bold text-lg">{member.name}</h3>
+          <p className="text-sm opacity-90">{member.role}</p>
+        </div>
+
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
+          <div className="text-center mb-4">
+            <h3 className="font-bold text-lg mb-2">{member.fullName}</h3>
+            <p className="text-sm opacity-90 mb-4">{member.hoverRole || member.role}</p>
+          </div>
+          <p className="text-sm leading-relaxed text-left mb-6">{member.bio}</p>
+          <div className="text-left">
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm hover:underline inline-flex items-center"
+            >
+              LinkedIn <span className="ml-1">&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -43,306 +176,9 @@ export default function Team() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           {/* Executive Team - First Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {/* Mr. Chiadikaobi David Okoh - CEO/Director */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                {/* Team Image */}
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-19%20at%206.10.11%E2%80%AFpm.png?updatedAt=1760893829383"
-                    alt="Mr. Chiadikaobi David Okoh"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                {/* Name and Role */}
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Chiadikaobi David O.</h3>
-                  <p className="text-sm opacity-90">Managing Director</p>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">
-                      Mr. Chiadikaobi David Okoh
-                    </h3>
-                    <p className="text-sm opacity-90 mb-4">Managing Director</p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Managing Director with extensive experience in business
-                    strategy and digital transformation. Leads our team with
-                    deep industry knowledge and proven leadership skills.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-               {/* Mr. Paul Ugwu - Chief Operation officer */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                {/* Team Image */}
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://ik.imagekit.io/shiga/orchid/IMG-20260109-WA0002(1).jpg"
-                    alt="Mr. Paul Ugwu"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                {/* Name and Role */}
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Mr. Paul Ugwu</h3>
-                  <p className="text-sm opacity-90">Chief Operation officer</p>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">
-                      Mr. Paul Ugwu     
-                    </h3>
-                    <p className="text-sm opacity-90 mb-4">Chief Operation officer</p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Chief Operation officer with extensive experience in business
-                    strategy and digital transformation. Leads our team with
-                    deep industry knowledge and proven leadership skills.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Buchi Ijeh - Partner */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                {/* Team Image */}
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://ik.imagekit.io/shiga/orchid/buchi.png?updatedAt=1760898266865"
-                    alt="Buchi Ijeh"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                {/* Name and Role */}
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Buchi Ijeh</h3>
-                  <p className="text-sm opacity-90">
-                    Business Development Manager
-                  </p>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">Buchi Ijeh</h3>
-                    <p className="text-sm opacity-90 mb-4">
-                      Business Development Manager
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Business Development Manager specializing in oil and gas
-                    services with over 10
-                    years of corporate leadership experience. Expert in business
-                    development and strategic planning.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Mr. Blessing Nwasuruba - Chief Laison officer */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                {/* Team Image */}
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://ik.imagekit.io/shiga/orchid/Screenshot%202025-10-22%20at%201.38.41%E2%80%AFam.png?updatedAt=1761093644059"
-                    alt="Blessing Nwasuruba"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                {/* Name and Role */}
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Blessing Nwasuruba</h3>
-                  <p className="text-sm opacity-90">Chief Laison Officer</p>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">
-                      Blessing Nwasuruba
-                    </h3>
-                    <p className="text-sm opacity-90 mb-4">
-                      Chief Laison Officer
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Chief Laison Officer specializing in innovative solutions
-                    and system architecture. Brings deep technical expertise to
-                    drive our digital transformation initiatives.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Adedeji Adewara - Laison Officer */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                {/* Team Image */}
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://ik.imagekit.io/shiga/orchid/adedeji.jpg?updatedAt=1760893627747"
-                    alt="Adedeji Adewara"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                {/* Name and Role */}
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Adedeji Adewara</h3>
-                  <p className="text-sm opacity-90">Laison Officer</p>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">Adedeji Adewara</h3>
-                    <p className="text-sm opacity-90 mb-4">
-                      Laison Officer on Power/Telecommunication
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Laison Officer focused on power and telecommunication
-                    solutions. Expert in infrastructure development and Laison
-                    consulting with extensive industry experience.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Promise Obioha - Project Manager */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://ik.imagekit.io/shiga/orchid/1000577504.jpg?updatedAt=1760945979405"
-                    alt="Promise Obioha"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Promise Obioha</h3>
-                  <p className="text-sm opacity-90">Project Manager</p>
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">Promise Obioha</h3>
-                    <p className="text-sm opacity-90 mb-4">Project Manager</p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Project Manager with extensive experience in project
-                    management and team coordination. Ensures successful
-                    delivery of complex projects and client satisfaction.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            {executives.map((member, index) => (
+              <MemberCard key={index} member={member} index={index} />
+            ))}
           </div>
 
           {/* Line Separator */}
@@ -369,54 +205,9 @@ export default function Team() {
 
           {/* Other Staffs Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Victoria Ajayi - Social Media Manager */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="group relative h-full cursor-pointer"
-            >
-              <div className="relative overflow-hidden">
-                {/* Team Image */}
-                <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src="https://ik.imagekit.io/shiga/orchid/AJAYE8.jpg?updatedAt=1761094336871"
-                    alt="Victoria Ajayi"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-
-                {/* Name and Role */}
-                <div className="bg-gradient-to-r from-primary-500 to-green-500 text-white p-4 text-center">
-                  <h3 className="font-bold text-lg">Victoria Ajayi</h3>
-                  <p className="text-sm opacity-90">Social Media Manager</p>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/95 to-green-500/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-6 text-white">
-                  <div className="text-center mb-4">
-                    <h3 className="font-bold text-lg mb-2">Victoria Ajayi</h3>
-                    <p className="text-sm opacity-90 mb-4">
-                      Social Media Manager
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-left mb-6">
-                    Social Media Manager with expertise in digital marketing and
-                    brand management. Creates engaging content and builds strong
-                    online presence across multiple platforms.
-                  </p>
-                  <div className="text-left">
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:underline inline-flex items-center"
-                    >
-                      LinkedIn <span className="ml-1">&gt;</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            {otherStaff.map((member, index) => (
+              <MemberCard key={index} member={member} index={index} />
+            ))}
           </div>
         </div>
       </section>

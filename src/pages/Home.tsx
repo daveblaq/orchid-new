@@ -54,7 +54,7 @@ export default function Home() {
       company: "Zaffiro",
       testimonial:
         "Orchiddigital Consulting Limited really came through for us. We needed funds to push our projects forward, and they handled the entire process smoothly and professionally. Thanks to their support, we were able to secure the financing we needed on time. We appreciate their help and highly recommend them.",
-      image: "/api/placeholder/200/200",
+      image: "https://ik.imagekit.io/shiga/orchid/Screenshot%202026-02-03%20at%2010.08.07%E2%80%AFam.png",
     },
     {
       name: "Ifeoma",
@@ -62,7 +62,7 @@ export default function Home() {
       company: "Ifeoma",
       testimonial:
         "Orchiddigital Consulting Limited was instrumental in helping us secure the funding we needed to expand our operations. As a leading beverage distributor with over 150 brands and a growing network of warehouses across the South-South, we needed a partner who understood both our scale and our vision. Orchid digital’s team worked confidently, transparently, and professionally — they helped us refine our pitch, open doors to investors, and close funding quickly.",
-      image: "/api/placeholder/200/200",
+      image: "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-01-09%20at%2011.17.23%20(1).jpeg",
     },
   ];
 
